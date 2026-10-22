@@ -1456,5 +1456,733 @@
       "isMSQ": false,
       "solution": "CloudSim is a simulation framework that models cloud computing environments (data centers, VMs, applications, users, and network topology), written in a Java-based environment, and developed at the CLOUDS Lab of the University of Melbourne. See Lecture 40 (Cloud Computing – Case Studies, slide 5)"
     }
+  ],
+  "9": [
+    {
+      "q": "[Week 9] OpenStack was launched in 2010 as a joint project between Rackspace Hosting and which other organization?",
+      "options": [
+        "Google",
+        "Microsoft",
+        "NASA",
+        "IBM"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "OpenStack, a software used to create cloud infrastructure, was launched as a joint project of Rackspace Hosting and NASA in 2010, and is open source. See Lecture 41 (Cloud Computing – Practical, slide 3)"
+    },
+    {
+      "q": "[Week 9] Which OpenStack component provides the dashboard (GUI) that gives an overview of the other components?",
+      "options": [
+        "Nova",
+        "Keystone",
+        "Horizon",
+        "Swift"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Horizon is the dashboard component of OpenStack — it provides the GUI of the software and gives an overview of the other components. See Lecture 41 (Cloud Computing – Practical, slide 5)"
+    },
+    {
+      "q": "[Week 9] Which OpenStack component is the compute service where instances are launched?",
+      "options": [
+        "Nova",
+        "Glance",
+        "Cinder",
+        "Neutron"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Nova is the compute service in OpenStack — it is where you launch your instances. Glance is the image service, Cinder is block storage, and Neutron provides networking. See Lecture 41 (Cloud Computing – Practical, slide 5)"
+    },
+    {
+      "q": "[Week 9] Which tool/script is used to install OpenStack using Devstack?",
+      "options": [
+        "stack.sh via Devstack",
+        "docker-compose",
+        "kubeadm",
+        "ansible-playbook"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "OpenStack is installed using Devstack: after cloning the devstack repository and configuring local.conf with ADMIN_PASSWORD, DATABASE_PASSWORD, RABBIT_PASSWORD, SERVICE_PASSWORD, and HOST_IP, the stack.sh file is run to install it. See Lecture 41 (Cloud Computing – Practical, slides 9–10)"
+    },
+    {
+      "q": "[Week 9] According to the lecture, what does sensor-cloud fundamentally provide, beyond merely integrating sensors with cloud computing?",
+      "options": [
+        "A physical replacement for all sensor hardware",
+        "Virtualization of sensor nodes, offered on a pay-per-use basis",
+        "A way to eliminate the need for a sink node",
+        "Free unlimited sensor deployment"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Sensor-cloud is not mere integration of sensors and cloud computing or 'dumping sensor data into the cloud' — it introduces the concept of virtualization of the sensor node, offered on a pay-per-use basis, acting as a stratum between sensor nodes and end-users. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 10)"
+    },
+    {
+      "q": "[Week 9] In a traditional Wireless Sensor Network (WSN), who is typically responsible for redeployment of the sensor nodes?",
+      "options": [
+        "The Sensor-Cloud Service Provider (SCSP)",
+        "The end-user of the sensor-cloud",
+        "The WSN-user",
+        "A third-party auditor"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "In a traditional WSN, the WSN-user is responsible for ownership, deployment, redeployment, maintenance, overhead, and usage. In sensor-cloud, redeployment and maintenance shift to the Sensor-Cloud Service Provider (SCSP), while usage shifts to the end-user. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 12)"
+    },
+    {
+      "q": "[Week 9] In the sensor-cloud model, which actor purchases physical sensor devices and lends them to the sensor-cloud, playing a role from a business perspective?",
+      "options": [
+        "End-user",
+        "Sensor-owner",
+        "Sensor-Cloud Service Provider (SCSP)",
+        "WSN-user"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The Sensor-owner purchases physical sensor devices deployed over different geographical locations and lends these devices to the sensor-cloud, acting as a business actor. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 13)"
+    },
+    {
+      "q": "[Week 9] Which of the following is listed as a major limitation of traditional WSNs that motivates the sensor-cloud model?",
+      "options": [
+        "Unlimited scalability at zero cost",
+        "Difficulty adapting to a change of requirement (e.g., moving from agriculture to smart home use)",
+        "Excessive availability of skilled vendors",
+        "No need for maintenance"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Limitations of WSNs include procurement issues (price, right vendor, sensor types), deployment and maintenance overheads, and difficulty adapting to a change of requirement — e.g., a WSN built for agriculture cannot easily be repurposed for a smart home. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 9)"
+    },
+    {
+      "q": "[Week 9] In the Optimal Composition of Virtual Sensors, what does CoV-I refer to?",
+      "options": [
+        "Composition of virtual sensors spanning multiple geographic regions",
+        "Composition of virtual sensors using only homogeneous nodes within the same geographic region",
+        "A pricing model for sensor-cloud",
+        "A caching mechanism for sensor data"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "CoV-I refers to the formation of a Virtual Sensor (VS) using homogeneous sensor nodes within the same geographical boundary, while CoV-II spans multiple regions using heterogeneous nodes to form a Virtual Sensor Group (VSG). See Lecture 43 (Sensor-Cloud – Part II: Sensor-as-a-Service, slide 6)"
+    },
+    {
+      "q": "[Week 9] In the sensor-cloud caching mechanism, which cache handles requests directly from the end-user and decides whether to serve data directly or re-cache from another source?",
+      "options": [
+        "External Cache (EC)",
+        "Sensor Cache (SC)",
+        "Distributed Cache (DC)",
+        "Internal Cache (IC)"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The Internal Cache (IC) handles requests from the end-user and takes the decision on whether the data should be provided directly or whether it is required to re-cache the data from the External Cache (EC). See Lecture 43 (Sensor-Cloud – Part II: Sensor-as-a-Service, slide 13)"
+    },
+    {
+      "q": "[Week 9] Why is dynamic and adaptive data caching useful in sensor-cloud, according to the lecture?",
+      "options": [
+        "Because environmental conditions always change extremely fast",
+        "Because it removes the need for a sensor-owner",
+        "Because caching eliminates the need for virtualization",
+        "Because unnecessary sensing during slow environmental change wastes energy"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "In many cases, environmental conditions change quite slowly, so the sensed data of physical sensors remains largely unaltered; unnecessary sensing under such conditions causes needless energy consumption, motivating adaptive caching. See Lecture 43 (Sensor-Cloud – Part II: Sensor-as-a-Service, slide 12)"
+    },
+    {
+      "q": "[Week 9] Which company is credited with coining the term 'fog computing'?",
+      "options": [
+        "Google",
+        "Amazon",
+        "CISCO",
+        "IBM"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Fog computing, or 'fogging,' is a term coined by CISCO. The idea is to extend the cloud nearer to IoT devices by introducing an intermediate layer between the cloud and the devices. See Lecture 44 (Fog Computing – Part I, slide 2)"
+    },
+    {
+      "q": "[Week 9] Which of the following is listed as a key issue with the traditional cloud model that motivates fog computing?",
+      "options": [
+        "Excess bandwidth availability",
+        "Volume, latency, and bandwidth limitations of the cloud",
+        "Too much local processing power at the device level",
+        "Absence of any IoT devices"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The current cloud model faces issues of Volume (too much data to process/store), Latency (round-trip time is too slow for time-sensitive data), and Bandwidth (huge traffic generated by billions of devices consumes most available bandwidth). See Lecture 44 (Fog Computing – Part I, slide 6)"
+    },
+    {
+      "q": "[Week 9] Where is the fog layer positioned in the fog computing architecture?",
+      "options": [
+        "Above the cloud layer",
+        "Between the cloud and the IoT devices",
+        "Inside each IoT device only",
+        "There is no fixed position; it replaces the cloud entirely"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Fog is a layer between the cloud and IoT devices; many fog nodes can be present, and sensor data are processed in the fog before being sent to the cloud, reducing latency and saving bandwidth and cloud storage. See Lecture 45 (Fog Computing – Part II, slide 2)"
+    },
+    {
+      "q": "[Week 9] Which of the following is NOT listed as a required characteristic of a fog node?",
+      "options": [
+        "Storage (transient)",
+        "Computing facility for quick decisions",
+        "Network connectivity",
+        "Permanent, unlimited archival storage"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Fog nodes need transient storage, computing facility (to process data and take quick decisions), and network connectivity to connect with IoT devices, other fog nodes, and the cloud — not permanent unlimited archival storage, which is the cloud's role. See Lecture 45 (Fog Computing – Part II, slide 4) ************END***********"
+    }
+  ],
+  "10": [
+    {
+      "q": "[Week 10] In the analogy comparing humans to smart cities presented in the lecture, what do 'Sensors and Tags' correspond to?",
+      "options": [
+        "Skeleton",
+        "Nerves",
+        "Sensory Organs",
+        "Brain"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "In the human–smart city analogy, Sensors and Tags correspond to Sensory Organs, Buildings/Industries/People correspond to the Skeleton, digital telecommunication networks correspond to Nerves, and ubiquitously embedded intelligence corresponds to the Brain. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 3)"
+    },
+    {
+      "q": "[Week 10] Which of the following is listed as one of the six 'Application Focus Areas' of a smart city?",
+      "options": [
+        "Smart Economy",
+        "Smart Bandwidth",
+        "Smart Voltage",
+        "Smart Currency"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The six application focus areas listed are Smart Economy, Smart Governance, Smart People, Smart Mobility, Smart Environment, and Smart Living. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 4)"
+    },
+    {
+      "q": "[Week 10] Under 'Current Focus Areas' of smart cities, which application area specifically deals with the auto routing of vehicles to empty slots and detecting vacant slots?",
+      "options": [
+        "Smart Homes",
+        "Smart Energy",
+        "Smart Health",
+        "Smart Parking Lots"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Smart Parking Lots focus on auto routing of vehicles to empty slots, auto charging for services provided, and detection of vacant slots in the parking lot. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 11)"
+    },
+    {
+      "q": "[Week 10] Which IoT challenge in smart cities relates to the risk of data leakage arising from multiple tenants sharing the same infrastructure?",
+      "options": [
+        "Reliability",
+        "Heterogeneity",
+        "Security and Privacy",
+        "Legal and Social aspects"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Under Security and Privacy challenges, the lecture notes exposure to attacks and vulnerabilities, and that multi-tenancy induces the risk of data leakage. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 16)"
+    },
+    {
+      "q": "[Week 10] What is the primary purpose of data fusion in IoT-enabled smart city environments, as described in the lecture?",
+      "options": [
+        "To delete redundant sensors from the network",
+        "To make the large incoming data volume precise and accurate for better decision making",
+        "To replace the need for any sensors",
+        "To increase network latency intentionally"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Data fusion addresses the challenge of making large, incoming data volumes precise and accurate, since the quality of data precision and accuracy directly affects the quality of decision-making in IoT-enabled smart cities. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 2)"
+    },
+    {
+      "q": "[Week 10] Which data fusion challenge refers to the situation where the same type of sensor reports different data for the same location?",
+      "options": [
+        "Imperfection",
+        "Ambiguity",
+        "Conflicts",
+        "Alignment"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Conflicts arise when the same sensor type reports different data for the same location. Imperfection refers to inaccurate/uncertain sensor data, Ambiguity refers to outliers/missing data, and Alignment relates to converting sensor data frames to a singular frame. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 4)"
+    },
+    {
+      "q": "[Week 10] In the stages of data fusion, at which level does the fusion of information happen at the sensor node or within the local network itself?",
+      "options": [
+        "Decision level",
+        "Feature level",
+        "Pixel level",
+        "Signal level"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Signal level fusion occurs at the sensor node or within the local network itself, while pixel level occurs at the imaging device, feature level occurs prior to decision making, and decision level is an ensemble of decisions. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 6)"
+    },
+    {
+      "q": "[Week 10] Which of the following is listed as one of the three functional layers of a smart parking system?",
+      "options": [
+        "Information Collection",
+        "Fuel Refilling",
+        "Vehicle Manufacturing",
+        "Traffic Signal Coloring"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Smart parking has three functional layers: Information Collection, System Deployment, and Service Dissemination. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 11)"
+    },
+    {
+      "q": "[Week 10] In the classification of energy harvesting solutions for smart cities, which type involves energy sources intentionally deployed near IoT devices?",
+      "options": [
+        "Ambient energy harvesting",
+        "Passive harvesting",
+        "Grid-tied harvesting",
+        "Dedicated energy harvesting"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Dedicated energy harvesting involves energy sources intentionally deployed near IoT sources, with the amount of energy harvested depending on the sensitivity of the harvesting circuit, the distance between device and source, and the environment. See Lecture 48 (Smart Cities and Smart Homes – Part III, slide 18)"
+    },
+    {
+      "q": "[Week 10] Which Home Area Network (HAN) standard is defined by IEEE 802.15.4 at the physical and MAC layers, and aims at low-cost, low-energy devices?",
+      "options": [
+        "UPnP",
+        "DLNA",
+        "Zigbee",
+        "X-10"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Zigbee consists of four layers (Physical, MAC, Network, Application); the Physical and MAC layers are defined by IEEE 802.15.4, while Network and Application layers are defined by Zigbee itself, and it targets low-cost, low-energy devices. See Lecture 48 (Smart Cities and Smart Homes – Part III, slide 14)"
+    },
+    {
+      "q": "[Week 10] Which HAN standard enables remote control of compliant devices over existing power lines and electrical wiring in a house, and is mainly used for lighting and appliance control?",
+      "options": [
+        "Konnex (KNX)",
+        "UPnP",
+        "LonWorks",
+        "X-10"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "X-10 enables remote control of compliant transmitters and receivers over power lines and electrical wiring, is adopted by GE and Philips, has low speed and low data rate, and is mainly used for control of lighting, appliance networks, and security sensors. See Lecture 48 (Smart Cities and Smart Homes – Part III, slide 15)"
+    },
+    {
+      "q": "[Week 10] According to the lecture, why does traditional TCP/IP fail to work well for Vehicle-to-Everything (V2X) communication?",
+      "options": [
+        "TCP/IP was designed mainly for single-pair information exchange dependent on data location",
+        "TCP/IP cannot be used with any wireless devices",
+        "TCP/IP requires no IP addresses at all",
+        "TCP/IP works only in stationary networks with no scalability limits"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "TCP/IP is designed mainly for handling information exchange between a single pair of entities, is dependent on the location of data, and can only identify endpoint addresses — which alone is not useful for content distribution in highly mobile V2X environments. See Lecture 49 (Connected Vehicles – Part I, slide 7)"
+    },
+    {
+      "q": "[Week 10] Which frequency spectrum did the US Department of Transport and FCC allocate for Intelligent Connected Vehicles (ICVs)?",
+      "options": [
+        "2.4 GHz ISM band",
+        "75 MHz (5850–5925 MHz)",
+        "900 MHz band",
+        "60 GHz mmWave band"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The US Department of Transport and Federal Communications Commission allocated 75 MHz (5850–5925 MHz) as the dedicated spectrum for ICVs, based on Dedicated Short Range Communication (DSRC) technology. See Lecture 50 (Connected Vehicles – Part II, slide 3)"
+    },
+    {
+      "q": "[Week 10] In the phases of ICV development described in the lecture, which phase is based on 4G LTE or DSRC and focuses on intelligent transportation services?",
+      "options": [
+        "Phase-1",
+        "Phase-2",
+        "Phase-3",
+        "Phase-0"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Phase-1 covers infotainment services based on 2G/3G, Phase-2 covers intelligent transportation services based on 4G LTE or DSRC, and Phase-3 covers vehicles connected to the cloud. See Lecture 50 (Connected Vehicles – Part II, slide 6)"
+    },
+    {
+      "q": "[Week 10] In the VANET domain classification, which domain consists of vehicles (mobile) and Road-Side Units (RSUs, static), communicating via V2V or V2I using the DSRC stack?",
+      "options": [
+        "In-Vehicle Domain",
+        "Cloud Domain",
+        "Infrastructure Domain",
+        "Ad-hoc Domain"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The Ad-hoc Domain is composed of vehicles (OBUs, which are mobile) and Road-Side Units (RSUs, which are static); communication may be V2V or V2I, carried out through the DSRC stack (IEEE 802.11p). See Lecture 50 (Connected Vehicles – Part II, slide 12) ************END***********"
+    }
+  ],
+  "11": [
+    {
+      "q": "[Week 11] According to the lecture, which feature distinguishes a smart grid from a traditional electrical grid?",
+      "options": [
+        "Energy distribution is only one directional",
+        "Monitoring and restoration are always performed manually",
+        "It enables bidirectional flows of energy with two-way communication and control",
+        "Energy generation must occur only at centralized power plants"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The lecture describes a smart grid as a modernized grid that supports bidirectional energy flow and two-way communication and control, unlike the traditional grid's one-directional operation. See Lecture 51 (Smart Grid - Part I, slide 3)"
+    },
+    {
+      "q": "[Week 11] What is the role of a smart meter in a smart home?",
+      "options": [
+        "It generates electricity from renewable energy sources",
+        "It provides the Smart Grid interface between the consumer and the energy service provider",
+        "It replaces the home energy management system",
+        "It operates only as a one-way energy meter without information exchange"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Smart meters operate digitally and provide the interface for automated information exchange between the consumer side and the energy service provider. See Lecture 51 (Smart Grid - Part I, slide 14)"
+    },
+    {
+      "q": "[Week 11] Under Time-of-Use pricing, when are consumers encouraged to operate smart appliances to reduce their energy cost?",
+      "options": [
+        "During off-peak hours",
+        "Only during on-peak hours",
+        "Only when the grid has a blackout",
+        "At a fixed time independent of the grid load"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Time-of-Use pricing encourages consumers to shift energy consumption to off-peak periods, when grid load is lower and the price of energy is lower. See Lecture 51 (Smart Grid - Part I, slide 20)"
+    },
+    {
+      "q": "[Week 11] In net metering, the consumer's final bill depends on which two energy flows?",
+      "options": [
+        "Reactive power and communication traffic",
+        "Only the energy generated at centralized power plants",
+        "Only the energy stored in the consumer's battery",
+        "Energy inflow from the grid and energy outflow from the consumer to the grid"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The lecture states that net-metering bills depend on both the energy received by the consumer from the grid and the excess energy supplied by the consumer back to the grid. See Lecture 51 (Smart Grid - Part I, slide 21)"
+    },
+    {
+      "q": "[Week 11] Which device is used in a smart grid operation center to sample voltage and current for monitoring the transmission system?",
+      "options": [
+        "Phasor Measurement Unit (PMU)",
+        "Data Aggregator Unit (DAU)",
+        "Smart appliance controller",
+        "Universal Power Line Bus"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "A PMU samples voltage and current at its installed location. Multiple PMUs form a phasor network whose information can be analyzed by a centralized SCADA system. See Lecture 52 (Smart Grid - Part II, slide 3)"
+    },
+    {
+      "q": "[Week 11] Which of the following is a function of distribution intelligence in the smart grid?",
+      "options": [
+        "Preventing all use of smart meters",
+        "Identifying the source of a power outage and supporting automatic power-flow restoration",
+        "Restricting the grid to one-way communication",
+        "Removing protection and control from feeder lines"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Distribution intelligence uses smart IoT devices and smart meters to identify outage sources, support automated switching, optimize real and reactive power, and protect feeder lines. See Lecture 52 (Smart Grid - Part II, slide 5)"
+    },
+    {
+      "q": "[Week 11] In smart grid communication, what does a gateway connect?",
+      "options": [
+        "Closely located smart meters to Data Aggregator Units (DAUs)",
+        "Only power plants directly to home appliances",
+        "PMUs directly to plug-in electric vehicles",
+        "Renewable generators directly to SCADA without intermediate communication"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The lecture explains that a gateway connects a group of closely located smart meters and acts as the communication link between those smart meters and the DAUs. See Lecture 52 (Smart Grid - Part II, slide 11)"
+    },
+    {
+      "q": "[Week 11] Which type of attack compromises the availability of smart grid components or information by making them inaccessible when needed?",
+      "options": [
+        "Net metering attack",
+        "Time synchronization attack",
+        "Data visualization attack",
+        "Denial of Service (DoS) attack"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The lecture identifies attacks that compromise availability as Denial of Service attacks. Such attacks may block key signals and affect grid stability and observability. See Lecture 52 (Smart Grid - Part II, slide 17)"
+    },
+    {
+      "q": "[Week 11] How is the Industrial Internet of Things (IIoT) described in the lecture?",
+      "options": [
+        "An application of IoT in industries that links automation systems with enterprise, planning, and product lifecycle",
+        "A consumer-only network for home entertainment devices",
+        "A replacement for all industrial automation without networking",
+        "A system used only for storing data without machine communication"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "IIoT applies IoT concepts to industrial systems and connects automation with enterprise functions, planning, and product lifecycle activities. See Lecture 53 (Industrial Internet of Things - Part I, slide 3)"
+    },
+    {
+      "q": "[Week 11] Which approach does the lecture associate with IIoT for adapting existing industrial systems?",
+      "options": [
+        "Disconnect and isolate",
+        "Rip and replace",
+        "Wrap and re-use",
+        "Remove and discard"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The lecture states that IIoT is based on a 'wrap and re-use' approach rather than a 'rip and replace' approach, allowing existing industrial assets to be integrated. See Lecture 53 (Industrial Internet of Things - Part I, slide 6)"
+    },
+    {
+      "q": "[Week 11] According to the lecture, which technology is identified as the key enabling technology for vehicle-to-vehicle and vehicle-to-road communications in Intelligent Transportation Systems?",
+      "options": [
+        "Universal Power Line Bus",
+        "Hadoop Distributed File System (HDFS)",
+        "Supervisory Control and Data Acquisition (SCADA)",
+        "Dedicated Short-Range Communications (DSRC)"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The lecture identifies DSRC as the key enabling technology for V2V and V2R communications in connected transportation systems. See Lecture 54 (Industrial Internet of Things - Part II, slide 5)"
+    },
+    {
+      "q": "[Week 11] In IIoT-based mining applications, which environmental parameters can be monitored using wireless sensor networks?",
+      "options": [
+        "Air quality, poisonous gases, and oxygen level inside mines",
+        "Only the billing amount of mine workers",
+        "Only the color of mining equipment",
+        "Only the internet browsing history of operators"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "For mining safety, the lecture describes the use of RFID, Wi-Fi, and other wireless technologies for early warning, air-quality monitoring, poisonous-gas detection, and oxygen-level monitoring. See Lecture 54 (Industrial Internet of Things - Part II, slide 7)"
+    },
+    {
+      "q": "[Week 11] Which Big Data characteristic refers to biases, noise, and abnormality in data?",
+      "options": [
+        "Value",
+        "Variability",
+        "Veracity",
+        "Volume"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The lecture defines veracity in terms of bias, noise, and abnormality in data and emphasizes its importance for automated decision-making and machine learning. See Lecture 55 (Data Handling and Analytics - Part I, slide 9)"
+    },
+    {
+      "q": "[Week 11] During data pre-processing, what is the purpose of redundancy mitigation?",
+      "options": [
+        "To prevent data from being collected",
+        "To intentionally duplicate every data item",
+        "To convert all structured data into images",
+        "To eliminate repeated data through detection, filtering, and compression"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Redundancy mitigation removes repeated data using detection, filtering, and compression, helping avoid unnecessary transmission and storage. See Lecture 55 (Data Handling and Analytics - Part I, slide 18)"
+    },
+    {
+      "q": "[Week 11] In Hadoop Distributed File System (HDFS), which node stores the actual data blocks?",
+      "options": [
+        "Datanode",
+        "Namenode",
+        "Job Tracker",
+        "YARN Resource Negotiator only"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The Namenode maintains filesystem metadata, while Datanodes store the actual data. HDFS divides files into blocks and replicates those blocks across Datanodes. See Lecture 55 (Data Handling and Analytics - Part I, slide 23) ************END***********"
+    }
+  ],
+  "12": [
+    {
+      "q": "[Week 12] In a decision tree, what happens at a leaf node?",
+      "options": [
+        "A new branch is always created",
+        "A class label is assigned",
+        "The tree restarts from the root",
+        "The feature space is expanded"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "At leaf nodes, a class label is assigned; at internal nodes, data is split based on attribute tests. See Lecture 56 (Data Handling and Analytics - Part II, slide 3)"
+    },
+    {
+      "q": "[Week 12] In supervised machine learning, which element distinguishes it from unsupervised learning?",
+      "options": [
+        "It never uses numerical data",
+        "It uses labeled data to train the model",
+        "It works only with image data",
+        "It does not require any training phase"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Supervised learning uses labeled datasets where both input features and corresponding output labels are provided during training. See Lecture 56 (Data Handling and Analytics - Part II, slide 5)"
+    },
+    {
+      "q": "[Week 12] ANOVA (Analysis of Variance) is especially useful when comparing which of the following?",
+      "options": [
+        "Exactly two samples only",
+        "More than two populations or samples",
+        "Only non-numerical labels without any response variable",
+        "Only identical copies of the same observation"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "ANOVA is introduced as a parametric statistical technique for comparing datasets and is especially useful when more than two populations or samples are being compared. See Lecture 56 (Data Handling and Analytics - Part II, slide 11)"
+    },
+    {
+      "q": "[Week 12] What does Pearson's correlation coefficient (r) measure?",
+      "options": [
+        "The number of equations in a statistical model",
+        "The maximum value in a dataset",
+        "The strength of association between two variables",
+        "The sample size of an experiment"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Pearson's correlation coefficient is used to measure the strength of association between two quantitative, continuous variables. See Lecture 56 (Data Handling and Analytics - Part II, slide 18)"
+    },
+    {
+      "q": "[Week 12] What is a primary objective of the AgriSens smart water management system?",
+      "options": [
+        "Restricting irrigation control to manual operation only",
+        "Increasing irrigation water use regardless of soil condition",
+        "Removing all sensors from agricultural fields",
+        "Achieving more crop yield with less water"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "AgriSens aims to improve water management by using less water while maintaining or improving crop yield, along with automatic irrigation and remote monitoring. See Lecture 57 (Case Study: Agriculture, slide 4)"
+    },
+    {
+      "q": "[Week 12] Which set correctly represents the three layers of the proposed AgriSens architecture?",
+      "options": [
+        "Physical layer; transport layer; presentation layer",
+        "Sensing and actuating layer; processing, storage and service layer; application layer",
+        "User layer; billing layer; routing layer",
+        "Sensor layer; firewall layer; operating-system layer"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The proposed AgriSens architecture is organized into a sensing and actuating layer, a processing, storage and service layer, and an application layer. See Lecture 57 (Case Study: Agriculture, slide 5)"
+    },
+    {
+      "q": "[Week 12] Which component is included in the integrated design of an AgriSens sensor node?",
+      "options": [
+        "Meter data management system for smart grids",
+        "Power management unit",
+        "Phasor measurement unit",
+        "Hadoop Namenode"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The AgriSens sensor node contains sensors and actuators, a processing and memory unit, a wireless communication unit, and a power management unit. See Lecture 57 (Case Study: Agriculture, slide 8)"
+    },
+    {
+      "q": "[Week 12] What is the function of the multi-user server in the AgriSens remote-server design?",
+      "options": [
+        "It supplies electrical power to the sensor nodes",
+        "It measures soil moisture directly in the field",
+        "It sends field information to the farmer's mobile phone using SMS and executes farmer queries and control messages",
+        "It replaces all gateways with wired links"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The multi-user server communicates field information to farmers through SMS and also processes farmer queries and control commands. See Lecture 57 (Case Study: Agriculture, slide 10)"
+    },
+    {
+      "q": "[Week 12] In the IoT healthcare architecture discussed in the lecture, which layer contains smartphones and tablets used as data aggregators?",
+      "options": [
+        "Physical power layer",
+        "Sensing layer",
+        "Cloud platform",
+        "Aggregated layer"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The aggregated layer collects data from sensing-layer devices. Smartphones and tablets are given as examples of aggregators. See Lecture 58 (Case Study: Healthcare, slide 3)"
+    },
+    {
+      "q": "[Week 12] Which of the following is an example of preventive care enabled by IoT healthcare?",
+      "options": [
+        "Fall detection for senior citizens",
+        "Disabling emergency alerts",
+        "Removing physiological sensors from patients",
+        "Storing only paper-based medical records"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The lecture presents fall detection, emergency situation detection, and early anomaly detection as examples of preventive care using IoT healthcare. See Lecture 58 (Case Study: Healthcare, slide 8)"
+    },
+    {
+      "q": "[Week 12] What is an advantage of continuous activity monitoring?",
+      "options": [
+        "It requires all sensor data to be discarded immediately",
+        "It prevents any long-term observation",
+        "It enables daily observation of human behavior and repetitive activity patterns",
+        "It can operate only with cameras"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Continuous monitoring helps observe daily behavior over long periods and identify repetitive patterns that can improve the reliability of activity recognition. See Lecture 59 (Activity Monitoring - Part I, slide 5)"
+    },
+    {
+      "q": "[Week 12] Which type of data can be analyzed using the deep-learning-based approach described in the lecture?",
+      "options": [
+        "Sensor data, images, and videos",
+        "Images only",
+        "Text labels only",
+        "Sensor data only and never images or videos"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The lecture states that deep-learning-based analysis can be applied to ordinary sensor data as well as image and video data. See Lecture 59 (Activity Monitoring - Part I, slide 8)"
+    },
+    {
+      "q": "[Week 12] Processing activity-monitoring sensor data directly on the device is referred to as which approach?",
+      "options": [
+        "Data-aggregator selection approach",
+        "Network-only approach",
+        "Cloud replication approach",
+        "In-place approach"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "In the in-place approach, activity data are processed on the device itself. This is generally power intensive but does not require a network connection for the processing task. See Lecture 59 (Activity Monitoring - Part I, slide 9)"
+    },
+    {
+      "q": "[Week 12] What are the three basic elements used in the smartphone-based activity-monitoring demonstration?",
+      "options": [
+        "A soil-moisture sensor, a pump, and a paddy field",
+        "A smart meter, a PMU, and a power plant",
+        "A smartphone, a network, and a remote server",
+        "A Hadoop Namenode, Datanode, and Job Tracker"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The demonstration uses a smartphone to generate sensor data, a network to carry the data, and a remote server to receive and process or visualize it. See Lecture 60 (Activity Monitoring - Part II)"
+    },
+    {
+      "q": "[Week 12] Which sensor values are specifically logged in the activity-monitoring demonstration described in the lecture?",
+      "options": [
+        "Accelerometer values",
+        "Soil-moisture values",
+        "Smart-grid voltage phasors",
+        "Water-level values"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "For the demonstration, the smartphone transmits accelerometer readings to the remote server, where the data are continuously logged. See Lecture 60 (Activity Monitoring - Part II) ************END***********"
+    }
   ]
 }
