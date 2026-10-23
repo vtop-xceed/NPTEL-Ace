@@ -19,6 +19,10 @@ function PageTransition({ children }) {
     el.classList.remove('page-enter');
     void el.offsetWidth; // reflow
     el.classList.add('page-enter');
+    const timer = setTimeout(() => {
+      if (el) el.classList.remove('page-enter');
+    }, 400);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (

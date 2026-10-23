@@ -41,7 +41,7 @@ const COURSES = [
 
 export default function HomePage() {
   const { setCourseTheme } = useTheme();
-  const { getBest } = useScoreHistory();
+  const { getBest, clear } = useScoreHistory();
   const [selectedCourse, setSelectedCourse] = useState(() => {
     return localStorage.getItem('selectedCourse') || null;
   });
@@ -180,9 +180,24 @@ export default function HomePage() {
                       <span className="week-number">{week}</span>
                       <span className="week-label">Week</span>
                       {best && (
-                        <span className="week-score-badge">
-                          Best: {best.score}/{best.total}
-                        </span>
+                        <div className="week-score-wrapper">
+                          <span className="week-score-badge">
+                            Best: {best.score}/{best.total}
+                          </span>
+                          <button
+                            type="button"
+                            className="week-score-reset-btn"
+                            title="Reset score"
+                            aria-label={`Reset score for week ${week}`}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              clear(selectedCourse, week);
+                            }}
+                          >
+                            ✕
+                          </button>
+                        </div>
                       )}
                       {hasScore && <span className="week-done-tick">✓</span>}
                     </Link>
