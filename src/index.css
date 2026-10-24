@@ -647,7 +647,7 @@ body::after {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .msq-badge {
@@ -1425,7 +1425,7 @@ button,
 
     .question-label {
         font-size: 0.85rem;
-        margin-bottom: 6px;
+        margin-bottom: 12px;
     }
 
     .question-text {
@@ -2986,10 +2986,11 @@ html[data-course="entrepreneurship"] body::after {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  height: 42px;
   background: var(--bg-card);
   border: 2px solid var(--border-option);
   color: var(--text-primary);
-  padding: 8px 16px;
+  padding: 0 16px;
   border-radius: 12px;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;

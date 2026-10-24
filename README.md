@@ -1,145 +1,62 @@
-# 🐻 NPTEL Ace — A Multi-Course NPTEL Practice Platform
+# NPTEL Ace
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-nptel--cloud--mcq.onrender.com-58cc02?style=for-the-badge&logo=render)](https://nptel-cloud-mcq.onrender.com/)
-[![React](https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.4-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+A practice platform for NPTEL assignments. Students pick a course, pick a week, and answer multiple-choice questions one at a time with instant feedback, streaks, and celebration animations. Practice is free and fully client-side.
 
-A **Duolingo-inspired multi-course practice platform** for NPTEL courses — practice Cloud Computing, Blockchain, Internet of Things (IoT), and Entrepreneurship assignments with instant feedback, streak tracking, milestone celebrations, animated mascot videos, and a gamified learning experience.
+**Live site:** https://nptel-cloud-mcq.onrender.com/
 
-<p align="center">
-  <img src="public/logo.jpg" alt="NPTEL Ace Mascot" width="200" />
-</p>
+## Purpose
 
----
+NPTEL students want to rehearse assignment questions before they attempt the graded version. NPTEL Ace collects the assignment questions for four courses, lets students drill them in a Duolingo-style single-question flow, and records their best scores locally so progress is visible on the week dashboard.
 
-## 📚 Supported Subjects & Courses
+Questions and answer keys come from each course's published assignment PDFs (stored in `assets/`) and are verified against the bold answer keys in those PDFs.
 
-NPTEL Ace currently includes curated assignment questions, instant concept solutions, and grand tests for the following subjects:
+## Supported courses
 
-| Subject Name | Icon | Weeks Available | Key Topics Covered |
-| :--- | :---: | :---: | :--- |
-| **Cloud Computing** | ☁️ | Weeks 1 – 12 + Grand Test | Virtualization, Distributed Systems, Cloud Architecture, SLA, Azure, GCP |
-| **Blockchain & Its Applications** | ⛓️ | Weeks 1 – 11 + Grand Test | Cryptography, Consensus Algorithms, Bitcoin, Ethereum, Smart Contracts |
-| **Introduction to Internet of Things (IoT)** | 📡 | Weeks 1 – 8 + Grand Test | Sensors, Actuators, WSN, IoT Protocols, Python, Raspberry Pi, SDN & Cloud |
-| **Entrepreneurship** | 🚀 | Weeks 1 – 12 + Grand Test | Ideation, Customer Discovery, Prototyping, Disruption & Business Scaling |
+| Course | Weeks | Questions |
+|---|---|---|
+| Cloud Computing | 1-12 | 120 |
+| Blockchain & Applications | 1-11 | 109 |
+| Introduction to IoT | 1-12 | 180 |
+| Entrepreneurship | 1-12 | 120 |
 
----
+Only the Entrepreneurship bank is fully reconciled against the assignment PDFs so far; the other three are unverified.
 
-## ✨ Features
+## Architecture
 
-### 🎮 Duolingo-Style Quiz Flow
-- **Single-Question Focus**: One question at a time with smooth animated transitions.
-- **Tappable Option Cards**: Clean card design with keyboard & touch support (no tiny radio buttons).
-- **Instant Solution Reveal**: Color-coded feedback banner explaining the concepts.
-- **Dynamic Progress**: Real-time progress bar with question counter and streak indicator.
+- **React 18 + Vite**: single-page app, routes rendered with React Router 6 (`/#/course/:id` and `/#/quiz/:courseId/:week`).
+- **Data-driven courses**: each course is a JSON file in `src/data/` (`cloud.json`, `blockchain.json`, `iot.json`, `entrepreneurship.json`). No backend; the quiz page reads JSON, shuffles question order at runtime, and shows options as tappable cards with immediate feedback.
+- **Scoring**: best score per course/week lives in `localStorage` via `useScoreHistory` — no accounts, nothing sent to a server.
+- **Theming**: dark/light mode plus a per-course color theme injected as CSS custom properties via `useTheme` (`data-course` on `<html>`); course colors drive icons, buttons, and the progress bar.
+- **Gamification**: milestone overlays every 3 correct answers, streak badge, mascot celebration video from `public/celebration.mp4` on scores above 50%.
+- **Styling**: hand-written CSS design system in `src/index.css` (theme variables, keyframe animations, mobile-first breakpoints). No CSS framework.
+- **Deployment**: Render static site, defined in `render.yaml`. `buildCommand` runs `npm install && npm run build`; built output in `dist/` is published with a `/* -> /index.html` rewrite for SPA routing. The committed root `index.html` and `assets/` keep the site servable even without a rebuild.
 
-### 🔥 Gamification & Delighters
-- **Streak Multiplier**: Consecutive correct answers light up the 🔥 streak badge.
-- **Milestone Animations**: Full-screen celebration overlays popping up every 3 questions when on a roll.
-- **Celebration Video**: Custom mascot completion video played at the end for scores > 50%.
-- **Particle Confetti**: Joyful confetti explosions on correct answers and high scores.
-- **Score Persistence**: Best scores recorded in local storage and displayed as badges on week dashboards.
-
-### 🎨 Design & Architecture
-- **React + Vite Architecture**: Lightning-fast hot reloading, modular component hierarchy, and declarative state machine.
-- **Dark & Light Modes**: System-aware and manual theme switching with customized radial gradients.
-- **Course-Specific Theming**: Indigo theme for Cloud Computing, Cyber Cyan for Blockchain, Emerald Tech for IoT, and Royal Amber for Entrepreneurship.
-- **Responsive Layout**: Designed mobile-first for touch screens, tablets, and desktop browsers.
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Framework** | [React 18](https://react.dev/) + [Vite](https://vitejs.dev/) |
-| **Routing** | [React Router 6](https://reactrouter.com/) |
-| **Styling** | Vanilla CSS (CSS variables, keyframe animations, glassmorphism) |
-| **Data Format** | Modular JSON datasets (`cloud.json`, `blockchain.json`, `iot.json`, `entrepreneurship.json`) |
-| **Deployment** | [Render](https://render.com/) Static Site (`render.yaml`) |
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm
-
-### Development
-```bash
-# Clone repository
-git clone https://github.com/Ravikant-sys/nptel-cloud-mcq.git
-cd nptel-cloud-mcq
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-### Production Build
-```bash
-npm run build
-```
-
----
-
-## 📁 Project Structure
+## Project layout
 
 ```
 nptel-cloud-mcq/
-├── public/
-│   ├── logo.jpg               # Bear mascot logo
-│   ├── celebration.mp4        # Mascot celebration animation
-│   └── _redirects             # SPA routing fallback for Render / Netlify
+├── public/              # logo, celebration video, SPA redirects
 ├── src/
-│   ├── components/
-│   │   ├── Header.jsx         # Navigation bar with theme toggle & admin trigger
-│   │   ├── Confetti.jsx       # Confetti particle burst effect
-│   │   ├── MilestoneOverlay.jsx # Every-3-questions congratulatory overlay
-│   │   ├── CelebrationVideo.jsx # Post-quiz video player
-│   │   └── AdminToast.jsx     # Easter egg analytics panel
-│   ├── data/
-│   │   ├── cloud.json         # 12 weeks of Cloud Computing MCQs
-│   │   ├── blockchain.json    # 11 weeks of Blockchain MCQs
-│   │   ├── iot.json           # 5 weeks of Internet of Things MCQs
-│   │   └── entrepreneurship.json # 12 weeks of Entrepreneurship MCQs
-│   ├── hooks/
-│   │   ├── useTheme.jsx       # Dark/Light & Course theme provider
-│   │   └── useScoreHistory.js # LocalStorage score storage
+│   ├── components/      # header, confetti, milestone overlay, celebration video, admin toast
+│   ├── data/            # JSON question banks per course
+│   ├── hooks/           # useTheme (course + dark/light), useScoreHistory (localStorage)
 │   ├── pages/
-│   │   ├── HomePage.jsx       # Course selection & week dashboard
-│   │   └── QuizPage.jsx       # Complete Duolingo quiz flow & results
-│   ├── utils/
-│   │   └── shuffle.js         # Question randomization
-│   ├── App.jsx                # Router & Theme Context setup
-│   ├── index.css              # Design system & animations
-│   └── main.jsx               # Application entry point
-├── render.yaml                # Zero-config deployment on Render
+│   │   ├── HomePage.jsx # course list and week dashboard
+│   │   ├── QuizPage.jsx # quiz flow, progress bar, results screen
+│   │   └── ...          # login / register pages
+│   ├── utils/shuffle.js # randomizes question order
+│   ├── index.css        # design system
+│   └── main.jsx         # entry point
+├── assets/              # assignment PDFs + production bundle copies
+├── index.html           # committed built page for static hosting
+├── render.yaml          # Render deployment spec
 └── vite.config.js
 ```
 
----
+## Local development
 
-## 📊 Private Footfall & Analytics Tracking
-
-Traffic and visitor footfall are tracked privately using **Google Analytics 4 (GA4)**. 
-- **100% Private**: No counters or badges are shown on the website. Only you (logged into your Google Analytics account) can view visitor counts, live footfalls, and page popularity.
-- **SPA Route Tracking**: Accurately counts visits across specific courses and quiz weeks.
-
-### Setting Up Your Measurement ID:
-1. Create a free property at [analytics.google.com](https://analytics.google.com) and copy your **Measurement ID** (`G-XXXXXXXXXX`).
-2. Add it to your `.env` file (or your hosting platform's environment variables):
-   ```env
-   VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-   ```
-   *(Alternatively, paste it into `src/config/analytics.js`)*
-3. Rebuild and deploy!
-
----
-
-<p align="center">
-  Built with ❤️ for NPTEL students everywhere
-</p>
+```bash
+npm install
+npm run dev    # dev server
+npm run build  # production build to dist/
+```
