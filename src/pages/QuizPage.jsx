@@ -6,7 +6,6 @@ import { shuffle } from '../utils/shuffle';
 import Confetti from '../components/Confetti';
 import MilestoneOverlay from '../components/MilestoneOverlay';
 import CelebrationVideo from '../components/CelebrationVideo';
-import AiHintPanel from '../components/AiHintPanel';
 import XpPopup from '../components/XpPopup';
 import cloudData from '../data/cloud.json';
 import blockchainData from '../data/blockchain.json';
@@ -425,13 +424,6 @@ export default function QuizPage() {
                   {currentQ.solution && (
                     <p className="feedback-solution">{currentQ.solution}</p>
                   )}
-                  <AiHintPanel
-                    key={currentIndex}
-                    question={currentQ.q}
-                    options={currentQ.options}
-                    correctIndices={correctIndices}
-                    solution={currentQ.solution}
-                  />
                 </div>
               )}
 
