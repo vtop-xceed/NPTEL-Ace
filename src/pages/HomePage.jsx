@@ -2,46 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
 import { useScoreHistory } from '../hooks/useScoreHistory';
-import cloudData from '../data/cloud.json';
-import blockchainData from '../data/blockchain.json';
-import iotData from '../data/iot.json';
-import entrepreneurshipData from '../data/entrepreneurship.json';
+import { COURSES } from '../data/courses';
 import FeedbackSection from '../components/FeedbackSection';
-
-const COURSES = [
-  {
-    id: 'cloud',
-    name: 'Cloud Computing',
-    desc: 'Distributed Systems, Virtualization & Azure/GCP',
-    icon: 'cloud',
-    color: '#38bdf8',
-    data: cloudData,
-  },
-  {
-    id: 'blockchain',
-    name: 'Blockchain & Applications',
-    desc: 'Cryptography, Consensus & Cryptocurrency',
-    icon: 'hub',
-    color: '#00d4ff',
-    data: blockchainData,
-  },
-  {
-    id: 'iot',
-    name: 'Introduction to IoT',
-    desc: 'Sensors, Actuators, Wireless Networks & IoT Protocols',
-    icon: 'satellite_alt',
-    color: '#10b981',
-    data: iotData,
-  },
-  {
-    id: 'entrepreneurship',
-    name: 'Entrepreneurship',
-    desc: 'Ideation, Prototyping, Disruption & Business Strategies',
-    icon: 'rocket_launch',
-    color: '#f59e0b',
-    data: entrepreneurshipData,
-  },
-];
 
 export default function HomePage() {
   const { setCourseTheme } = useTheme();
@@ -109,35 +71,26 @@ export default function HomePage() {
           </div>
 
           <div className="course-grid">
-            {COURSES.map((course, index) => {
-              const weekKeys = Object.keys(course.data);
-              const weeksCount = weekKeys.length;
-              const questionsCount = weekKeys.reduce(
-                (acc, w) => acc + (course.data[w]?.length || 0),
-                0
-              );
-
-              return (
-                <div
-                  key={course.id}
-                  className="course-card"
-                  id={`card-${course.id}`}
-                  style={{ animationDelay: `${index * 0.08}s` }}
-                  onClick={() => handleSelectCourse(course.id)}
-                >
-                  <div className="course-icon ms">{course.icon}</div>
-                  <div className="course-info">
-                    <h3>{course.name}</h3>
-                    <p>{course.desc}</p>
-                    <div className="course-stats">
-                      <span className="course-stat"><span className="ms">calendar_month</span> {weeksCount} weeks</span>
-                      <span className="course-stat"><span className="ms">contact_support</span> {questionsCount} questions</span>
-                    </div>
+            {COURSES.map((course, index) => (
+              <div
+                key={course.id}
+                className="course-card"
+                id={`card-${course.id}`}
+                style={{ animationDelay: `${index * 0.08}s` }}
+                onClick={() => handleSelectCourse(course.id)}
+              >
+                <div className="course-icon ms">{course.icon}</div>
+                <div className="course-info">
+                  <h3>{course.name}</h3>
+                  <p>{course.desc}</p>
+                  <div className="course-stats">
+                    <span className="course-stat"><span className="ms">calendar_month</span> {course.weeks} weeks</span>
+                    <span className="course-stat"><span className="ms">contact_support</span> {course.questions} questions</span>
                   </div>
-                  <div className="course-card-arrow ms">chevron_right</div>
                 </div>
-              );
-            })}
+                <div className="course-card-arrow ms">chevron_right</div>
+              </div>
+            ))}
           </div>
 
           <button
@@ -161,7 +114,7 @@ export default function HomePage() {
         >
           <div className="dashboard-header">
             <div className="dashboard-title-group">
-              <span className="dashboard-course-icon ms" style={{ color: COURSES.find(c => c.id === selectedCourse)?.color }}>{COURSES.find(c => c.id === selectedCourse)?.icon}</span>
+              <span className="dashboard-course-icon ms" style={{ color: activeCourseObj?.color }}>{activeCourseObj?.icon}</span>
               <h2 className="dashboard-title">{activeCourseObj?.name}</h2>
             </div>
             <button className="back-to-courses" onClick={handleBackToCourses}>
@@ -185,9 +138,7 @@ export default function HomePage() {
 
           <div className="dashboard-grid">
             {activeCourseObj &&
-              Object.keys(activeCourseObj.data)
-                .sort((a, b) => parseInt(a, 10) - parseInt(b, 10))
-                .map((week, idx) => {
+              Array.from({ length: activeCourseObj.weeks }, (_, i) => String(i + 1)).map((week, idx) => {
                   const best = getBest(selectedCourse, week);
                   const hasScore = !!best;
                   return (
@@ -229,7 +180,7 @@ export default function HomePage() {
               <Link
                 to={`/quiz/${selectedCourse}/grand`}
                 className="week-card grand-test-card"
-                style={{ animationDelay: `${Object.keys(activeCourseObj.data).length * 0.05 + 0.05}s` }}
+                style={{ animationDelay: `${activeCourseObj.weeks * 0.05 + 0.05}s` }}
               >
                 <span className="week-number ms">emoji_events</span>
                 <span className="week-label">Grand Test — All Weeks</span>

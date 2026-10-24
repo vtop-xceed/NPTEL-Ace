@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const PERFECT_OPTIONS = [
   { emoji: 'local_fire_department', title: 'On Fire!',      subtitle: 'Perfect round — all correct!' },
@@ -34,6 +34,11 @@ function BurstParticles() {
 
 export default function MilestoneOverlay({ correctCount, totalInBlock, onDismiss }) {
   const [dismissing, setDismissing] = useState(false);
+  const dismissStartedRef = useRef(false);
+  const closeTimerRef = useRef(null);
+  // Latest callback without re-arming the auto-dismiss on parent re-renders
+  const onDismissRef = useRef(onDismiss);
+  onDismissRef.current = onDismiss;
   const [msg] = useState(() => {
     if (correctCount === totalInBlock) {
       return PERFECT_OPTIONS[Math.floor(Math.random() * PERFECT_OPTIONS.length)];
@@ -42,23 +47,31 @@ export default function MilestoneOverlay({ correctCount, totalInBlock, onDismiss
   });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const autoTimer = setTimeout(() => {
+      if (dismissStartedRef.current) return;
+      dismissStartedRef.current = true;
       setDismissing(true);
-      const closeTimer = setTimeout(() => {
-        if (onDismiss) onDismiss();
-      }, 400);
-      return () => clearTimeout(closeTimer);
+      closeTimerRef.current = setTimeout(() => onDismissRef.current?.(), 400);
     }, 2400);
+    return () => {
+      clearTimeout(autoTimer);
+      clearTimeout(closeTimerRef.current);
+    };
+  }, []);
 
-    return () => clearTimeout(timer);
-  }, [onDismiss]);
+  const handleDismiss = () => {
+    if (dismissStartedRef.current) return;
+    dismissStartedRef.current = true;
+    setDismissing(true);
+    closeTimerRef.current = setTimeout(() => onDismissRef.current?.(), 400);
+  };
 
   const isPerfect = correctCount === totalInBlock;
 
   return (
     <div
       className={`milestone-overlay ${dismissing ? 'dismissing' : ''}`}
-      onClick={() => { setDismissing(true); setTimeout(() => onDismiss?.(), 400); }}
+      onClick={handleDismiss}
     >
       <BurstParticles />
 

@@ -15,11 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     // Visitor counter tracking on mount
-    try {
-      fetch('https://api.counterapi.dev/v1/nptel-cloud-mcq-ravikant/visits/up', { mode: 'no-cors' });
-    } catch (e) {
-      // silent
-    }
+    fetch('https://api.counterapi.dev/v1/nptel-cloud-mcq-ravikant/visits/up', { mode: 'no-cors' }).catch(() => {});
   }, []);
 
   // Scroll shadow effect

@@ -7,17 +7,7 @@ import Confetti from '../components/Confetti';
 import MilestoneOverlay from '../components/MilestoneOverlay';
 import CelebrationVideo from '../components/CelebrationVideo';
 import XpPopup from '../components/XpPopup';
-import cloudData from '../data/cloud.json';
-import blockchainData from '../data/blockchain.json';
-import iotData from '../data/iot.json';
-import entrepreneurshipData from '../data/entrepreneurship.json';
-
-const DATA_MAP = {
-  cloud: cloudData,
-  blockchain: blockchainData,
-  iot: iotData,
-  entrepreneurship: entrepreneurshipData,
-};
+import { loadCourse } from '../data/courses';
 
 export default function QuizPage() {
   const { course, week } = useParams();
@@ -49,38 +39,44 @@ export default function QuizPage() {
     }
   }, [course, setCourseTheme]);
 
-  // Load & shuffle questions on mount
+  // Load & shuffle questions on mount (course bank is fetched on demand)
   useEffect(() => {
-    const courseData = DATA_MAP[course];
-    if (!courseData) {
-      navigate('/');
-      return;
-    }
+    let cancelled = false;
+    loadCourse(course).then((courseData) => {
+      if (cancelled) return;
+      if (!courseData) {
+        navigate('/');
+        return;
+      }
 
-    let rawQuestions = [];
-    if (week === 'grand') {
-      Object.keys(courseData).forEach(w => {
-        rawQuestions = rawQuestions.concat(courseData[w]);
-      });
-    } else if (courseData[week]) {
-      rawQuestions = [...courseData[week]];
-    }
+      let rawQuestions = [];
+      if (week === 'grand') {
+        Object.keys(courseData).forEach(w => {
+          rawQuestions = rawQuestions.concat(courseData[w]);
+        });
+      } else if (courseData[week]) {
+        rawQuestions = [...courseData[week]];
+      }
 
-    if (rawQuestions.length === 0) {
-      navigate('/');
-      return;
-    }
+      if (rawQuestions.length === 0) {
+        navigate('/');
+        return;
+      }
 
-    const shuffled = shuffle(rawQuestions);
-    setQuestions(shuffled);
-    setCurrentIndex(0);
-    setScore(0);
-    setStreak(0);
-    setBestStreak(0);
-    setSelectedOptions(new Set());
-    setQuizState('selecting');
-    lastMilestoneAt.current = 0;
-    scoreAtLastMilestone.current = 0;
+      const shuffled = shuffle(rawQuestions);
+      setQuestions(shuffled);
+      setCurrentIndex(0);
+      setScore(0);
+      setStreak(0);
+      setBestStreak(0);
+      setSelectedOptions(new Set());
+      setQuizState('selecting');
+      lastMilestoneAt.current = 0;
+      scoreAtLastMilestone.current = 0;
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [course, week, navigate]);
 
   const currentQ = questions[currentIndex];

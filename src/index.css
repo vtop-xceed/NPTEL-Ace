@@ -24,9 +24,7 @@
     --danger-glow: rgba(255, 75, 75, 0.3);
     --warning: #ff9600;
     --progress-bg: #2e4a54;
-    --progress-fill: #58cc02;
     --check-btn-bg: #58cc02;
-    --check-btn-hover: #4caf00;
     --check-btn-disabled: #2e4a54;
     --check-btn-disabled-text: #5a7a85;
     --feedback-correct-bg: #1a3a1a;
@@ -37,7 +35,6 @@
     --glass-border: rgba(88, 204, 2, 0.15);
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     --streak-color: #ff9600;
-    --xp-color: #ffd900;
 }
 
 [data-theme="light"] {
@@ -184,18 +181,6 @@ body::after {
     gap: 12px;
 }
 
-.streak-display {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-weight: 700;
-    color: var(--streak-color);
-    font-size: 1rem;
-    background: rgba(255, 150, 0, 0.1);
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 150, 0, 0.2);
-}
 
 .theme-btn {
     background: var(--bg-card);
@@ -565,10 +550,6 @@ body::after {
     box-shadow: 0 0 6px 1px rgba(88, 204, 2, 0.45);
 }
 
-.quiz-progress-fill::after {
-    content: '';
-}
-
 /* ── Test Page: Header ──────────────────────────────────────── */
 .quiz-header {
     position: fixed;
@@ -711,27 +692,21 @@ body::after {
 }
 
 .option-card.correct {
-    border-color: var(--accent) !important;
-    background: var(--feedback-correct-bg) !important;
-    box-shadow: 0 0 0 3px var(--accent-glow) !important;
+    border-color: var(--accent);
+    background: var(--feedback-correct-bg);
+    box-shadow: 0 0 0 3px var(--accent-glow);
     animation: correctPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .option-card.wrong {
-    border-color: var(--danger) !important;
-    background: var(--feedback-wrong-bg) !important;
-    box-shadow: 0 0 0 3px var(--danger-glow) !important;
+    border-color: var(--danger);
+    background: var(--feedback-wrong-bg);
+    box-shadow: 0 0 0 3px var(--danger-glow);
 }
 
 .option-card.dimmed {
     opacity: 0.5;
     pointer-events: none;
-}
-
-.option-card.show-correct {
-    border-color: var(--accent) !important;
-    background: var(--feedback-correct-bg) !important;
-    opacity: 1 !important;
 }
 
 .option-badge {
@@ -768,12 +743,6 @@ body::after {
     color: #fff;
 }
 
-.option-card.show-correct .option-badge {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: #fff;
-}
-
 .option-text {
     flex: 1;
     font-size: 1rem;
@@ -789,8 +758,7 @@ body::after {
 }
 
 .option-card.correct .option-result-icon,
-.option-card.wrong .option-result-icon,
-.option-card.show-correct .option-result-icon {
+.option-card.wrong .option-result-icon {
     display: block;
 }
 
@@ -971,9 +939,6 @@ body::after {
     100% { opacity: 0; transform: scale(0.85); }
 }
 
-@media (max-width: 600px) {
-    .celebration-video { width: 260px; }
-}
 
 .results-emoji {
     font-size: 5rem;
@@ -1094,12 +1059,6 @@ body::after {
     overflow: hidden;
 }
 
-.confetti-piece {
-    position: absolute;
-    top: -20px;
-    animation: confettiFall2 var(--dur, 2.5s) ease-out forwards;
-}
-
 /* ── Animations ─────────────────────────────────────────────── */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -1136,7 +1095,7 @@ body::after {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     animation: milestoneIn 0.4s ease-out;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .milestone-overlay.dismissing {
@@ -1189,7 +1148,6 @@ body::after {
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.view-hidden { display: none !important; }
 
 .view-transition {
     animation: fadeInUp 0.4s ease-out;
@@ -1217,12 +1175,8 @@ body::after {
 :root {
     --dur-fast: 0.2s;
   --dur: 0.25s;
-  --dur-slow: 0.4s;
-  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
   --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
-    --safe-left: env(safe-area-inset-left, 0px);
-    --safe-right: env(safe-area-inset-right, 0px);
 }
 
 button,
@@ -1255,11 +1209,6 @@ button,
 
     .header-right {
         gap: 8px;
-    }
-
-    .streak-display {
-        padding: 5px 10px;
-        font-size: 0.85rem;
     }
 
     .theme-btn {
@@ -1616,9 +1565,7 @@ html[data-course="cloud"] {
     --accent-hover: #0284c7;
     --accent-glow: rgba(56, 189, 248, 0.3);
     --progress-bg: rgba(56, 189, 248, 0.16);
-    --progress-fill: #38bdf8;
     --check-btn-bg: #0284c7;
-    --check-btn-hover: #0369a1;
     --feedback-correct-bg: #07263b;
     --feedback-correct-border: #38bdf8;
     --glass-border: rgba(56, 189, 248, 0.2);
@@ -1649,9 +1596,7 @@ html[data-course="cloud"] body::after {
     --accent: #0284c7;
     --accent-hover: #0369a1;
     --accent-glow: rgba(2, 132, 199, 0.2);
-    --progress-fill: #0284c7;
     --check-btn-bg: #0284c7;
-    --check-btn-hover: #0369a1;
     --feedback-correct-bg: #e0f2fe;
     --feedback-correct-border: #0284c7;
 }
@@ -1678,9 +1623,7 @@ html[data-course="blockchain"] {
     --accent-hover: #00b8e0;
     --accent-glow: rgba(0, 212, 255, 0.3);
     --progress-bg: rgba(0, 212, 255, 0.16);
-    --progress-fill: #00d4ff;
     --check-btn-bg: #00d4ff;
-    --check-btn-hover: #00b8e0;
     --feedback-correct-bg: #072533;
     --feedback-correct-border: #00d4ff;
     --glass-border: rgba(0, 212, 255, 0.2);
@@ -1711,9 +1654,7 @@ html[data-course="blockchain"] body::after {
     --accent: #0099bb;
     --accent-hover: #0088a6;
     --accent-glow: rgba(0, 153, 187, 0.2);
-    --progress-fill: #0099bb;
     --check-btn-bg: #0099bb;
-    --check-btn-hover: #0088a6;
     --feedback-correct-bg: #e2f6fc;
     --feedback-correct-border: #0099bb;
 }
@@ -1740,9 +1681,7 @@ html[data-course="iot"] {
     --accent-hover: #059669;
     --accent-glow: rgba(16, 185, 129, 0.3);
     --progress-bg: rgba(16, 185, 129, 0.16);
-    --progress-fill: #10b981;
     --check-btn-bg: #10b981;
-    --check-btn-hover: #059669;
     --feedback-correct-bg: #072e20;
     --feedback-correct-border: #10b981;
     --glass-border: rgba(16, 185, 129, 0.2);
@@ -1773,9 +1712,7 @@ html[data-course="iot"] body::after {
     --accent: #059669;
     --accent-hover: #047857;
     --accent-glow: rgba(5, 150, 105, 0.2);
-    --progress-fill: #059669;
     --check-btn-bg: #059669;
-    --check-btn-hover: #047857;
     --feedback-correct-bg: #e6f9f0;
     --feedback-correct-border: #059669;
 }
@@ -1802,9 +1739,7 @@ html[data-course="entrepreneurship"] {
     --accent-hover: #d97706;
     --accent-glow: rgba(245, 158, 11, 0.3);
     --progress-bg: rgba(245, 158, 11, 0.16);
-    --progress-fill: #f59e0b;
     --check-btn-bg: #d97706;
-    --check-btn-hover: #b45309;
     --feedback-correct-bg: #2d1f06;
     --feedback-correct-border: #f59e0b;
     --glass-border: rgba(245, 158, 11, 0.2);
@@ -1835,9 +1770,7 @@ html[data-course="entrepreneurship"] body::after {
     --accent: #d97706;
     --accent-hover: #b45309;
     --accent-glow: rgba(217, 119, 6, 0.2);
-    --progress-fill: #d97706;
     --check-btn-bg: #d97706;
-    --check-btn-hover: #b45309;
     --feedback-correct-bg: #fef9c3;
     --feedback-correct-border: #d97706;
 }
@@ -2036,7 +1969,7 @@ html[data-course="entrepreneurship"] body::after {
   animation: slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .question-container.slide-left {
-  animation: slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: slideInLeft 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes slideInRight {
@@ -2460,24 +2393,6 @@ html[data-course="entrepreneurship"] body::after {
 @keyframes themeSpin {
   from { transform: rotate(-90deg) scale(0.5); opacity: 0; }
   to   { transform: rotate(0deg)  scale(1);    opacity: 1; }
-}
-
-/* ── Loading skeleton shimmer (for quiz load state) ─────────── */
-@keyframes skeletonShimmer {
-  0%   { background-position: -400px 0; }
-  100% { background-position: 400px 0; }
-}
-
-.quiz-loading-skeleton {
-  background: linear-gradient(
-    90deg,
-    var(--bg-card) 25%,
-    var(--bg-card-hover) 50%,
-    var(--bg-card) 75%
-  );
-  background-size: 800px 100%;
-  animation: skeletonShimmer 1.4s ease-in-out infinite;
-  border-radius: 12px;
 }
 
 /* ── Progress bar comet head ────────────────────────────────── */
@@ -2928,16 +2843,6 @@ html[data-course="entrepreneurship"] body::after {
   margin-bottom: 6px;
 }
 
-.feedback-save-badge {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent);
-  background: rgba(88, 204, 2, 0.12);
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  margin-bottom: 20px;
-}
 
 .feedback-success-actions {
   display: flex;
@@ -2963,23 +2868,6 @@ html[data-course="entrepreneurship"] body::after {
   color: var(--accent);
 }
 
-.feedback-btn-download {
-  background: var(--accent);
-  border: none;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  cursor: pointer;
-  box-shadow: 0 4px 14px var(--accent-glow);
-  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
-}
-
-.feedback-btn-download:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
-}
 
 /* ── Header Authentication Styles ───────────────────────────── */
 .header-login-btn {
@@ -3382,6 +3270,3 @@ html[data-course="entrepreneurship"] body::after {
   -webkit-user-select: none;
 }
 
-.ms.ms-outline {
-  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 200, 'opsz' 24;
-}

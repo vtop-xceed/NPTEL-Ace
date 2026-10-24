@@ -274,8 +274,5 @@ function authPlugin() {
 
 export default defineConfig({
   plugins: [react(), feedbackStoragePlugin(), authPlugin()],
-  build: {
-    outDir: 'dist',
-  },
 })
 

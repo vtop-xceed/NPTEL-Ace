@@ -4,8 +4,8 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "dev": "cp index.src.html index.html && vite",
-    "build": "cp index.src.html index.html && vite build && cp dist/index.html ./index.html && cp dist/assets/* ./assets/",
+    "dev": "vite",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
