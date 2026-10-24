@@ -66,7 +66,7 @@ export default function Header() {
         <div className="header-right">
           {user ? (
             <div className="header-user-badge">
-              <span className="user-avatar-icon">👤</span>
+              <span className="user-avatar-icon ms">person</span>
               <span className="user-name-text" title={user.email}>
                 {user.name || user.email.split('@')[0]}
               </span>
@@ -76,7 +76,7 @@ export default function Header() {
             </div>
           ) : (
             <Link to="/login" className="header-login-btn">
-              <span>🔑</span>
+              <span className="ms">key</span>
               <span>Login</span>
             </Link>
           )}

@@ -26,7 +26,7 @@ export default function AiHintPanel({ question, options, correctIndices, solutio
     <div className="ai-hint-panel">
       {state === 'idle' && (
         <button className="ai-hint-btn" onClick={handleGetHint} id="ai-hint-trigger">
-          <span className="ai-hint-icon">✨</span>
+          <span className="ai-hint-icon ms">auto_awesome</span>
           <span>Ask AI to Explain</span>
         </button>
       )}
@@ -40,7 +40,7 @@ export default function AiHintPanel({ question, options, correctIndices, solutio
 
       {state === 'error' && (
         <div className="ai-hint-error">
-          <span>⚠️ {errorMsg}</span>
+          <span className="ms">warning</span><span>{errorMsg}</span>
           <button className="ai-hint-retry" onClick={handleGetHint}>Retry</button>
         </div>
       )}
@@ -48,7 +48,7 @@ export default function AiHintPanel({ question, options, correctIndices, solutio
       {state === 'done' && hint && (
         <div className="ai-hint-result">
           <div className="ai-hint-result-header">
-            <span className="ai-hint-result-icon">🤖</span>
+            <span className="ai-hint-result-icon ms">smart_toy</span>
             <span className="ai-hint-result-title">AI Explanation</span>
           </div>
           <p className="ai-hint-result-text">{hint}</p>
@@ -57,7 +57,7 @@ export default function AiHintPanel({ question, options, correctIndices, solutio
             onClick={() => setState('idle')}
             title="Dismiss"
           >
-            ✕ Close
+            <span className="ms">close</span> Close
           </button>
         </div>
       )}

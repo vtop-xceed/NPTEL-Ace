@@ -9,9 +9,9 @@ export default function AdminToast({ onClose }) {
   return (
     <div className="admin-toast">
       <div style={{ marginBottom: '10px' }}>
-        🛡️ <strong>Admin Menu</strong>
+        <span className="ms">shield</span> <strong>Admin Menu</strong>
       </div>
-      <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '15px' }}>
+      <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>
         Click below to see the live visitor data:
       </p>
       <a
@@ -22,7 +22,7 @@ export default function AdminToast({ onClose }) {
           display: 'inline-block',
           background: 'var(--accent)',
           color: 'white',
-          padding: '8px 15px',
+          padding: '8px 16px',
           borderRadius: '8px',
           textDecoration: 'none',
           fontSize: '0.9rem',

@@ -198,6 +198,19 @@ export default function QuizPage() {
     advanceQuestion();
   };
 
+  // Right-click = check answer / continue / dismiss milestone
+  useEffect(() => {
+    const onContextMenu = (e) => {
+      e.preventDefault();
+      if (quizState === 'selecting') handleCheck();
+      else if (quizState === 'feedback') handleContinue();
+      else if (quizState === 'milestone') handleMilestoneDismiss();
+    };
+    window.addEventListener('contextmenu', onContextMenu);
+    return () => window.removeEventListener('contextmenu', onContextMenu);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quizState, selectedOptions, currentIndex, score]);
+
   const handleVideoComplete = () => {
     setQuizState('results');
     const pct = Math.round((score / questions.length) * 100);
@@ -229,24 +242,24 @@ export default function QuizPage() {
 
   // Calculate stats for Results
   const pct = Math.round((score / questions.length) * 100);
-  let resultEmoji = '🎉';
+  let resultIcon = 'emoji_events';
   let resultTitle = 'Excellent Work!';
   let resultSubtitle = "You're almost there, keep it up!";
 
   if (pct === 100) {
-    resultEmoji = '🏆';
+    resultIcon = 'emoji_events';
     resultTitle = 'Perfect Score!';
     resultSubtitle = 'You nailed every single question!';
   } else if (pct >= 80) {
-    resultEmoji = '🎉';
+    resultIcon = 'celebration';
     resultTitle = 'Excellent Work!';
     resultSubtitle = "You're doing great, keep it up!";
   } else if (pct >= 60) {
-    resultEmoji = '💪';
+    resultIcon = 'fitness_center';
     resultTitle = 'Good Effort!';
     resultSubtitle = "A little more practice and you'll master this.";
   } else {
-    resultEmoji = '📖';
+    resultIcon = 'school';
     resultTitle = 'Keep Studying!';
     resultSubtitle = 'Review the material and try again.';
   }
@@ -260,24 +273,23 @@ export default function QuizPage() {
       {/* Progress Bar */}
       {quizState !== 'results' && quizState !== 'video' && (
         <>
+          <div className="quiz-header" id="quiz-header">
+            <Link to="/" className="quiz-close-btn" aria-label="Exit quiz">
+              <span className="ms">close</span>
+            </Link>
+            <span className="quiz-week-label">
+              {week === 'grand' ? 'Grand Test' : `Week ${week}`}
+            </span>
+            <div className={`quiz-streak-badge ${streak >= 2 ? 'visible' : ''} ${streak >= 5 ? 'hot' : ''}`}>
+              <span className="streak-flame ms">local_fire_department</span>
+              <span className="streak-num" key={streak}>{streak}</span>
+            </div>
+          </div>
           <div className="quiz-progress-bar">
             <div
               className="quiz-progress-fill"
               style={{ width: `${progressPct}%` }}
             />
-          </div>
-
-          <div className="quiz-header" id="quiz-header">
-            <Link to="/" className="quiz-close-btn" aria-label="Exit quiz">
-              ✕
-            </Link>
-            <span className="quiz-counter">
-              <span className="current">{currentIndex + 1}</span> / {questions.length}
-            </span>
-            <div className={`quiz-streak-badge ${streak >= 2 ? 'visible' : ''} ${streak >= 5 ? 'hot' : ''}`}>
-              <span className="streak-flame">🔥</span>
-              <span className="streak-num" key={streak}>{streak}</span>
-            </div>
           </div>
           <XpPopup trigger={xpTrigger} amount={10} />
         </>
@@ -303,7 +315,7 @@ export default function QuizPage() {
       {quizState === 'results' && (
         <div className="results-screen view-transition">
           <div className="results-content">
-            <div className="results-emoji">{resultEmoji}</div>
+            <div className="results-emoji ms">{resultIcon}</div>
             <h2 className="results-title">{resultTitle}</h2>
             <p className="results-subtitle">{resultSubtitle}</p>
             <div className="results-stats">
@@ -353,7 +365,7 @@ export default function QuizPage() {
                 Question {currentIndex + 1} of {questions.length}
                 {isMSQ && <span className="msq-badge">MSQ — Multiple Options</span>}
               </div>
-              <h2 className="question-text">{currentQ.q}</h2>
+              <h2 className="question-text">{currentQ.q.replace(/^\[\s*Week\s*\d+\s*\]\s*/i, '')}</h2>
 
               <div className="options-grid">
                 {currentQ.options.map((opt, idx) => {
@@ -367,10 +379,10 @@ export default function QuizPage() {
                   if (quizState === 'feedback') {
                     if (isCorrectAnswer) {
                       cardClass += ' correct';
-                      iconText = '✓';
+                      iconText = 'check_circle';
                     } else if (isSelected) {
                       cardClass += ' wrong';
-                      iconText = '✗';
+                      iconText = 'cancel';
                     } else {
                       cardClass += ' dimmed';
                     }
@@ -387,7 +399,7 @@ export default function QuizPage() {
                       <span className="option-badge">{letter}</span>
                       <span className="option-text">{opt}</span>
                       {iconText && (
-                        <span className="option-result-icon">{iconText}</span>
+                        <span className="option-result-icon ms">{iconText}</span>
                       )}
                     </div>
                   );
@@ -411,7 +423,7 @@ export default function QuizPage() {
                 <div className="feedback-section visible">
                   <div className="feedback-header">
                     <span className="feedback-icon">
-                      {isAnswerCorrect ? '✅' : '❌'}
+                      {isAnswerCorrect && <span className="ms">check_circle</span>}{!isAnswerCorrect && <span className="ms">cancel</span>}
                     </span>
                     <span
                       className={`feedback-title ${

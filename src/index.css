@@ -1,23 +1,22 @@
 /* ============================================================
    NPTEL MCQ Platform — Duolingo-Inspired Design System
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 /* ── Theme Variables ────────────────────────────────────────── */
 :root {
-    --bg-primary: #131f24;
-    --bg-secondary: #1a2c33;
-    --bg-card: #1e3640;
-    --bg-card-hover: #234550;
-    --bg-option: #1e3640;
-    --bg-option-hover: #264a57;
-    --bg-option-selected: #2b5568;
-    --border-option: #2e5e6e;
+    --bg-primary: #0e181c;
+    --bg-secondary: #15242a;
+    --bg-card: #1d323a;
+    --bg-card-hover: #24454f;
+    --bg-option: #1d323a;
+    --bg-option-hover: #2b515d;
+    --bg-option-selected: #2e5e6c;
+    --border-option: #35626f;
     --border-option-selected: #58cc02;
-    --border-option-hover: #4a8fa0;
+    --border-option-hover: #5599aa;
     --text-primary: #ffffff;
-    --text-secondary: #9fb8c0;
-    --text-muted: #6a8f9d;
+    --text-secondary: #b7d3d9;
+    --text-muted: #8faeae;
     --accent: #58cc02;
     --accent-hover: #4caf00;
     --accent-glow: rgba(88, 204, 2, 0.3);
@@ -52,9 +51,9 @@
     --border-option: #e0e5e0;
     --border-option-selected: #58cc02;
     --border-option-hover: #a0d060;
-    --text-primary: #1a2a1a;
-    --text-secondary: #5a6a5a;
-    --text-muted: #8a9a8a;
+    --text-primary: #16241a;
+    --text-secondary: #4c604c;
+    --text-muted: #71836f;
     --accent: #58cc02;
     --accent-hover: #4caf00;
     --accent-glow: rgba(88, 204, 2, 0.2);
@@ -209,7 +208,7 @@ body::after {
     justify-content: center;
     align-items: center;
     color: var(--text-primary);
-    transition: all 0.25s ease;
+    transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
 }
 
 .theme-btn:hover {
@@ -240,7 +239,7 @@ body::after {
     border-radius: 50%;
     margin-bottom: 16px;
     border: 4px solid var(--accent);
-    box-shadow: 0 8px 30px var(--accent-glow);
+    box-shadow: 0 8px 28px var(--accent-glow);
     animation: emojiPop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both;
 }
 
@@ -258,7 +257,7 @@ body::after {
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     font-weight: 400;
     margin-bottom: 8px;
@@ -278,7 +277,7 @@ body::after {
     border-radius: 16px;
     padding: 24px;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -287,73 +286,51 @@ body::after {
     overflow: hidden;
 }
 
-.course-card::after {
-    content: '';
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--bg-option);
-    border: 2px solid var(--border-option);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.25s ease;
-}
-
 .course-card:hover {
     transform: translateY(-3px);
     border-color: var(--accent);
-    box-shadow: 0 8px 30px var(--accent-glow);
+    box-shadow: 0 8px 28px var(--accent-glow);
     background: var(--bg-card-hover);
 }
 
-.course-card:hover::after {
-    border-color: var(--accent);
-    background: var(--accent);
-}
-
 .course-card:active {
-    transform: translateY(-1px) scale(0.99);
+    transform: translateY(-1px) scale(0.97);
 }
 
 #card-cloud:hover {
     border-color: #38bdf8;
-    box-shadow: 0 8px 30px rgba(56, 189, 248, 0.28);
+    box-shadow: 0 8px 28px rgba(56, 189, 248, 0.28);
 }
-#card-cloud:hover::after {
-    border-color: #38bdf8;
-    background: #38bdf8;
+#card-cloud .course-icon {
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.12);
 }
 
 #card-blockchain:hover {
     border-color: #00d4ff;
-    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.28);
+    box-shadow: 0 8px 28px rgba(0, 212, 255, 0.28);
 }
-#card-blockchain:hover::after {
-    border-color: #00d4ff;
-    background: #00d4ff;
+#card-blockchain .course-icon {
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.12);
 }
 
 #card-iot:hover {
     border-color: #10b981;
-    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.28);
+    box-shadow: 0 8px 28px rgba(16, 185, 129, 0.28);
 }
-#card-iot:hover::after {
-    border-color: #10b981;
-    background: #10b981;
+#card-iot .course-icon {
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.12);
 }
 
 #card-entrepreneurship:hover {
     border-color: #f59e0b;
-    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.28);
+    box-shadow: 0 8px 28px rgba(245, 158, 11, 0.28);
 }
-#card-entrepreneurship:hover::after {
-    border-color: #f59e0b;
-    background: #f59e0b;
+#card-entrepreneurship .course-icon {
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.12);
 }
 
 .course-icon {
@@ -381,7 +358,7 @@ body::after {
 }
 
 .course-info p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     line-height: 1.4;
 }
@@ -393,7 +370,7 @@ body::after {
 }
 
 .course-stat {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     display: flex;
     align-items: center;
@@ -412,7 +389,7 @@ body::after {
 
 .dashboard-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-primary);
 }
@@ -421,7 +398,7 @@ body::after {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
     cursor: pointer;
     background: none;
@@ -429,7 +406,7 @@ body::after {
     border-radius: 12px;
     padding: 8px 16px;
     font-weight: 600;
-    transition: all 0.25s ease;
+    transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
     font-family: 'Inter', sans-serif;
 }
 
@@ -453,7 +430,7 @@ body::after {
     padding: 20px 16px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
     text-decoration: none;
     color: var(--text-primary);
     display: flex;
@@ -462,7 +439,7 @@ body::after {
     gap: 6px;
     box-shadow: var(--card-shadow);
     position: relative;
-    animation: fadeInUp 0.5s ease-out both;
+    animation: fadeInUp 0.5s ease-out backwards;
 }
 
 .week-card:nth-child(1) { animation-delay: 0.05s; }
@@ -479,9 +456,9 @@ body::after {
 .week-card:nth-child(12) { animation-delay: 0.6s; }
 
 .week-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: var(--accent);
-    box-shadow: 0 8px 25px var(--accent-glow);
+    box-shadow: 0 8px 28px var(--accent-glow);
 }
 
 .week-card:active {
@@ -496,7 +473,7 @@ body::after {
 }
 
 .week-label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-secondary);
     text-transform: uppercase;
@@ -511,7 +488,7 @@ body::after {
 }
 
 .week-score-badge {
-    font-size: 0.72rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--accent);
     background: rgba(88, 204, 2, 0.12);
@@ -523,7 +500,7 @@ body::after {
     background: rgba(255, 255, 255, 0.08);
     border: none;
     color: var(--text-muted);
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -532,7 +509,7 @@ body::after {
     justify-content: center;
     border-radius: 50%;
     line-height: 1;
-    transition: all 0.2s ease;
+    transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
     opacity: 0.6;
 }
 
@@ -554,17 +531,22 @@ body::after {
 }
 
 .grand-test-card .week-number {
-    font-size: 1.4rem;
+    color: #ffd700;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.45);
+}
+
+.grand-test-card .week-number {
+    font-size: 1.5rem;
 }
 
 .grand-test-card:hover {
-    box-shadow: 0 8px 35px var(--accent-glow);
+    box-shadow: 0 8px 28px var(--accent-glow);
 }
 
 /* ── Test Page: Progress Bar ────────────────────────────────── */
 .quiz-progress-bar {
     position: fixed;
-    top: 0;
+    top: 54px;
     left: 0;
     width: 100%;
     height: 12px;
@@ -574,29 +556,24 @@ body::after {
 
 .quiz-progress-fill {
     height: 100%;
-    background: var(--progress-fill);
+    background: linear-gradient(180deg, #8fdf6a 0%, #58cc02 45%, #35990a 100%);
     border-radius: 0 8px 8px 0;
-    transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: width 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     position: relative;
     overflow: hidden;
     min-width: 12px;
+    box-shadow: 0 0 6px 1px rgba(88, 204, 2, 0.45);
 }
 
 .quiz-progress-fill::after {
     content: '';
-    position: absolute;
-    right: -1px;
-    top: 0;
-    width: 12px;
-    height: 100%;
-    border-radius: 0 8px 8px 0;
-    background: rgba(255, 255, 255, 0.3);
 }
 
 /* ── Test Page: Header ──────────────────────────────────────── */
 .quiz-header {
     position: fixed;
-    top: 12px;
+    top: 0;
+    height: 54px;
     left: 0;
     width: 100%;
     z-index: 150;
@@ -619,8 +596,8 @@ body::after {
     background: none;
     color: var(--text-secondary);
     cursor: pointer;
-    font-size: 1.3rem;
-    transition: all 0.2s ease;
+    font-size: 1.25rem;
+    transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
     text-decoration: none;
 }
 
@@ -630,27 +607,17 @@ body::after {
     background: rgba(255, 75, 75, 0.1);
 }
 
-.quiz-counter {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-secondary);
-}
-
-.quiz-counter .current {
-    color: var(--text-primary);
-}
 
 .quiz-streak-badge {
     display: flex;
     align-items: center;
     gap: 4px;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--streak-color);
     opacity: 0;
     transform: scale(0.8);
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease
 }
 
 .quiz-streak-badge.visible {
@@ -660,7 +627,7 @@ body::after {
 
 /* ── Test Page: Question Area ───────────────────────────────── */
 .quiz-body {
-    padding: 68px 20px 96px;
+    padding: 66px 20px 96px;
     max-width: 620px;
     margin: 0 auto;
     min-height: calc(100vh - 20px);
@@ -675,11 +642,11 @@ body::after {
 }
 
 .question-label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
     margin-bottom: 8px;
 }
 
@@ -687,7 +654,7 @@ body::after {
     display: inline-block;
     background: var(--warning);
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 700;
     padding: 3px 10px;
     border-radius: 6px;
@@ -717,12 +684,11 @@ body::after {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 11px 16px;
+    padding: 12px 16px;
     background: var(--bg-option);
     border: 2px solid var(--border-option);
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.2s ease;
     user-select: none;
     -webkit-user-select: none;
     position: relative;
@@ -735,7 +701,7 @@ body::after {
 }
 
 .option-card:active {
-    transform: scale(0.985);
+    transform: scale(0.97);
 }
 
 .option-card.selected {
@@ -755,7 +721,6 @@ body::after {
     border-color: var(--danger) !important;
     background: var(--feedback-wrong-bg) !important;
     box-shadow: 0 0 0 3px var(--danger-glow) !important;
-    animation: wrongShake2 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 .option-card.dimmed {
@@ -772,7 +737,7 @@ body::after {
 .option-badge {
     width: 32px;
     height: 32px;
-    border-radius: 9px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -782,7 +747,7 @@ body::after {
     border: 2px solid var(--border-option);
     color: var(--text-secondary);
     background: var(--bg-primary);
-    transition: all 0.2s ease;
+    transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .option-card.selected .option-badge {
@@ -813,12 +778,12 @@ body::after {
     flex: 1;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 1.45;
+    line-height: 1.4;
     color: var(--text-primary);
 }
 
 .option-result-icon {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     flex-shrink: 0;
     display: none;
 }
@@ -841,7 +806,7 @@ body::after {
     border-top: 2px solid var(--glass-border);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    transition: all 0.3s ease;
+    transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
 }
 
 .quiz-bottom-bar.feedback-correct {
@@ -877,12 +842,12 @@ body::after {
 }
 
 .feedback-icon {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 }
 
 .feedback-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
@@ -890,9 +855,9 @@ body::after {
 .feedback-title.wrong { color: var(--danger); }
 
 .feedback-solution {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    line-height: 1.45;
+    line-height: 1.4;
     max-height: 110px;
     overflow-y: auto;
     padding-right: 8px;
@@ -900,7 +865,7 @@ body::after {
 
 .quiz-action-btn {
     width: 100%;
-    padding: 13px 20px;
+    padding: 12px 16px;
     font-size: 1rem;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
@@ -909,7 +874,7 @@ body::after {
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
     margin-bottom: 2px;
 }
 
@@ -1025,7 +990,7 @@ body::after {
 }
 
 .results-subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     margin-bottom: 32px;
 }
@@ -1043,13 +1008,14 @@ body::after {
     border: 2px solid var(--border-option);
     border-radius: 16px;
     padding: 20px 28px;
+    box-shadow: var(--card-shadow);
     text-align: center;
     min-width: 120px;
 }
 
 .result-stat-value {
     font-family: 'Outfit', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--accent);
     line-height: 1;
@@ -1059,7 +1025,7 @@ body::after {
 .result-stat-value.warning { color: var(--warning); }
 
 .result-stat-label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     font-weight: 600;
     text-transform: uppercase;
@@ -1079,9 +1045,9 @@ body::after {
     font-size: 1rem;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
-    border-radius: 14px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1134,11 +1100,6 @@ body::after {
     animation: confettiFall2 var(--dur, 2.5s) ease-out forwards;
 }
 
-@keyframes confettiFall {
-    0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
-    100% { transform: translateY(100vh) rotate(720deg) scale(0.3); opacity: 0; }
-}
-
 /* ── Animations ─────────────────────────────────────────────── */
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -1156,23 +1117,9 @@ body::after {
     100% { transform: scale(1); }
 }
 
-@keyframes wrongShake {
-    0%, 100% { transform: translateX(0); }
-    15% { transform: translateX(-8px); }
-    30% { transform: translateX(8px); }
-    45% { transform: translateX(-6px); }
-    60% { transform: translateX(6px); }
-    75% { transform: translateX(-2px); }
-}
-
 @keyframes emojiPop {
     from { opacity: 0; transform: scale(0.3) rotate(-15deg); }
     to { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-@keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
-    50% { box-shadow: 0 0 0 8px transparent; }
 }
 
 /* ── Milestone Celebration Overlay ──────────────────────────── */
@@ -1204,7 +1151,7 @@ body::after {
 
 .milestone-text {
     font-family: 'Outfit', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #ffffff;
     margin-top: 12px;
@@ -1214,43 +1161,11 @@ body::after {
 
 .milestone-subtext {
     font-family: 'Inter', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.75);
     margin-top: 6px;
     animation: milestoneTextIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;
-}
-
-.milestone-score-ring {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    position: relative;
-    animation: milestoneTextIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
-}
-
-.milestone-score-ring::before {
-    content: '';
-    position: absolute;
-    top: -5px; left: -5px;
-    width: 100px; height: 100px;
-    border-radius: 50%;
-    border: 5px solid var(--accent);
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    animation: ringSpinIn 0.8s ease-out 0.5s both;
-}
-
-.milestone-score-text {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--accent);
 }
 
 @keyframes milestoneIn {
@@ -1272,11 +1187,6 @@ body::after {
 @keyframes milestoneTextIn {
     from { opacity: 0; transform: translateY(15px) scale(0.9); }
     to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes ringSpinIn {
-    from { transform: rotate(0deg); opacity: 0; }
-    to { transform: rotate(360deg); opacity: 1; }
 }
 
 .view-hidden { display: none !important; }
@@ -1305,7 +1215,11 @@ body::after {
 
 /* ── Comprehensive Phone Responsiveness & Touch Ergonomics ──── */
 :root {
-    --safe-top: env(safe-area-inset-top, 0px);
+    --dur-fast: 0.2s;
+  --dur: 0.25s;
+  --dur-slow: 0.4s;
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --safe-left: env(safe-area-inset-left, 0px);
     --safe-right: env(safe-area-inset-right, 0px);
@@ -1376,7 +1290,7 @@ button,
     }
 
     .hero-subtitle {
-        font-size: 0.92rem;
+        font-size: 0.85rem;
     }
 
     /* Course Cards */
@@ -1388,24 +1302,24 @@ button,
     .course-card {
         padding: 16px 14px;
         gap: 12px;
-        border-radius: 14px;
+        border-radius: 12px;
     }
 
     .course-icon {
         width: 48px;
         height: 48px;
-        font-size: 2.1rem;
+        font-size: 2rem;
         border-radius: 12px;
     }
 
     .course-info h3 {
-        font-size: 1.12rem;
+        font-size: 1.25rem;
         line-height: 1.25;
     }
 
     .course-info p {
-        font-size: 0.82rem;
-        line-height: 1.35;
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 
     .course-stats {
@@ -1414,7 +1328,7 @@ button,
     }
 
     .course-stat {
-        font-size: 0.76rem;
+        font-size: 0.85rem;
     }
 
     .course-card::after {
@@ -1435,7 +1349,7 @@ button,
 
     .back-to-courses {
         padding: 6px 12px;
-        font-size: 0.82rem;
+        font-size: 0.85rem;
         border-radius: 10px;
     }
 
@@ -1446,23 +1360,23 @@ button,
 
     .week-card {
         padding: 12px 6px;
-        border-radius: 13px;
+        border-radius: 12px;
         gap: 4px;
         min-height: 80px;
     }
 
     .week-number {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         line-height: 1;
     }
 
     .week-label {
-        font-size: 0.7rem;
-        letter-spacing: 0.2px;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
     }
 
     .week-score-badge {
-        font-size: 0.65rem;
+        font-size: 0.85rem;
         padding: 1px 6px;
         border-radius: 6px;
     }
@@ -1484,10 +1398,11 @@ button,
     /* Quiz Header & Progress Bar */
     .quiz-progress-bar {
         height: 8px;
+        top: 50px;
     }
 
     .quiz-header {
-        top: 8px;
+        top: 0;
         padding: 8px 14px;
         height: 50px;
     }
@@ -1496,29 +1411,26 @@ button,
         width: 36px;
         height: 36px;
         border-radius: 10px;
-        font-size: 1.15rem;
+        font-size: 1.25rem;
     }
 
-    .quiz-counter {
-        font-size: 0.92rem;
-    }
 
     /* Quiz Body */
     .quiz-body {
-        padding: calc(54px + var(--safe-top)) 14px calc(80px + var(--safe-bottom));
+        padding: calc(58px + var(--safe-top)) 14px calc(80px + var(--safe-bottom));
         justify-content: flex-start;
-        margin-top: 4px;
-        min-height: calc(100vh - 10px);
+        margin-top: 0;
+        min-height: 100dvh;
     }
 
     .question-label {
-        font-size: 0.76rem;
+        font-size: 0.85rem;
         margin-bottom: 6px;
     }
 
     .question-text {
         font-size: clamp(1.05rem, 3.8vw, 1.22rem);
-        line-height: 1.38;
+        line-height: 1.4;
         margin-bottom: 12px;
     }
 
@@ -1529,20 +1441,20 @@ button,
     .option-card {
         padding: 10px 14px;
         gap: 10px;
-        border-radius: 11px;
+        border-radius: 10px;
         min-height: 44px;
     }
 
     .option-badge {
         width: 28px;
         height: 28px;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         border-radius: 7px;
     }
 
     .option-text {
-        font-size: 0.9rem;
-        line-height: 1.35;
+        font-size: 0.85rem;
+        line-height: 1.4;
     }
 
     /* Quiz Bottom Bar */
@@ -1555,19 +1467,19 @@ button,
     }
 
     .feedback-title {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .feedback-solution {
         font-size: 0.85rem;
         max-height: 110px;
-        line-height: 1.45;
+        line-height: 1.4;
         padding-right: 4px;
     }
 
     .quiz-action-btn {
         padding: 14px;
-        font-size: 0.96rem;
+        font-size: 1rem;
         border-radius: 12px;
         min-height: 48px;
     }
@@ -1579,7 +1491,7 @@ button,
 
     .celebration-video {
         width: min(250px, 85vw);
-        border-radius: 18px;
+        border-radius: 16px;
     }
 
     .results-emoji {
@@ -1588,12 +1500,12 @@ button,
     }
 
     .results-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         margin-bottom: 6px;
     }
 
     .results-subtitle {
-        font-size: 0.92rem;
+        font-size: 0.85rem;
         margin-bottom: 20px;
     }
 
@@ -1613,7 +1525,7 @@ button,
     }
 
     .result-stat-value {
-        font-size: 1.65rem;
+        font-size: 1.8rem;
     }
 
     .results-actions {
@@ -1625,26 +1537,19 @@ button,
 
     .result-btn {
         width: 100%;
-        padding: 13px;
-        font-size: 0.92rem;
+        padding: 12px;
+        font-size: 1rem;
         text-align: center;
     }
 
-    /* Feedback Floating Button & Bottom Sheet Modal */
-    .feedback-floating-btn {
-        bottom: max(16px, var(--safe-bottom));
-        right: 16px;
-        padding: 9px 14px;
-        font-size: 0.86rem;
-    }
-
+    /* Feedback Bottom Sheet Modal */
     .feedback-modal-backdrop {
         padding: 0;
         align-items: flex-end;
     }
 
     .feedback-modal-card {
-        border-radius: 22px 22px 0 0;
+        border-radius: 24px 24px 0 0;
         max-height: 88dvh;
         padding: 20px 18px max(24px, var(--safe-bottom));
         width: 100%;
@@ -1658,7 +1563,7 @@ button,
     }
 
     .star-btn {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         min-width: 44px;
         min-height: 44px;
         display: inline-flex;
@@ -1685,7 +1590,7 @@ button,
     }
 
     .course-info h3 {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 
     .quiz-body {
@@ -1710,6 +1615,7 @@ html[data-course="cloud"] {
     --accent: #38bdf8;
     --accent-hover: #0284c7;
     --accent-glow: rgba(56, 189, 248, 0.3);
+    --progress-bg: rgba(56, 189, 248, 0.16);
     --progress-fill: #38bdf8;
     --check-btn-bg: #0284c7;
     --check-btn-hover: #0369a1;
@@ -1771,6 +1677,7 @@ html[data-course="blockchain"] {
     --accent: #00d4ff;
     --accent-hover: #00b8e0;
     --accent-glow: rgba(0, 212, 255, 0.3);
+    --progress-bg: rgba(0, 212, 255, 0.16);
     --progress-fill: #00d4ff;
     --check-btn-bg: #00d4ff;
     --check-btn-hover: #00b8e0;
@@ -1832,6 +1739,7 @@ html[data-course="iot"] {
     --accent: #10b981;
     --accent-hover: #059669;
     --accent-glow: rgba(16, 185, 129, 0.3);
+    --progress-bg: rgba(16, 185, 129, 0.16);
     --progress-fill: #10b981;
     --check-btn-bg: #10b981;
     --check-btn-hover: #059669;
@@ -1893,6 +1801,7 @@ html[data-course="entrepreneurship"] {
     --accent: #f59e0b;
     --accent-hover: #d97706;
     --accent-glow: rgba(245, 158, 11, 0.3);
+    --progress-bg: rgba(245, 158, 11, 0.16);
     --progress-fill: #f59e0b;
     --check-btn-bg: #d97706;
     --check-btn-hover: #b45309;
@@ -1964,9 +1873,8 @@ html[data-course="entrepreneurship"] body::after {
   padding: 0.5rem 1rem;
   border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 0.01em;
-}
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
+  }
 .ai-hint-btn:hover {
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.32), rgba(99, 102, 241, 0.32));
   border-color: rgba(167, 139, 250, 0.7);
@@ -1983,7 +1891,7 @@ html[data-course="entrepreneurship"] body::after {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.83rem;
+  font-size: 0.85rem;
   color: var(--text-secondary, #a1a1aa);
 }
 .ai-hint-spinner {
@@ -2004,7 +1912,7 @@ html[data-course="entrepreneurship"] body::after {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: #f87171;
   flex-wrap: wrap;
 }
@@ -2014,7 +1922,7 @@ html[data-course="entrepreneurship"] body::after {
   color: #f87171;
   border-radius: 6px;
   padding: 0.2rem 0.6rem;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: background 0.15s;
 }
@@ -2028,7 +1936,7 @@ html[data-course="entrepreneurship"] body::after {
   border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: 12px;
   padding: 0.85rem 1rem;
-  animation: ai-fadein 0.35s ease;
+  animation: ai-fadein 0.4s ease;
   position: relative;
 }
 @keyframes ai-fadein {
@@ -2045,15 +1953,15 @@ html[data-course="entrepreneurship"] body::after {
   font-size: 1rem;
 }
 .ai-hint-result-title {
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.5px;
   color: #a78bfa;
 }
 .ai-hint-result-text {
-  font-size: 0.88rem;
-  line-height: 1.6;
+  font-size: 0.85rem;
+  line-height: 1.5;
   color: var(--text-primary, #e4e4e7);
   margin: 0 0 0.6rem;
 }
@@ -2061,7 +1969,7 @@ html[data-course="entrepreneurship"] body::after {
   background: none;
   border: none;
   color: var(--text-secondary, #71717a);
-  font-size: 0.76rem;
+  font-size: 0.85rem;
   cursor: pointer;
   padding: 0;
   transition: color 0.15s;
@@ -2108,7 +2016,7 @@ html[data-course="entrepreneurship"] body::after {
   color: #1a1200;
   font-family: 'Outfit', sans-serif;
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: 1rem;
   padding: 6px 16px;
   border-radius: 999px;
   box-shadow: 0 4px 20px rgba(255, 200, 0, 0.5);
@@ -2125,10 +2033,10 @@ html[data-course="entrepreneurship"] body::after {
 
 /* ── 3. Question slide-in animation ─────────────────────────── */
 .question-container.slide-right {
-  animation: slideInRight 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .question-container.slide-left {
-  animation: slideInLeft 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes slideInRight {
@@ -2171,23 +2079,8 @@ html[data-course="entrepreneurship"] body::after {
   100% { transform: scale(1);   opacity: 1; }
 }
 
-/* ── 5. Progress bar shimmer ─────────────────────────────────── */
 .quiz-progress-fill {
   overflow: hidden;
-}
-.quiz-progress-fill::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: progressShimmer 2s ease-in-out infinite;
-  border-radius: inherit;
-}
-@keyframes progressShimmer {
-  0%   { left: -60%; }
-  100% { left: 120%; }
 }
 
 /* ── 6. Option card — spring tap ────────────────────────────── */
@@ -2198,7 +2091,7 @@ html[data-course="entrepreneurship"] body::after {
               box-shadow 0.2s ease;
 }
 .option-card:active {
-  transform: scale(0.95) !important;
+  transform: scale(0.97) !important;
 }
 .option-card.selected {
   animation: optionSpring 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -2215,7 +2108,7 @@ html[data-course="entrepreneurship"] body::after {
   content: '';
   position: absolute;
   inset: -4px;
-  border-radius: 18px;
+  border-radius: 16px;
   border: 2px solid var(--accent);
   animation: rippleRing 0.6s ease-out forwards;
   pointer-events: none;
@@ -2228,8 +2121,7 @@ html[data-course="entrepreneurship"] body::after {
 /* ── 8. Wrong answer shake (enhanced) ───────────────────────── */
 .option-card.wrong {
   animation: wrongShake2 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-}
-@keyframes wrongShake2 {
+}@keyframes wrongShake2 {
   0%,100% { transform: translateX(0); }
   10%     { transform: translateX(-10px) rotate(-1deg); }
   25%     { transform: translateX(9px)  rotate(1deg); }
@@ -2272,9 +2164,6 @@ html[data-course="entrepreneurship"] body::after {
   100% { transform: scale(1)    rotate(0); }
 }
 
-/* ── 12. Week card stagger (extended) ───────────────────────── */
-.week-card:nth-child(n) { animation-fill-mode: both; }
-
 /* ── 13. Results stat cards pop-in ─────────────────────────── */
 .result-stat-card {
   animation: statCardPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
@@ -2305,7 +2194,7 @@ html[data-course="entrepreneurship"] body::after {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 28px;
+  border-radius: 24px;
   padding: 40px 48px;
   text-align: center;
   animation: milestoneCardIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
@@ -2325,7 +2214,6 @@ html[data-course="entrepreneurship"] body::after {
   width: 100px;
   height: 100px;
   transform: rotate(-90deg);
-  margin-top: 20px;
   animation: milestoneTextIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
 }
 
@@ -2357,7 +2245,7 @@ html[data-course="entrepreneurship"] body::after {
   justify-content: center;
   width: 100px;
   height: 100px;
-  margin-top: 0;
+  margin-top: 20px;
   /* remove old pseudo-element ring */
 }
 .milestone-score-ring::before { display: none; }
@@ -2370,17 +2258,17 @@ html[data-course="entrepreneurship"] body::after {
   position: relative;
   z-index: 1;
   font-family: 'Outfit', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--accent);
 }
 
 .milestone-tap-hint {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.4);
   margin-top: 16px;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.5px;
   animation: milestoneTextIn 0.4s ease 0.8s both;
 }
 
@@ -2419,16 +2307,11 @@ html[data-course="entrepreneurship"] body::after {
 
 /* ── 16. Check button pulse when enabled ────────────────────── */
 .quiz-action-btn.check-btn:not(:disabled) {
-  animation: checkBtnPulse 2s ease-in-out infinite;
+  animation: checkBtnPulse 2s ease-in-out 3;
 }
 @keyframes checkBtnPulse {
   0%, 100% { box-shadow: 0 4px 0 var(--accent-hover), 0 6px 20px var(--accent-glow); }
   50%      { box-shadow: 0 4px 0 var(--accent-hover), 0 6px 32px rgba(88,204,2,0.55); }
-}
-
-@keyframes grandShimmer {
-  0%   { left: -60%; }
-  100% { left: 120%; }
 }
 
 /* ============================================================
@@ -2450,7 +2333,7 @@ html[data-course="entrepreneurship"] body::after {
 }
 
 .page-enter {
-  animation: pageEnter 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: pageEnter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* ── Home view enter / exit transitions ─────────────────────── */
@@ -2465,17 +2348,17 @@ html[data-course="entrepreneurship"] body::after {
 }
 
 .home-view-enter {
-  animation: homeEnter 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: homeEnter 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .home-view-exit {
-  animation: homeExit 0.22s ease-in both;
+  animation: homeExit 0.25s ease-in both;
   pointer-events: none;
 }
 
 /* ── Course card stagger entrance ───────────────────────────── */
 .course-card {
-  animation: courseCardIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation: courseCardIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   animation-fill-mode: both;
 }
 
@@ -2484,19 +2367,28 @@ html[data-course="entrepreneurship"] body::after {
   to   { opacity: 1; transform: translateX(0) scale(1); }
 }
 
-/* Course card chevron arrow */
+/* Course card chevron arrow disc */
 .course-card-arrow {
-  font-size: 1.5rem;
-  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--bg-option);
+  border: 2px solid var(--border-option);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
   flex-shrink: 0;
-  margin-right: 8px;
-  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   line-height: 1;
 }
 
 .course-card:hover .course-card-arrow {
   transform: translateX(6px);
-  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 /* ── Dashboard title group ──────────────────────────────────── */
@@ -2508,6 +2400,7 @@ html[data-course="entrepreneurship"] body::after {
 
 .dashboard-course-icon {
   font-size: 1.8rem;
+  color: var(--accent);
   animation: emojiPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   display: inline-block;
 }
@@ -2522,7 +2415,7 @@ html[data-course="entrepreneurship"] body::after {
   position: absolute;
   top: 8px;
   right: 10px;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: var(--accent);
   background: rgba(88, 204, 2, 0.15);
@@ -2542,7 +2435,7 @@ html[data-course="entrepreneurship"] body::after {
 
 /* ── Header entrance + scroll shadow ───────────────────────── */
 .header-entrance {
-  animation: headerSlideDown 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: headerSlideDown 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes headerSlideDown {
@@ -2587,30 +2480,42 @@ html[data-course="entrepreneurship"] body::after {
   border-radius: 12px;
 }
 
-/* ── Progress bar glow tip ──────────────────────────────────── */
+/* ── Progress bar comet head ────────────────────────────────── */
 .quiz-progress-fill::after {
   content: '';
   position: absolute;
   right: -2px;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--progress-fill);
-  box-shadow: 0 0 10px 4px var(--accent-glow);
-  opacity: 0.85;
-  animation: progressTipPulse 1.5s ease-in-out infinite;
+  width: 110px;
+  height: 9px;
+  border-radius: 999px;
+  background: radial-gradient(
+    closest-side at 100% 50%,
+    #ffffff 0%,
+    #e2ffd0 16%,
+    #9adf60 38%,
+    rgba(88, 204, 2, 0.4) 68%,
+    transparent 100%
+  );
+  animation: cometFlicker 1.1s ease-in-out infinite;
 }
 
-@keyframes progressTipPulse {
-  0%, 100% { box-shadow: 0 0 10px 4px var(--accent-glow); transform: translateY(-50%) scale(1); }
-  50%       { box-shadow: 0 0 18px 8px var(--accent-glow); transform: translateY(-50%) scale(1.2); }
+@keyframes cometFlicker {
+  0%, 100% { opacity: 0.75; transform: translateY(-50%) scaleX(1); }
+  50%      { opacity: 1;    transform: translateY(-50%) scaleX(1.15); }
+}
+
+@media (max-width: 640px) {
+  .quiz-progress-fill::after {
+    width: 70px;
+    height: 7px;
+  }
 }
 
 /* ── Option card stagger entrance ───────────────────────────── */
 .options-grid .option-card {
-  animation: optionCardIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: optionCardIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .options-grid .option-card:nth-child(1) { animation-delay: 0.04s; }
@@ -2679,11 +2584,6 @@ html[data-course="entrepreneurship"] body::after {
   transform: translateX(-3px);
 }
 
-/* ── Quiz counter pop on change ─────────────────────────────── */
-.quiz-counter .current {
-  display: inline-block;
-  animation: numPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
 
 /* ── Feedback icon entrance ─────────────────────────────────── */
 .feedback-icon {
@@ -2713,78 +2613,21 @@ html[data-course="entrepreneurship"] body::after {
   100% { left: 120%; }
 }
 
-/* ── Grand test card pulse glow ─────────────────────────────── */
-.grand-test-card:hover {
-  animation: grandGlow 0.8s ease-in-out infinite alternate;
-}
-
-@keyframes grandGlow {
-  from { box-shadow: 0 8px 35px var(--accent-glow); }
-  to   { box-shadow: 0 12px 50px var(--accent-glow), 0 0 0 4px rgba(88, 204, 2, 0.08); }
-}
-
-/* ── Reduced motion support ─────────────────────────────────── */
-/* ── Floating Feedback Button ───────────────────────────────── */
-.feedback-floating-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--bg-card);
-  border: 2px solid var(--accent);
-  color: var(--text-primary);
-  padding: 10px 18px;
-  border-radius: 30px;
-  box-shadow: 0 8px 25px var(--accent-glow), 0 4px 12px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  animation: feedbackFloat 3s ease-in-out infinite alternate;
-}
-
-@keyframes feedbackFloat {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-4px); }
-}
-
-.feedback-floating-btn:hover {
-  transform: scale(1.08) translateY(-4px);
-  background: var(--accent);
-  color: #fff;
-  box-shadow: 0 10px 30px var(--accent-glow);
-}
-
-.feedback-btn-icon {
-  font-size: 1.15rem;
-  line-height: 1;
-}
-
-.feedback-btn-label {
-  letter-spacing: 0.3px;
-}
-
 /* ── Inline Feedback Bar ────────────────────────────────────── */
 .feedback-inline-bar {
   margin-top: 36px;
   padding: 14px 20px;
   background: var(--bg-card);
-  border: 1px solid var(--border-option);
-  border-radius: 14px;
+  border: 2px solid var(--border-option);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   box-shadow: var(--card-shadow);
-  transition: all 0.25s ease;
+  transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
 }
 
 .feedback-inline-bar:hover {
@@ -2801,7 +2644,7 @@ html[data-course="entrepreneurship"] body::after {
   padding: 6px 14px;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .feedback-inline-trigger:hover {
@@ -2842,6 +2685,11 @@ html[data-course="entrepreneurship"] body::after {
   overflow-y: auto;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes modalPop {
   0% { opacity: 0; transform: scale(0.9) translateY(20px); }
   100% { opacity: 1; transform: scale(1) translateY(0); }
@@ -2858,10 +2706,10 @@ html[data-course="entrepreneurship"] body::after {
 
 .feedback-modal-badge {
   display: inline-block;
-  font-size: 0.76rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   padding: 3px 10px;
   border-radius: 16px;
   background: rgba(88, 204, 2, 0.12);
@@ -2872,24 +2720,24 @@ html[data-course="entrepreneurship"] body::after {
 
 .feedback-modal-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--text-primary);
 }
 
 .feedback-modal-close {
   background: var(--bg-primary);
-  border: 1.5px solid var(--border-option);
+  border: 2px solid var(--border-option);
   color: var(--text-secondary);
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
   line-height: 1;
 }
 
@@ -2901,9 +2749,9 @@ html[data-course="entrepreneurship"] body::after {
 }
 
 .feedback-card-sub {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  line-height: 1.45;
+  line-height: 1.4;
   margin-bottom: 16px;
 }
 
@@ -2926,13 +2774,6 @@ html[data-course="entrepreneurship"] body::after {
   .feedback-modal-card {
     padding: 20px 18px;
   }
-  .feedback-floating-btn .feedback-btn-label {
-    display: none;
-  }
-  .feedback-floating-btn {
-    padding: 12px;
-    border-radius: 50%;
-  }
 }
 
 .feedback-field {
@@ -2942,7 +2783,7 @@ html[data-course="entrepreneurship"] body::after {
 }
 
 .feedback-field label {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -2955,14 +2796,14 @@ html[data-course="entrepreneurship"] body::after {
 .feedback-input,
 .feedback-textarea {
   background: var(--bg-primary);
-  border: 1.5px solid var(--border-option);
+  border: 2px solid var(--border-option);
   border-radius: 12px;
   padding: 10px 14px;
   color: var(--text-primary);
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 16px;
   outline: none;
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .feedback-select:focus,
@@ -2987,12 +2828,16 @@ html[data-course="entrepreneurship"] body::after {
 .star-btn {
   background: none;
   border: none;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   cursor: pointer;
   color: var(--text-muted);
   transition: transform 0.15s ease, color 0.15s ease;
   padding: 2px 3px;
   line-height: 1;
+}
+
+.star-btn .ms {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 200, 'opsz' 24;
 }
 
 .star-btn:hover {
@@ -3004,8 +2849,12 @@ html[data-course="entrepreneurship"] body::after {
   filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.4));
 }
 
+.star-btn.active .ms {
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 200, 'opsz' 24;
+}
+
 .star-text {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-secondary);
   margin-left: 6px;
@@ -3024,14 +2873,14 @@ html[data-course="entrepreneurship"] body::after {
   padding: 12px 24px;
   border-radius: 12px;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.92rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   box-shadow: 0 4px 14px var(--accent-glow);
-  transition: all 0.25s ease;
+  transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
 }
 
 .feedback-submit-btn:hover:not(:disabled) {
@@ -3067,7 +2916,7 @@ html[data-course="entrepreneurship"] body::after {
 }
 
 .feedback-success-icon {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 8px;
   animation: emojiPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
@@ -3099,14 +2948,14 @@ html[data-course="entrepreneurship"] body::after {
 
 .feedback-btn-secondary {
   background: var(--bg-primary);
-  border: 1.5px solid var(--border-option);
+  border: 2px solid var(--border-option);
   color: var(--text-primary);
   padding: 10px 16px;
   border-radius: 10px;
   font-weight: 600;
   font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .feedback-btn-secondary:hover {
@@ -3124,7 +2973,7 @@ html[data-course="entrepreneurship"] body::after {
   font-size: 0.85rem;
   cursor: pointer;
   box-shadow: 0 4px 14px var(--accent-glow);
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .feedback-btn-download:hover {
@@ -3138,16 +2987,16 @@ html[data-course="entrepreneurship"] body::after {
   align-items: center;
   gap: 6px;
   background: var(--bg-card);
-  border: 1.5px solid var(--border-option);
+  border: 2px solid var(--border-option);
   color: var(--text-primary);
   padding: 8px 16px;
   border-radius: 12px;
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
 }
 
 .header-login-btn:hover {
@@ -3163,15 +3012,15 @@ html[data-course="entrepreneurship"] body::after {
   align-items: center;
   gap: 8px;
   background: var(--bg-card);
-  border: 1.5px solid var(--border-option);
+  border: 2px solid var(--border-option);
   padding: 5px 12px 5px 8px;
   border-radius: 20px;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   max-width: 220px;
 }
 
 .user-avatar-icon {
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .user-name-text {
@@ -3187,7 +3036,7 @@ html[data-course="entrepreneurship"] body::after {
   background: none;
   border: none;
   color: var(--danger);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   font-weight: 700;
   cursor: pointer;
   padding: 2px 6px;
@@ -3239,31 +3088,40 @@ html[data-course="entrepreneurship"] body::after {
 .auth-icon {
   font-size: 2.8rem;
   margin-bottom: 10px;
+  color: var(--accent);
   animation: emojiPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
 .auth-title {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 6px;
 }
 
 .auth-subtitle {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .auth-alert {
   padding: 12px 16px;
   border-radius: 12px;
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 20px;
   line-height: 1.4;
   animation: slideUp 0.25s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.auth-alert .ms {
+  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
 .auth-alert-error {
@@ -3304,14 +3162,14 @@ html[data-course="entrepreneurship"] body::after {
 
 .auth-input {
   background: var(--bg-primary);
-  border: 1.5px solid var(--border-option);
+  border: 2px solid var(--border-option);
   border-radius: 12px;
   padding: 12px 16px;
   color: var(--text-primary);
   font-family: inherit;
   font-size: 16px; /* Prevents auto-zoom on iOS */
   outline: none;
-  transition: all 0.2s ease;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .auth-input:focus {
@@ -3331,7 +3189,7 @@ html[data-course="entrepreneurship"] body::after {
   cursor: pointer;
   margin-top: 4px;
   box-shadow: 0 4px 15px var(--accent-glow);
-  transition: all 0.25s ease;
+  transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
 }
 
 .auth-submit-btn:hover:not(:disabled) {
@@ -3350,7 +3208,7 @@ html[data-course="entrepreneurship"] body::after {
   margin-top: 24px;
   padding-top: 18px;
   border-top: 1px solid var(--border-option);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   display: flex;
   flex-direction: column;
@@ -3370,7 +3228,7 @@ html[data-course="entrepreneurship"] body::after {
 
 .auth-back-link {
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -3388,7 +3246,141 @@ html[data-course="entrepreneurship"] body::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+  html {
+    scroll-behavior: auto !important;
+  }
 }
 
 
 
+
+/* ── How-to popup (homepage) ────────────────────────────────── */
+.howto-trigger {
+  margin-top: 28px;
+  background: rgba(88, 204, 2, 0.08);
+  border: 1.5px dashed var(--border-option);
+  color: var(--text-secondary);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform var(--dur-fast) ease, border-color var(--dur-fast) ease, background var(--dur-fast) ease, box-shadow var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+
+.howto-trigger:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+  background: rgba(88, 204, 2, 0.12);
+}
+
+.howto-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px;
+}
+
+.howto-modal-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-option);
+  border-radius: 24px;
+  padding: 28px;
+  max-width: 460px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 40px var(--accent-glow);
+}
+
+.howto-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.howto-modal-header h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.howto-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.howto-close-btn:hover {
+  color: var(--danger);
+  background: rgba(255, 60, 60, 0.08);
+}
+
+.howto-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.howto-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.howto-key {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* ── Quiz header week label ─────────────────────────────────── */
+.quiz-week-label {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 1.6vw, 1.08rem);
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  color: var(--text-primary);
+  text-shadow: 0 0 10px rgba(88, 204, 2, 0.75), 0 0 26px rgba(88, 204, 2, 0.45);
+}
+
+/* ── Material Symbols (expressive feel: filled, rounded, high contrast) ── */
+.ms {
+  font-family: 'Material Symbols Rounded';
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 200, 'opsz' 24;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ms.ms-outline {
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 200, 'opsz' 24;
+}

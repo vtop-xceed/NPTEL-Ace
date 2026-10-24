@@ -13,28 +13,32 @@ const COURSES = [
     id: 'cloud',
     name: 'Cloud Computing',
     desc: 'Distributed Systems, Virtualization & Azure/GCP',
-    icon: '☁️',
+    icon: 'cloud',
+    color: '#38bdf8',
     data: cloudData,
   },
   {
     id: 'blockchain',
     name: 'Blockchain & Applications',
     desc: 'Cryptography, Consensus & Cryptocurrency',
-    icon: '⛓️',
+    icon: 'hub',
+    color: '#00d4ff',
     data: blockchainData,
   },
   {
     id: 'iot',
     name: 'Introduction to IoT',
     desc: 'Sensors, Actuators, Wireless Networks & IoT Protocols',
-    icon: '📡',
+    icon: 'satellite_alt',
+    color: '#10b981',
     data: iotData,
   },
   {
     id: 'entrepreneurship',
     name: 'Entrepreneurship',
     desc: 'Ideation, Prototyping, Disruption & Business Strategies',
-    icon: '🚀',
+    icon: 'rocket_launch',
+    color: '#f59e0b',
     data: entrepreneurshipData,
   },
 ];
@@ -47,7 +51,16 @@ export default function HomePage() {
   });
   const [viewState, setViewState] = useState(selectedCourse ? 'dashboard' : 'courses');
   const [transitioning, setTransitioning] = useState(false);
+  const [showHowTo, setShowHowTo] = useState(false);
   const dashboardRef = useRef(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setShowHowTo(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   useEffect(() => {
     setCourseTheme(selectedCourse);
@@ -112,20 +125,29 @@ export default function HomePage() {
                   style={{ animationDelay: `${index * 0.08}s` }}
                   onClick={() => handleSelectCourse(course.id)}
                 >
-                  <div className="course-icon">{course.icon}</div>
+                  <div className="course-icon ms">{course.icon}</div>
                   <div className="course-info">
                     <h3>{course.name}</h3>
                     <p>{course.desc}</p>
                     <div className="course-stats">
-                      <span className="course-stat">📅 {weeksCount} weeks</span>
-                      <span className="course-stat">❓ {questionsCount} questions</span>
+                      <span className="course-stat"><span className="ms">calendar_month</span> {weeksCount} weeks</span>
+                      <span className="course-stat"><span className="ms">contact_support</span> {questionsCount} questions</span>
                     </div>
                   </div>
-                  <div className="course-card-arrow">›</div>
+                  <div className="course-card-arrow ms">chevron_right</div>
                 </div>
               );
             })}
           </div>
+
+          <button
+            type="button"
+            className="howto-trigger"
+            onClick={() => setShowHowTo(true)}
+            aria-haspopup="dialog"
+          >
+            <span className="ms">lightbulb</span> How to use NPTEL Ace — keybinds & tips
+          </button>
 
           <FeedbackSection />
         </div>
@@ -139,9 +161,7 @@ export default function HomePage() {
         >
           <div className="dashboard-header">
             <div className="dashboard-title-group">
-              <span className="dashboard-course-icon">
-                {COURSES.find(c => c.id === selectedCourse)?.icon}
-              </span>
+              <span className="dashboard-course-icon ms" style={{ color: COURSES.find(c => c.id === selectedCourse)?.color }}>{COURSES.find(c => c.id === selectedCourse)?.icon}</span>
               <h2 className="dashboard-title">{activeCourseObj?.name}</h2>
             </div>
             <button className="back-to-courses" onClick={handleBackToCourses}>
@@ -195,11 +215,11 @@ export default function HomePage() {
                               clear(selectedCourse, week);
                             }}
                           >
-                            ✕
+                            <span className="ms">close</span>
                           </button>
                         </div>
                       )}
-                      {hasScore && <span className="week-done-tick">✓</span>}
+                      {hasScore && <span className="week-done-tick ms">check_circle</span>}
                     </Link>
                   );
                 })}
@@ -211,7 +231,7 @@ export default function HomePage() {
                 className="week-card grand-test-card"
                 style={{ animationDelay: `${Object.keys(activeCourseObj.data).length * 0.05 + 0.05}s` }}
               >
-                <span className="week-number">🏆</span>
+                <span className="week-number ms">emoji_events</span>
                 <span className="week-label">Grand Test — All Weeks</span>
                 {(() => {
                   const grandBest = getBest(selectedCourse, 'grand');
@@ -223,6 +243,35 @@ export default function HomePage() {
                 })()}
               </Link>
             )}
+          </div>
+        </div>
+      )}
+      {showHowTo && (
+        <div
+          className="howto-modal-backdrop"
+          onClick={() => setShowHowTo(false)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="howto-modal-card" onClick={(e) => e.stopPropagation()}>
+            <div className="howto-modal-header">
+              <h3><span className="ms">lightbulb</span> How to use NPTEL Ace</h3>
+              <button
+                type="button"
+                className="howto-close-btn"
+                onClick={() => setShowHowTo(false)}
+                aria-label="Close"
+              >
+                <span className="ms">close</span>
+              </button>
+            </div>
+            <ul className="howto-list">
+              <li><span className="howto-key ms">touch_app</span> Pick a course, then a week — or jump straight to the Grand Test mixing every week.</li>
+              <li><span className="howto-key ms">ads_click</span> <b>Right-click</b> to check your answer, continue, or dismiss the streak pop-up — no in-browser menu while quizzing.</li>
+              <li><span className="howto-key ms">keyboard</span> <b>Esc</b> closes any open pop-up.</li>
+              <li><span className="howto-key ms">local_fire_department</span> Stack 2+ correct answers in a row for milestone celebrations.</li>
+              <li><span className="howto-key ms">forum</span> Spotted a wrong answer? Use the feedback card below — it helps fix data.</li>
+            </ul>
           </div>
         </div>
       )}

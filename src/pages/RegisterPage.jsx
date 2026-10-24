@@ -55,7 +55,7 @@ export default function RegisterPage() {
     <main className="main-content auth-container">
       <div className="auth-card">
         <div className="auth-header">
-          <div className="auth-icon">📝</div>
+          <div className="auth-icon ms">edit_note</div>
           <h2 className="auth-title">Create Your Account</h2>
           <p className="auth-subtitle">
             Register with just your email. No password needed!
@@ -68,8 +68,8 @@ export default function RegisterPage() {
           </div>
         )}
 
-        {error && <div className="auth-alert auth-alert-error">⚠️ {error}</div>}
-        {success && <div className="auth-alert auth-alert-success">🎉 {success}</div>}
+        {error && <div className="auth-alert auth-alert-error"><span className="ms">warning</span> {error}</div>}
+        {success && <div className="auth-alert auth-alert-success"><span className="ms">celebration</span> {success}</div>}
 
         <form onSubmit={handleRegister} className="auth-form">
           <div className="auth-field">
@@ -104,7 +104,7 @@ export default function RegisterPage() {
             className="auth-submit-btn"
             disabled={loading || !email.trim()}
           >
-            {loading ? 'Saving to Database...' : 'Register & Start Practicing 🚀'}
+            {loading ? 'Saving to Database...' : 'Register & Start Practicing'}
           </button>
         </form>
 

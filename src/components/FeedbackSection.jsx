@@ -57,23 +57,7 @@ export default function FeedbackSection() {
 
   return (
     <>
-      {/* Small Floating Feedback Trigger Button on Main Page */}
-      <button
-        type="button"
-        id="feedback-trigger-btn"
-        className="feedback-floating-btn"
-        onClick={() => {
-          setIsOpen(true);
-          setStatus('idle');
-        }}
-        aria-label="Open Feedback Form"
-        title="Give Feedback & Suggestions"
-      >
-        <span className="feedback-btn-icon">💬</span>
-        <span className="feedback-btn-label">Feedback</span>
-      </button>
-
-      {/* Inline Subtle Link on Homepage below courses */}
+      {/* Inline Feedback Bar on Homepage below courses */}
       <div className="feedback-inline-bar">
         <span>Have feedback or noticed a typo?</span>
         <button
@@ -84,7 +68,7 @@ export default function FeedbackSection() {
             setStatus('idle');
           }}
         >
-          💬 Give Feedback
+          <span className="ms">forum</span> Give Feedback
         </button>
       </div>
 
@@ -103,7 +87,7 @@ export default function FeedbackSection() {
             {/* Modal Header */}
             <div className="feedback-modal-header">
               <div className="feedback-header-left">
-                <span className="feedback-modal-badge">💬 Feedback</span>
+                <span className="feedback-modal-badge"><span className="ms">forum</span> Feedback</span>
                 <h3 className="feedback-modal-title">Share Your Feedback</h3>
               </div>
               <button
@@ -112,13 +96,13 @@ export default function FeedbackSection() {
                 onClick={() => setIsOpen(false)}
                 aria-label="Close Feedback Form"
               >
-                ✕
+                <span className="ms">close</span>
               </button>
             </div>
 
             {status === 'success' ? (
               <div className="feedback-success-state">
-                <div className="feedback-success-icon">🎉</div>
+                <div className="feedback-success-icon ms">celebration</div>
                 <h4>Thank you for your feedback!</h4>
                 <p className="feedback-card-sub" style={{ marginTop: '8px' }}>
                   Your feedback has been submitted successfully.
@@ -172,15 +156,15 @@ export default function FeedbackSection() {
                           onMouseLeave={() => setHoverRating(0)}
                           aria-label={`${star} star`}
                         >
-                          ★
+                          <span className="ms">star</span>
                         </button>
                       ))}
                       <span className="star-text">
-                        {rating === 5 && '😍 Loved it!'}
-                        {rating === 4 && '😊 Great'}
-                        {rating === 3 && '🙂 Good'}
-                        {rating === 2 && '😐 Needs work'}
-                        {rating === 1 && '🙁 Needs fix'}
+                        {rating === 5 && 'Loved it!'}
+                        {rating === 4 && 'Great'}
+                        {rating === 3 && 'Good'}
+                        {rating === 2 && 'Needs work'}
+                        {rating === 1 && 'Needs fix'}
                       </span>
                     </div>
                   </div>

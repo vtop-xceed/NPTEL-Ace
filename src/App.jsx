@@ -32,13 +32,18 @@ function PageTransition({ children }) {
   );
 }
 
+function HeaderIfNotQuiz() {
+  const { pathname } = useLocation();
+  return pathname.startsWith('/quiz') ? null : <Header />;
+}
+
 export default function App() {
   return (
     <ThemeProvider>
       <AuthProvider>
         <Router>
           <AnalyticsTracker />
-          <Header />
+          <HeaderIfNotQuiz />
           <Routes>
             <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
             <Route path="/quiz/:course/:week" element={<PageTransition><QuizPage /></PageTransition>} />

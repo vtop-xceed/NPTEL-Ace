@@ -109,9 +109,9 @@
       "solution": "Product-market fit and customer adoption stem fundamentally from identifying genuine market pain points and offering creative, viable solutions."
     },
     {
-      "q": "[Week 1] What is the fundamental starting stage of an",
+      "q": "[Week 1] What is the fundamental starting stage of an entrepreneurial journey?",
       "options": [
-        "",
+        "Ideation",
         "Testing",
         "Validation",
         "Prototyping"
@@ -123,12 +123,12 @@
   ],
   "2": [
     {
-      "q": "[Week 2] Which stage comes immediately after",
+      "q": "[Week 2] Which stage comes immediately after Ideation in the broad stages of product development?",
       "options": [
         "Testing",
         "Validation",
         "Prototyping",
-        ""
+        "Commercialisation"
       ],
       "correctIndex": 2,
       "isMSQ": false,
@@ -159,7 +159,7 @@
       "solution": "Kerr et al. (HBS 2017) discuss how entrepreneurial personality traits, risk attitudes, and locus of control are influenced by and embedded within national cultural environments."
     },
     {
-      "q": "[Week 2] ",
+      "q": "[Week 2] Entrepreneurial large-scale firms may succeed in creating:",
       "options": [
         "Self-delusion",
         "Conglomerates",
@@ -219,7 +219,7 @@
       "solution": "The Stanford d.school design thinking framework begins with \"Empathize\"—deeply understanding customer needs and behaviors."
     },
     {
-      "q": "[Week 2] A true design thinking and",
+      "q": "[Week 2] A true design thinking and ideation exercise involves:",
       "options": [
         "Accepting the status quo",
         "Questioning the basics",
@@ -231,7 +231,7 @@
       "solution": "Breakthrough innovation requires first-principles thinking and questioning fundamental assumptions."
     },
     {
-      "q": "[Week 2] Which of the following is a serious",
+      "q": "[Week 2] Which of the following is a serious ideation mistake?",
       "options": [
         "Lack of boundary",
         "Lack of predefined purpose",
@@ -245,7 +245,7 @@
   ],
   "3": [
     {
-      "q": "[Week 3] An effective",
+      "q": "[Week 3] An effective Ideation facilitator would ideally be:",
       "options": [
         "A computer analyst",
         "An empathetic and creative thinker",
@@ -391,7 +391,7 @@
       "solution": "Unicorn valuation is driven by exponential user adoption, rapid top-line growth, and capturing dominant market share."
     },
     {
-      "q": "[Week 4] Successful",
+      "q": "[Week 4] Successful commercialisation rests on which of the following?",
       "options": [
         "Demand creation",
         "Demand fulfillment",
@@ -408,7 +408,7 @@
         "High technology and Low cost",
         "Creative business model and High technology",
         "Creative business model and low cost",
-        "High"
+        "High technology, Low cost and Creative business model"
       ],
       "correctIndex": 3,
       "isMSQ": false,
@@ -446,9 +446,9 @@
         "Both now cater to e-commerce in India",
         "None of the above"
       ],
-      "correctIndex": 1,
+      "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Amazon is an American publicly traded multinational corporation (NASDAQ: AMZN), unlike Flipkart which operates as a private company acquired by Walmart."
+      "solution": "All three are common to both: each started with online book selling in its home market, each operates in India through privately held entities, and both now serve Indian e-commerce. Hence 'None of the above'."
     },
     {
       "q": "[Week 4] Because of Covid-19 pandemic, start-ups in the following industry were adversely affected:",
@@ -475,7 +475,7 @@
       "solution": "Ninjacart restructured the agricultural supply chain by directly connecting farmers to kirana stores and supermarkets in under 12 hours."
     },
     {
-      "q": "[Week 4] In the granulated stages of manufactured product meets the required standards before reaching the distribution network?10",
+      "q": "[Week 4] In the granulated stages of commercialisation, which stage primarily ensures that the manufactured product meets the required standards before reaching the distribution network?",
       "options": [
         "Supply Chain",
         "Quality Check",
@@ -592,9 +592,9 @@
         "Application Leadership",
         "Cost Leadership"
       ],
-      "correctIndex": 1,
+      "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Experimental leadership pursues boundary-pushing technology trials to convert visionary concepts into functioning reality."
+      "solution": "Application leadership is the innovator strategy that deploys new technologies to turn aspirational ideas into working reality."
     },
     {
       "q": "[Week 5] Fourth industrial revolution is characterized by:",
@@ -671,7 +671,7 @@
       "solution": "Additive manufacturing (3D printing) constructs geometry additively, drastically reducing material waste and enabling topology-optimized lightweighting."
     },
     {
-      "q": "[Week 6] From mobile phones, the recovery of which of the following critical materials presents a",
+      "q": "[Week 6] From mobile phones, the recovery of which of the following critical materials presents a technological challenge and a potential start-up opportunity?",
       "options": [
         "Steel",
         "Aluminium",
@@ -697,7 +697,7 @@
     {
       "q": "[Week 6] According to the Five Economic Forces Model, strategy and structure should consider which forces as more primal than industrial forces?",
       "options": [
-        "",
+        "Technological forces",
         "Social forces",
         "Economic forces",
         "Competitive forces"
@@ -729,6 +729,738 @@
       "correctIndex": 1,
       "isMSQ": false,
       "solution": "JIT operates as a pull-system (Kanban) where production is triggered strictly by downstream customer consumption."
+    }
+  ],
+  "7": [
+    {
+      "q": "[Week 7] Which of the following is a financial strategy decision?",
+      "options": [
+        "Diversification strategy decision",
+        "Integration strategy decision",
+        "Dividend decision",
+        "Recruitment strategy decision"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The classic financial strategy decisions are investment, financing and dividend decisions. The dividend decision determines how much profit is distributed to shareholders versus reinvested in the business."
+    },
+    {
+      "q": "[Week 7] The following is important for smooth and prudential conduct of a company's operations:",
+      "options": [
+        "Periodic equity infusion",
+        "Debt on tap",
+        "Net positive cash flow from operations",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "A net positive cash flow from operations keeps the company solvent and prudently funds day-to-day operations without depending on fresh equity or debt."
+    },
+    {
+      "q": "[Week 7] In the early phases of a start-up (say, ideation and prototyping), a start-up usually receives:",
+      "options": [
+        "Angel funding (also seed funding)",
+        "Venture capital funding",
+        "Private equity funding",
+        "Public issue funding"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Ideation and prototyping stage ventures typically receive angel or seed funding; VC comes at scaling, PE at maturity, and public issues only for established companies."
+    },
+    {
+      "q": "[Week 7] Which of the following statements is true?",
+      "options": [
+        "Over the last few years, there has been an increased investor interest in the Indian start-ups",
+        "Over the last few years, there has been a decreased increased investor interest in the Indian start-ups",
+        "Over the last few years, there has been a decline in the number of Unicorn Indian start-ups",
+        "Over the last few years, there has been no diversification in the Indian start-up domains"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Investor interest in Indian start-ups has grown sharply, with record funding rounds, rising unicorns and diversification into new domains like fintech, healthtech and agritech."
+    },
+    {
+      "q": "[Week 7] One of the most striking examples in global corporatization of an Indian start-up has been:",
+      "options": [
+        "Snapdeal",
+        "Practo",
+        "Walmart-Flipkart",
+        "Urban Ladder"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Walmart's acquisition of Flipkart in 2018 (valued at ~$16 billion) is the landmark corporatization of an Indian start-up by a global corporate group."
+    },
+    {
+      "q": "[Week 7] Wipro Founder supports start-ups through:",
+      "options": [
+        "Catamaran",
+        "Premji Invest",
+        "Wipro itself",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Azim Premji, Wipro's founder, backs Indian start-ups through his personal investment vehicle Premji Invest."
+    },
+    {
+      "q": "[Week 7] IIT Madras Research Park is primarily a:",
+      "options": [
+        "Leading plug and play incubator",
+        "Leading accelerator",
+        "Leading angel investor",
+        "Leading R&D laboratory"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The course describes IIT Madras Research Park as a leading incubator offering plug and play laboratories and offices, having incubated 200+ technology start-ups (Ather, Conzumex, Uniphore)."
+    },
+    {
+      "q": "[Week 7] Government of India directly encourages and supports start-ups financially and procedurally through:",
+      "options": [
+        "Startup India Platform",
+        "Banks",
+        "Regional Rural Banks",
+        "Microfinance Institutions"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The Startup India Platform is the dedicated GoI mechanism providing start-ups recognition, funding support (Fund of Funds, guarantees) and procedural simplification."
+    },
+    {
+      "q": "[Week 7] MSMEs and start-ups have a specialised funding institution for start-ups set up by GoI called:",
+      "options": [
+        "Indifi",
+        "HUDCO",
+        "MUDRA",
+        "Kinara"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "MUDRA (Micro Units Development and Refinance Agency) is the GoI institution set up to fund (refinance) micro-enterprises and small start-ups."
+    },
+    {
+      "q": "[Week 7] A pitch deck is a vital vehicle for the start-up founders to engage with all stakeholders, more specifically:",
+      "options": [
+        "Its employees",
+        "The governments",
+        "The investors",
+        "The suppliers and vendors"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The pitch deck is the founders' primary vehicle to persuade investors — presenting the opportunity, traction, team and financial plan to raise funds."
+    }
+  ],
+  "8": [
+    {
+      "q": "[Week 8] PISA stands for:",
+      "options": [
+        "Programme for International Start-up Assessment",
+        "Programme for International Student Assessment",
+        "Programme for Indian Student Assessment",
+        "Programme for Indian Start-up Assessment"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "PISA is the OECD's Programme for International Student Assessment, which benchmarks 15-year-olds' reading, math and science performance across nations."
+    },
+    {
+      "q": "[Week 8] Indian Government's Make in India thrust is expected to benefit from India's capabilities in:",
+      "options": [
+        "Start-ups",
+        "Software",
+        "Frugal engineering",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The course states that Make in India becomes real when smart science combines with frugal engineering, India's economical way of achieving effectiveness at low cost and short timeframes."
+    },
+    {
+      "q": "[Week 8] Growth hitherto has been based on continuous increases in: (Hint: There could be more than one correct answer)",
+      "options": [
+        "Consumption",
+        "Resource use",
+        "Climate warming",
+        "All of the above"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Economic growth has in fact been driven by all of the above: increases in consumption, resource use and attendant climate warming."
+    },
+    {
+      "q": "[Week 8] Start-ups have a great opportunity to contribute to the ushering in of:",
+      "options": [
+        "Circular economy",
+        "Declining economy",
+        "Volatile economy",
+        "None of the above"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The course positions start-ups, by and large grassroots activities, as best placed to build the zero-waste circular economy of design, manufacture, reuse, repair and recycling."
+    },
+    {
+      "q": "[Week 8] The National Innovation and Startup Policy 2019 for Students and Faculty (NISP) envisages that Institutes could do the following to support student and staff promoted start-ups: (Hint: There could be more than one correct answer)",
+      "options": [
+        "Licensing of Institute IPR on easy terms",
+        "Taking of a nominal equity in the start-ups",
+        "Promote linkups with seed and angel investors",
+        "All of the above"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Per the released key, all of the above: NISP 2019 licenses institute-IPR on easy terms, takes nominal equity interests and promotes linkups with seed and angel investors."
+    },
+    {
+      "q": "[Week 8] Globally, the following US universities are the most famous ones for nurturing a strong and vibrant entrepreneurial ecosystem:",
+      "options": [
+        "Arizona and Georgia",
+        "Stanford and MIT",
+        "Harvard and Columbia",
+        "Yale and Michigan"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Stanford (Silicon Valley) and MIT (Route 128, Kendall Square) are the archetypal American universities whose research parks and incubation ecosystems spawned world-leading start-up clusters."
+    },
+    {
+      "q": "[Week 8] To lead in analytics based start-ups, one needs a strong base of:",
+      "options": [
+        "Arts",
+        "Geology",
+        "Mathematics",
+        "History"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Analytics rests on statistical and mathematical foundations; a strong mathematics base is essential to lead analytics-based start-ups."
+    },
+    {
+      "q": "[Week 8] What is a Founder's Dilemma?",
+      "options": [
+        "Which product to choose",
+        "How much to invest",
+        "When to transfer leadership to professionals",
+        "Where to sell"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The Founder's Dilemma is the tension over when founders should hand over leadership to professional (non-founder) CEOs as the start-up scales."
+    },
+    {
+      "q": "[Week 8] Co-founders of a successful start-up usually have:",
+      "options": [
+        "Exactly same skills",
+        "Opposing attitudes",
+        "Complementary skills and attitudes",
+        "Same family lineage"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Successful founding teams pair complementary skills and aligned attitudes so the team covers technology, commercial and organisational competence without destructive conflict."
+    },
+    {
+      "q": "[Week 8] The succession sagas at Tata Group and Infosys emphasise that for harmonious transition when founders are still the investors or statured leaders, harmony is ensured by:",
+      "options": [
+        "A complete break with the past",
+        "Having all key decisions formally vetted by the founders",
+        "Change with Continuity",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Both Tata Group and InfosysNavigated leadership transitions through 'change with continuity' - evolving leadership while retaining institutional values rather than rupturing with the founders' legacy."
+    }
+  ],
+  "9": [
+    {
+      "q": "[Week 9] For Founder to CEO transition to be successful in a start-up, the CEO must possess, beyond, technical and business skills:",
+      "options": [
+        "Ability to invest in the start-up",
+        "Ability to quit at any time",
+        "Cultural skills and fit",
+        "Constantly questioning attitude"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Beyond operational and strategic competencies, the course's six CEO components include cultural and ethical approaches; cultural skills and fit are essential for founder-to-CEO transitions to succeed."
+    },
+    {
+      "q": "[Week 9] In terms of ensuring good corporate governance, the start-up must have the following from the very beginning:",
+      "options": [
+        "A board comprising independent experts and leaders, including the founder and co-founder",
+        "An organisation structure",
+        "A recruitment procedure",
+        "A hire and fire policy"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Good governance must start early with an independent, expert board that includes the founder/co-founder, anchoring compliance, ethics and accountability."
+    },
+    {
+      "q": "[Week 9] One of the important characteristics even for an all-powerful CEO is to have the:",
+      "options": [
+        "The humility of advocacy",
+        "The consensus from all stakeholders",
+        "Both (a) and (b)",
+        "Neither (a) nor (b)"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The key marks both (a) and (b): the course preaches the humility of advocacy, where consensus from all stakeholders is co-created rather than the CEO's word being mandated."
+    },
+    {
+      "q": "[Week 9] Global concerns on climate change can lead to new start-up opportunities in:",
+      "options": [
+        "Medtech",
+        "Edtech",
+        "Cleantech",
+        "Fintech"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Climate concerns open direct start-up opportunity space in cleantech - clean energy, water security and climate protection are listed among the industry 4.0 opportunity areas."
+    },
+    {
+      "q": "[Week 9] Which of the following is NOT a pillar of the Global Entrepreneurship Index?",
+      "options": [
+        "Risk Acceptance",
+        "Technology Absorption",
+        "Product Innovation",
+        "Financial Sustainability"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The GEI's 14 pillars include Risk Acceptance, Technology Absorption and Product Innovation (also Startup Skills, Networking, Human Capital, High Growth, Internationalization, Risk Capital, etc.). Financial Sustainability is not one of them."
+    },
+    {
+      "q": "[Week 9] According to the 2019 University Entrepreneurship Index, Indian start-ups have to do a lot more in the following area:",
+      "options": [
+        "Biopharmaceutical technology",
+        "Retail and e-commerce",
+        "Finance",
+        "Travel and hospitality"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The Illinois university model snapshot places biomedical/biotech at ~47% of start-up investment, whereas Indian investment concentrates in e-commerce and digitization - so biopharmaceutical technology is where India has far to go."
+    },
+    {
+      "q": "[Week 9] Structurally, the Japanese industrial ecosystem enables technological innovation:",
+      "options": [
+        "In select pockets of the value chain",
+        "All across the value chain",
+        "Only where large companies need",
+        "Only by large firms"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The course describes the Japanese model as generating technology innovation across the value chain, self-sustaining and independent yet collaborative via respectful co-existence of start-ups with large firms."
+    },
+    {
+      "q": "[Week 9] As a global trend, while the success in start-up will lead to exceptional rewards, start-ups do face:",
+      "options": [
+        "Little or no failure rate",
+        "High failure rate",
+        "Governmental bailout even in failure",
+        "Bailout by banks even in failure"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Exceptional rewards come with high failure risk - by convention only about 1 in 10 start-ups survive, and there is no bailout on failure."
+    },
+    {
+      "q": "[Week 9] Which strategic approach is associated with cost-competitiveness for start-ups?",
+      "options": [
+        "Innovative Technologists",
+        "Creative Marketers",
+        "Operations Leaders",
+        "Collaborative Networking"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Operations Leaders manage cost and scale frugally, driving cost competitiveness through operational efficiency rather than novelty."
+    },
+    {
+      "q": "[Week 9] Which pillar of the Global Entrepreneurship Index focuses on entrepreneurs' ability to enter global markets?",
+      "options": [
+        "High Growth",
+        "Internationalization",
+        "Competition",
+        "Risk Capital"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The Internationalization pillar captures the degree to which a country's entrepreneurs are internationalized, measured by exporting potential and economic complexity."
+    }
+  ],
+  "10": [
+    {
+      "q": "[Week 10] Continuing its entrepreneurial journey since the establishment of Tata Steel in 1907, Tata Group's latest aspiration is to develop a:",
+      "options": [
+        "Super car",
+        "Super truck",
+        "Digital super app",
+        "Super salt"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Tata's latest entrepreneurial step was the Tata Neu digital super app (April 2022), integrating the group's consumer businesses into one platform."
+    },
+    {
+      "q": "[Week 10] Which of the following is true?",
+      "options": [
+        "Employee entrepreneurs will carry out projects dictated by the employers only",
+        "Employee entrepreneurs may develop products useful for their companies or for broader industries",
+        "Employee entrepreneurs eventually give up on their projects",
+        "Organisations lose talent because of employee entrepreneurship"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Employee entrepreneurship spans service to the employer's own industry and the broader industry - exemplified by iClean and RiconPharma founders spinning out 'for the broader industry good'."
+    },
+    {
+      "q": "[Week 10] HRM strategy primarily supports which of the following?",
+      "options": [
+        "Organisational structure and roles",
+        "Strategic and operational goals",
+        "Market competition and growth",
+        "Product development and innovation"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "HRM strategy is a bridge: it translates the firm's strategic and operational goals into organisation structure, roles, talent systems and performance."
+    },
+    {
+      "q": "[Week 10] Entrepreneurs are rendered more distinctive by:",
+      "options": [
+        "Only passion without energy",
+        "Only energy without passion",
+        "Fusion of passion and energy",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The course explicitly states 'the fusion of passion and energy is what makes entrepreneurs very unique and very distinctive in the overall leadership canvas of an industry'."
+    },
+    {
+      "q": "[Week 10] Entrepreneurial organisations, when compared to bureaucratic organisations, have:",
+      "options": [
+        "Higher entropy",
+        "Lower entropy",
+        "Equal entropy",
+        "Zero entropy"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The key marks lower entropy: entrepreneurial organisations channel passion and energy into integrated, purposeful action rather than letting it dissipate as higher entropy."
+    },
+    {
+      "q": "[Week 10] The type of talent in a start-up should ideally be determined by:",
+      "options": [
+        "Available talent in the marketplace",
+        "Nature of business strategy of the firm",
+        "Management style of the founder",
+        "Ability to pay"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Recruitment is a business-driven planning tool; talent needs follow from the business strategy the firm pursues, not from market convenience or the founder's style."
+    },
+    {
+      "q": "[Week 10] The most common type of organisation for a start-up is:",
+      "options": [
+        "Functional organisation",
+        "Product organisation",
+        "SBU organisation",
+        "Matrix organisation"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The course states the functional organization structure is the most popular structure and at the start-up stage the most common and dominant form."
+    },
+    {
+      "q": "[Week 10] Matrix organization is usually resorted to by:",
+      "options": [
+        "Domestic companies",
+        "Multinational corporations",
+        "Academic institutions",
+        "Research laboratories"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Matrix organization typically surfaces in large multinational organizations, balancing functional and business/dimension leads across geographies."
+    },
+    {
+      "q": "[Week 10] Which management expert enunciated 14 principles of management?",
+      "options": [
+        "Frederick Taylor",
+        "Elton Mayo",
+        "Henry Fayol",
+        "Abraham Maslow"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Henri Fayol, the French management theorist, enunciated the 14 principles of management (division of work, unity of command, esprit de corps, etc.)."
+    },
+    {
+      "q": "[Week 10] Start-ups offer great opportunity for employees in terms of:",
+      "options": [
+        "Simple performance",
+        "Directed behaviour",
+        "Random behaviour",
+        "Self-actualisation"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Start-ups give employees room to take ownership and realise their full potential - the path to self-actualisation, the apex of Maslow's need hierarchy."
+    }
+  ],
+  "11": [
+    {
+      "q": "[Week 11] Alexander Kritikos in his paper titled “Entrepreneurs and their impact on jobs and economic growth” in IZA World of Labor (May 2014) used the following phrase to aptly describe the disruption of an industry caused by innovative entrepreneurs:",
+      "options": [
+        "Hyper disruption",
+        "Hyper destruction",
+        "Creative destruction",
+        "Creative construction"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Kritikos describes innovative entrepreneurs as agents of creative destruction - Schumpeter's phrase for innovations that displace established products and processes."
+    },
+    {
+      "q": "[Week 11] According to ILO statistics (2018), the percentage of employment in the formal sector is:",
+      "options": [
+        "Less than 10%",
+        "Between 20 and 30%",
+        "Between 40 and 50%",
+        "Above 50%"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Per ILO 2018 statistics cited in the course, only 6.5% of global employment is in the formal sector; 61% works informally (68.2% in Asia-Pacific)."
+    },
+    {
+      "q": "[Week 11] As industries mature:",
+      "options": [
+        "Employment accelerates",
+        "Employment decelerates",
+        "Junior employees become less important",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The course states that when industries mature, employment decelerates - the rate of growth of employment in mature industries is lower than in young industries."
+    },
+    {
+      "q": "[Week 11] Food delivery companies such as Zomato and Swiggy brought this change to the employment scenario:",
+      "options": [
+        "Huge formal employment on fulltime rolls",
+        "Huge informal employment, all on contract",
+        "A mix of huge formal and informal employment, on a mix of fulltime and part-time rolls",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "The key marks the mix: India needs huge formal and informal employment together, spread over a mix of fulltime and part-time rolls."
+    },
+    {
+      "q": "[Week 11] In terms of employment, entrepreneurship is nothing but:",
+      "options": [
+        "A divine choice",
+        "A serendipitous choice",
+        "An occupational choice",
+        "A referral choice"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Following Kritikos' framing, entrepreneurship is an occupational choice - individuals choose between employment and self-employment based on opportunities and capabilities."
+    },
+    {
+      "q": "[Week 11] One of the greatest authors on employment and entrepreneurship who wrote a landmark book in 1934 was:",
+      "options": [
+        "Rensis Likert",
+        "Joseph Schumpeter",
+        "Paul Samuelson",
+        "Abraham Maslow"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "Joseph Schumpeter's The Theory of Economic Development (English edition, 1934) gave the landmark analysis of entrepreneurship, innovation and creative destruction."
+    },
+    {
+      "q": "[Week 11] Village industries (for example, pottery, carpentry, honey extraction) give self-employment to:",
+      "options": [
+        "Farmers",
+        "ITI diploma holders",
+        "Skilled artisans, whether formally educated or not",
+        "Migrant labour"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Village industries sustain self-employment for skilled artisans regardless of formal schooling - craft competence rather than credentials drives these livelihoods."
+    },
+    {
+      "q": "[Week 11] E-Commerce start-up sector's growth has triggered huge corresponding growth in:",
+      "options": [
+        "Malls",
+        "Kirana stores",
+        "Logistics",
+        "Advertising"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "E-commerce start-ups triggered an explosion of the logistics industry - warehousing, last-mile delivery fleets and courier networks grew in direct response."
+    },
+    {
+      "q": "[Week 11] Which of the following statements is true, with reference to a company?",
+      "options": [
+        "The Board of Directors is not responsible for Corporate Governance",
+        "The CEO is not responsible but the Board of Directors is responsible for Corporate Governance",
+        "Corporate Governance is the responsibility of shareholders",
+        "The Board of Directors and the CEO are responsible for Corporate Governance"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Corporate governance is a shared responsibility: the Board provides oversight, steer and stewardship while the CEO and executive team operationalise it - both are jointly responsible."
+    },
+    {
+      "q": "[Week 11] The following governmental agency takes a lead role in formulating policies for and supervising corporate governance of listed companies in India:",
+      "options": [
+        "IRDA",
+        "RBI",
+        "SEBI",
+        "National Stock exchange"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "SEBI (Securities and Exchange Board of India) formulates governance policies (Listing Obligations, LODR) and supervises listed companies, including board composition and audit committee norms."
+    }
+  ],
+  "12": [
+    {
+      "q": "[Week 12] The ideal space for a start-up in the matrix of needs and futurism (the need-marketing pivot) is:",
+      "options": [
+        "Linear Known",
+        "Linear Unknown",
+        "Non-linear Known",
+        "Non-linear Unknown"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "As established companies excel in the linear-known space through incremental development, innovative start-ups excel in non-linear unknown space - creating unique market and industry segments."
+    },
+    {
+      "q": "[Week 12] Strategically, marketing is all about:",
+      "options": [
+        "Selling products to consumers as much as possible",
+        "Pricing products at the highest possible level",
+        "Matching new company capabilities and new consumer needs",
+        "Convincing others"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Marketing is the matching discipline - market dynamics of new consumer requirements and new company capabilities together tell whether the firm will renew itself or transform itself."
+    },
+    {
+      "q": "[Week 12] The quote “like all disciplines, entrepreneurship has models, processes and case studies.” is by:",
+      "options": [
+        "Donald F. Kuratko",
+        "Peter Drucker",
+        "Eric Ries",
+        "Clayton Christensen"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Kuratko, author of Entrepreneurship: Theory, Process and Practice, says like all disciplines entrepreneurship has models, processes and case studies - quoted alongside Drucker's 'entrepreneurship is a discipline that can be learned'."
+    },
+    {
+      "q": "[Week 12] Which of the following represents the highest level of need in Maslow's Hierarchy of Needs?",
+      "options": [
+        "Safety needs",
+        "Social needs",
+        "Esteem needs",
+        "Self-actualisation needs"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "Self-actualisation needs sit at the apex of Maslow's hierarchy, above esteem, social and safety needs."
+    },
+    {
+      "q": "[Week 12] Chennai Business School was established by senior working executives and became successful despite competition. It demonstrates:",
+      "options": [
+        "Opportunity Entrepreneurship",
+        "Replicative Entrepreneurship",
+        "Employee Entrepreneurship",
+        "Necessity Entrepreneurship"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "Founded by senior working executives under employment, Chennai Business School matched its capabilities against new consumer needs - opportunity entrepreneurship rather than replicative entry."
+    },
+    {
+      "q": "[Week 12] Every start-up will have its core competence but all successful start-ups have a unique additional competency:",
+      "options": [
+        "Governmental support",
+        "Industry support",
+        "Ability to conceptualise and execute an integrated business strategy and business model",
+        "None of the above"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "Beyond core technical competence, lasting success comes from the ability to craft and execute an integrated business strategy and business model that binds the whole venture together."
+    },
+    {
+      "q": "[Week 12] The unique differentiating competence required for natural products to be medicines is the following:",
+      "options": [
+        "Finance",
+        "The technical ability to characterise and isolate the active wellness or therapeutic ingredient",
+        "Being in the large-scale sector",
+        "None of the above"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "The course notes the biggest challenge in plant-based medicine is characterizing the core therapeutic ingredient and eliminating adverse components - the technical ability to isolate active ingredients differentiates natural-medicine ventures like NatSol."
+    },
+    {
+      "q": "[Week 12] NatSol Laboratories chose a natural product for its business. It is:",
+      "options": [
+        "Aspartime",
+        "Stevia",
+        "Sucralose",
+        "Ginseng"
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "NatSol identifies stevia, a unique plant-based sweetener with near-zero glycemic index, as its seed product - unlike synthetic aspartame and sucralose."
+    },
+    {
+      "q": "[Week 12] Which of the following is NOT one of the traditional 4 Ps of marketing?",
+      "options": [
+        "Product",
+        "Price",
+        "Promotion",
+        "People"
+      ],
+      "correctIndex": 3,
+      "isMSQ": false,
+      "solution": "The traditional marketing mix is Product, Price, Place and Promotion - 'People' belongs to the extended service marketing mix, not the traditional 4 Ps."
+    },
+    {
+      "q": "[Week 12] Integrated Cleanroom Technology supplies its products primarily to:",
+      "options": [
+        "Automobile industry",
+        "Chemical industry",
+        "Sterile pharmaceutical industry",
+        "Housing industry"
+      ],
+      "correctIndex": 2,
+      "isMSQ": false,
+      "solution": "iClean (Integrated Cleanroom Technologies) builds cleanroom panels for sterile pharmaceutical manufacturing, becoming India's largest cleanroom technology company serving diverse pharma plants."
     }
   ]
 }

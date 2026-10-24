@@ -46,15 +46,15 @@ export default function LoginPage() {
     <main className="main-content auth-container">
       <div className="auth-card">
         <div className="auth-header">
-          <div className="auth-icon">🔑</div>
+          <div className="auth-icon ms">key</div>
           <h2 className="auth-title">Welcome to NPTEL Ace</h2>
           <p className="auth-subtitle">
             Enter your email to sign in. No password required.
           </p>
         </div>
 
-        {error && <div className="auth-alert auth-alert-error">⚠️ {error}</div>}
-        {success && <div className="auth-alert auth-alert-success">✅ {success}</div>}
+        {error && <div className="auth-alert auth-alert-error"><span className="ms">warning</span> {error}</div>}
+        {success && <div className="auth-alert auth-alert-success"><span className="ms">check_circle</span> {success}</div>}
 
         <form onSubmit={handleLogin} className="auth-form">
           <div className="auth-field">
@@ -76,7 +76,7 @@ export default function LoginPage() {
             className="auth-submit-btn"
             disabled={loading || !email.trim()}
           >
-            {loading ? 'Checking Database...' : 'Continue with Email →'}
+            {loading ? 'Checking Database...' : 'Continue with Email'}
           </button>
         </form>
 
