@@ -43,7 +43,7 @@ NPTEL-Ace/
 │   ├── pages/
 │   │   ├── HomePage.jsx # course list and week dashboard
 │   │   ├── QuizPage.jsx # quiz flow, progress bar, results screen
-│   │   └── ...          # login / register pages
+│   │   └── ...          # other pages
 │   ├── utils/shuffle.js # randomizes question order
 │   ├── index.css        # design system
 │   └── main.jsx         # entry point
