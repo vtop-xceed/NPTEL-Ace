@@ -70,15 +70,9 @@ export default function Header() {
                 Logout
               </button>
             </div>
-          ) : (
-            <Link to="/login" className="header-login-btn">
-              <span className="ms">key</span>
-              <span>Login</span>
-            </Link>
-          )}
+          ) : null}
 
-          <button
-            id="theme-toggle"
+          <button            id="theme-toggle"
             className={`theme-btn ${themeAnimating ? 'theme-btn-spin' : ''}`}
             onClick={handleThemeToggle}
             aria-label="Toggle Theme"

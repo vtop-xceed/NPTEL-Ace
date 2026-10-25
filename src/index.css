@@ -2865,36 +2865,9 @@ html[data-course="entrepreneurship"] body::after {
 
 .feedback-btn-secondary:hover {
   border-color: var(--accent);
-  color: var(--accent);
+   color: var(--accent);
 }
 
-
-/* ── Header Authentication Styles ───────────────────────────── */
-.header-login-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 42px;
-  background: var(--bg-card);
-  border: 2px solid var(--border-option);
-  color: var(--text-primary);
-  padding: 0 16px;
-  border-radius: 12px;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform var(--dur) ease, border-color var(--dur) ease, background var(--dur) ease, box-shadow var(--dur) ease, color var(--dur) ease;
-}
-
-.header-login-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-1px);
-  background: var(--bg-card-hover);
-  box-shadow: 0 4px 15px var(--accent-glow);
-}
 
 .header-user-badge {
   display: inline-flex;
