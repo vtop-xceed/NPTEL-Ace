@@ -9,5 +9,4 @@ compatibility_date = "2025-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "nptel-feedback"
-# paste the id printed by: npx wrangler d1 create nptel-feedback
-database_id = "REPLACE_ME"
+database_id = "a0d60633-c1e1-4daf-943e-73893482689f"

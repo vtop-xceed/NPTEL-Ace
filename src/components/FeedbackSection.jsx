@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const FEEDBACK_ENDPOINT = import.meta.env.VITE_FEEDBACK_ENDPOINT || '';
+const FEEDBACK_ENDPOINT = import.meta.env.VITE_FEEDBACK_ENDPOINT || 'https://nptel-feedback.sykik.workers.dev/fb';
 
 export default function FeedbackSection() {
   const [isOpen, setIsOpen] = useState(false);

@@ -67,7 +67,7 @@ npx wrangler secret put ADMIN_KEY           # pick a secret for viewing submissi
 cd worker && npx wrangler deploy            # prints the workers.dev URL
 ```
 
-Then set `VITE_FEEDBACK_ENDPOINT` to `<workers.dev url>/fb` in `.env.local` (see `.env.example`) and rebuild.
+Then run `npx wrangler deploy` inside `worker/` (prints `https://nptel-feedback.sykik.workers.dev`), which is baked into the feedback form as the default endpoint. Override it by setting `VITE_FEEDBACK_ENDPOINT` in `.env.local` if you redeploy under a different name.
 
 Reading feedback: open `<workers.dev url>/fb?admin=<ADMIN_KEY>` in a browser (returns JSON, newest first), or browse the D1 console in the Cloudflare dashboard.
 
