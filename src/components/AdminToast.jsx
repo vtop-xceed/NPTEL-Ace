@@ -1,35 +1,39 @@
 import React from 'react';
 
-const COUNTER_NAMESPACE = 'nptel-cloud-mcq-ravikant';
-const COUNTER_KEY = 'visits';
+// Key is prompted per device and kept in localStorage; never shipped in the bundle.
+const openDashboard = () => {
+  let key = localStorage.getItem('nptel-admin-key');
+  if (!key) {
+    key = window.prompt('Admin key:');
+    if (key) localStorage.setItem('nptel-admin-key', key);
+  }
+  if (key) window.open(`https://nptel-feedback.sykik.workers.dev/admin?admin=${encodeURIComponent(key)}`, '_blank');
+};
 
 export default function AdminToast({ onClose }) {
-  const statsUrl = `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${COUNTER_KEY}`;
-
   return (
     <div className="admin-toast">
       <div style={{ marginBottom: '10px' }}>
         <span className="ms">shield</span> <strong>Admin Menu</strong>
       </div>
       <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '16px' }}>
-        Click below to see the live visitor data:
+        Live visits, course picks, and feedback:
       </p>
-      <a
-        href={statsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        onClick={openDashboard}
         style={{
           display: 'inline-block',
           background: 'var(--accent)',
           color: 'white',
           padding: '8px 16px',
           borderRadius: '8px',
-          textDecoration: 'none',
+          border: 'none',
           fontSize: '0.9rem',
+          cursor: 'pointer',
         }}
       >
         Open Live Stats ↗
-      </a>
+      </button>
       <button
         onClick={onClose}
         style={{
