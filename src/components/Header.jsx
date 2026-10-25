@@ -1,12 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from '../hooks/useTheme';
-import { useAuth } from '../context/AuthContext';
 import AdminToast from './AdminToast';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
-  const { user, logout } = useAuth();
   const [showAdmin, setShowAdmin] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [themeAnimating, setThemeAnimating] = useState(false);
@@ -60,19 +58,8 @@ export default function Header() {
         </div>
 
         <div className="header-right">
-          {user ? (
-            <div className="header-user-badge">
-              <span className="user-avatar-icon ms">person</span>
-              <span className="user-name-text" title={user.email}>
-                {user.name || user.email.split('@')[0]}
-              </span>
-              <button onClick={logout} className="header-logout-btn" title="Sign out">
-                Logout
-              </button>
-            </div>
-          ) : null}
-
-          <button            id="theme-toggle"
+          <button
+            id="theme-toggle"
             className={`theme-btn ${themeAnimating ? 'theme-btn-spin' : ''}`}
             onClick={handleThemeToggle}
             aria-label="Toggle Theme"
