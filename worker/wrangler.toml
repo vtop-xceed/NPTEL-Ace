@@ -1,0 +1,13 @@
+name = "nptel-feedback"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Leave empty here; set the admin view key with:
+#   npx wrangler secret put ADMIN_KEY
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nptel-feedback"
+# paste the id printed by: npx wrangler d1 create nptel-feedback
+database_id = "REPLACE_ME"

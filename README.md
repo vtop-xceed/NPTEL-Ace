@@ -53,6 +53,24 @@ NPTEL-Ace/
 └── vite.config.js
 ```
 
+## Feedback
+
+Users report wrong answers or typos through the homepage feedback card. Reports go to a Cloudflare Worker backed by a D1 database (`worker/`), so nothing is stored on the Render host and redeploys never touch the data.
+
+One-time setup:
+
+```bash
+npx wrangler login
+npx wrangler d1 create nptel-feedback       # copy database_id into worker/wrangler.toml
+npx wrangler d1 execute nptel-feedback --remote --command "CREATE TABLE IF NOT EXISTS feedback (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, course TEXT, rating INT, message TEXT, page TEXT, created_at TEXT DEFAULT (datetime('now')))"
+npx wrangler secret put ADMIN_KEY           # pick a secret for viewing submissions
+cd worker && npx wrangler deploy            # prints the workers.dev URL
+```
+
+Then set `VITE_FEEDBACK_ENDPOINT` to `<workers.dev url>/fb` in `.env.local` (see `.env.example`) and rebuild.
+
+Reading feedback: open `<workers.dev url>/fb?admin=<ADMIN_KEY>` in a browser (returns JSON, newest first), or browse the D1 console in the Cloudflare dashboard.
+
 ## Local development
 
 ```bash

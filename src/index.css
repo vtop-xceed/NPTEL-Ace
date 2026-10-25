@@ -2670,6 +2670,17 @@ html[data-course="entrepreneurship"] body::after {
   margin-bottom: 16px;
 }
 
+.feedback-error-note {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--danger);
+  background: var(--feedback-wrong-bg, rgba(235, 43, 35, 0.12));
+  border: 1px solid var(--danger);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+
 .feedback-form {
   display: flex;
   flex-direction: column;

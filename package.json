@@ -15,7 +15,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
-    "mysql2": "^3.24.5",
     "vite": "^5.4.0"
   }
 }

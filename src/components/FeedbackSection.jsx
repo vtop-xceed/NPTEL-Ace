@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const FEEDBACK_ENDPOINT = import.meta.env.VITE_FEEDBACK_ENDPOINT || '';
+
 export default function FeedbackSection() {
   const [isOpen, setIsOpen] = useState(false);
   const [course, setCourse] = useState('general');
@@ -7,7 +9,7 @@ export default function FeedbackSection() {
   const [hoverRating, setHoverRating] = useState(0);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success'
+  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
 
   // Close on Escape key
   useEffect(() => {
@@ -22,38 +24,41 @@ export default function FeedbackSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!message.trim()) return;
+    if (!message.trim() || !FEEDBACK_ENDPOINT) return;
 
     setStatus('submitting');
-    const feedbackItem = {
-      course,
-      rating,
-      name: name.trim() || 'Anonymous Student',
-      message: message.trim(),
-      date: new Date().toLocaleString(),
-      timestamp: new Date().toISOString(),
-    };
-
     try {
-      await fetch('/api/feedback', {
+      const res = await fetch(FEEDBACK_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(feedbackItem),
+        body: JSON.stringify({
+          course,
+          rating,
+          name: name.trim() || 'Anonymous Student',
+          message: message.trim(),
+          page: window.location.href,
+        }),
       });
+      if (!res.ok) throw new Error(`feedback endpoint ${res.status}`);
     } catch {
-      // Backend handles fallback
+      setStatus('error');
+      return;
     }
 
     setStatus('success');
     setMessage('');
     setName('');
+  };
 
-    // Automatically close modal after 2.5 seconds
-    setTimeout(() => {
+  // Automatically close modal after 2.5 seconds on success
+  useEffect(() => {
+    if (status !== 'success') return;
+    const t = setTimeout(() => {
       setIsOpen(false);
       setStatus('idle');
     }, 2500);
-  };
+    return () => clearTimeout(t);
+  }, [status]);
 
   return (
     <>
@@ -122,8 +127,13 @@ export default function FeedbackSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="feedback-form">
+                {status === 'error' && (
+                  <p className="feedback-error-note" role="alert">
+                    Couldn't send your feedback right now. Please try again in a bit.
+                  </p>
+                )}
                 <p className="feedback-card-sub">
-                  Found a question mistake or have a feature suggestion? Let us know below!
+                  Spotted a wrong answer or a typo? Tell us which question and what's wrong.
                 </p>
 
                 <div className="feedback-row">
