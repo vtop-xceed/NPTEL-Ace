@@ -31,8 +31,8 @@ export default {
   },
 };
 
-const esc = (s) =>
-  String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const esc = (v) =>
+  String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 function adminHtml() {
   return `<!doctype html>
@@ -69,7 +69,7 @@ function adminHtml() {
 <section><h2>Feedback</h2><div id="fb"></div></section>
 <script>
 const KEY = new URLSearchParams(location.search).get('admin') || '';
-const esc = s => (s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stars = n => '★'.repeat(Math.min(5, n)) + '☆'.repeat(Math.max(0, 5 - n));
 
 async function load() {
