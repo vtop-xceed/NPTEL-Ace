@@ -5,6 +5,7 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import QuizPage from './pages/QuizPage';
 import { AnalyticsTracker } from './utils/analytics';
+import { startTracking } from './utils/tracker';
 
 function PageTransition({ children }) {
   const location = useLocation();
@@ -35,6 +36,9 @@ function HeaderIfNotQuiz() {
 }
 
 export default function App() {
+  useEffect(() => {
+    startTracking();
+  }, []);
   return (
     <ThemeProvider>
       <Router>

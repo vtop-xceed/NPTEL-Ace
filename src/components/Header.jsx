@@ -11,11 +11,6 @@ export default function Header() {
   const clickCount = useRef(0);
   const lastClickTime = useRef(0);
 
-  useEffect(() => {
-    // Visitor counter tracking on mount
-    fetch('https://api.counterapi.dev/v1/nptel-cloud-mcq-ravikant/visits/up', { mode: 'no-cors' }).catch(() => {});
-  }, []);
-
   // Scroll shadow effect
   useEffect(() => {
     const handleScroll = () => {

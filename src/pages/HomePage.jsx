@@ -4,6 +4,7 @@ import { useTheme } from '../hooks/useTheme';
 import { useScoreHistory } from '../hooks/useScoreHistory';
 import { COURSES } from '../data/courses';
 import FeedbackSection from '../components/FeedbackSection';
+import { trackCourse } from '../utils/tracker';
 
 export default function HomePage() {
   const { setCourseTheme } = useTheme();
@@ -36,6 +37,7 @@ export default function HomePage() {
   const activeCourseObj = COURSES.find(c => c.id === selectedCourse);
 
   const handleSelectCourse = (courseId) => {
+    trackCourse(courseId);
     setTransitioning(true);
     setTimeout(() => {
       setSelectedCourse(courseId);
