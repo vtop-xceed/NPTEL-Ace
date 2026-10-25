@@ -8,6 +8,7 @@ import MilestoneOverlay from '../components/MilestoneOverlay';
 import CelebrationVideo from '../components/CelebrationVideo';
 import XpPopup from '../components/XpPopup';
 import { loadCourse } from '../data/courses';
+import { sendFeedback } from '../utils/feedbackClient';
 
 export default function QuizPage() {
   const { course, week } = useParams();
@@ -26,6 +27,18 @@ export default function QuizPage() {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
   const [xpTrigger, setXpTrigger] = useState(0);
   const [slideDir, setSlideDir] = useState('right'); // 'right' | 'left'
+  const [reported, setReported] = useState(() => new Set());
+
+  const reportQuestion = (q) => {
+    if (reported.has(q.q)) return;
+    sendFeedback({
+      name: 'Question Report',
+      course,
+      message: `Week ${week === 'grand' ? 'Grand' : week} · Q${currentIndex + 1}: ${q.q.slice(0, 160)}`,
+      page: window.location.href,
+    });
+    setReported((prev) => new Set(prev).add(q.q));
+  };
 
   // Milestone tracking
   const [milestoneInfo, setMilestoneInfo] = useState(null);
@@ -358,8 +371,19 @@ export default function QuizPage() {
           <main className="quiz-body">
             <div className={`question-container slide-${slideDir}`} key={currentIndex}>
               <div className="question-label">
-                Question {currentIndex + 1} of {questions.length}
-                {isMSQ && <span className="msq-badge">MSQ — Multiple Options</span>}
+                <span>
+                  Question {currentIndex + 1} of {questions.length}
+                  {isMSQ && <span className="msq-badge">MSQ — Multiple Options</span>}
+                </span>
+                <button
+                  type="button"
+                  className="q-report-btn"
+                  disabled={reported.has(currentQ.q)}
+                  onClick={() => reportQuestion(currentQ)}
+                >
+                  <span className="ms">flag</span>
+                  {reported.has(currentQ.q) ? 'Reported ✓' : 'Report'}
+                </button>
               </div>
               <h2 className="question-text">{currentQ.q.replace(/^\[\s*Week\s*\d+\s*\]\s*/i, '')}</h2>
 

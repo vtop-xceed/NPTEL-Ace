@@ -87,7 +87,7 @@ async function load() {
       ? '<table><tr><th>Course</th><th>Shares</th><th>Picks</th></tr>' + c.map(x =>
           '<tr><td>' + esc(x.course) + '</td><td style="width:45%"><div class="bar" style="width:' + Math.round(x.picks / max * 100) + '%"></div></td><td><b>' + x.picks + '</b></td></tr>').join('') + '</table>'
       : '<p class="mut">No picks yet.</p>';
-    const f = await fetch('/fb?admin=' + KEY).then(r => r.json());
+    const f = s;
     document.getElementById('fb').innerHTML = (f.feedback || []).map(x =>
       '<div class="fb"><div class="top"><b>' + esc(x.name) + '</b><span>' + stars(x.rating) + ' · ' + esc(x.created_at) + '</span></div>' +
       '<div style="margin:6px 0">' + esc(x.message) + '</div>' +
@@ -140,6 +140,9 @@ async function handleStats(env) {
     .filter(([k]) => k.startsWith('course:'))
     .map(([k, v]) => ({ course: k.slice(7), picks: v }))
     .sort((a, b) => b.picks - a.picks);
+  const fb = await env.DB.prepare(
+    'SELECT id, name, course, rating, message, page, created_at FROM feedback ORDER BY id DESC LIMIT 200'
+  ).all();
   return json({
     visits: map.visits || 0,
     sessions: map.sessions || 0,
@@ -148,6 +151,7 @@ async function handleStats(env) {
       ? Math.round(((map.time_seconds || 0) / map.sessions / 60) * 10) / 10
       : 0,
     topCourses: courses,
+    feedback: fb.results,
   });
 }
 

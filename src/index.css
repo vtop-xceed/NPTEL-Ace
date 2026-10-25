@@ -623,12 +623,45 @@ body::after {
 }
 
 .question-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
+}
+
+.q-report-btn {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    cursor: pointer;
+    text-transform: none;
+    letter-spacing: normal;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.q-report-btn:hover:not(:disabled) {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.q-report-btn:disabled {
+    cursor: default;
+    color: var(--correct);
+    border-color: var(--correct);
+    opacity: 0.85;
 }
 
 .msq-badge {
