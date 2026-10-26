@@ -10,7 +10,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The ITU report describes a future where humans may become a minority as generators and receivers of traffic. Instead, communication will increasingly happen between devices and \u201cthings,\u201d forming the Internet of Things. See lecture 1 Introduction to IoT \u2014 Part-I @ 03:10"
+      "solution": "The ITU report describes a future where humans may become a minority as generators and receivers of traffic. Instead, communication will increasingly happen between devices and “things,” forming the Internet of Things. See lecture 1 Introduction to IoT — Part-I @ 03:10"
     },
     {
       "q": "[Week 1] Which of the following are characteristics of IoT systems?",
@@ -26,10 +26,10 @@
         2
       ],
       "isMSQ": true,
-      "solution": "IoT systems require scalable architecture, clear naming and addressing, and must support heterogeneous devices such as sleeping nodes, mobile nodes, and non-IP devices. However, IoT systems may have intermittent connectivity, so option d is incorrect. See lecture 1: Introduction to IoT \u2014 Part-I @ 06:05"
+      "solution": "IoT systems require scalable architecture, clear naming and addressing, and must support heterogeneous devices such as sleeping nodes, mobile nodes, and non-IP devices. However, IoT systems may have intermittent connectivity, so option d is incorrect. See lecture 1: Introduction to IoT — Part-I @ 06:05"
     },
     {
-      "q": "[Week 1] In the lecture, \u201cSmart Dust\u201d refers to:",
+      "q": "[Week 1] In the lecture, “Smart Dust” refers to:",
       "options": [
         "A cloud storage model for IoT data",
         "A large-scale wireless router used in smart cities",
@@ -38,7 +38,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Smart Dust refers to extremely small computing devices, smaller than a grain of sand, that can be used to measure chemicals in soil or diagnose problems in the human body. See lecture 1 Introduction to IoT \u2014 Part-I @ 10:40"
+      "solution": "Smart Dust refers to extremely small computing devices, smaller than a grain of sand, that can be used to measure chemicals in soil or diagnose problems in the human body. See lecture 1 Introduction to IoT — Part-I @ 10:40"
     },
     {
       "q": "[Week 1] Which statement best explains the relation between IoT and M2M communication?",
@@ -50,7 +50,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "M2M focuses mainly on communication among machines and devices. IoT is broader because it includes interactions between things, people, applications, and systems. See lecture 1 Introduction to IoT \u2014 Part-I @ 19:30"
+      "solution": "M2M focuses mainly on communication among machines and devices. IoT is broader because it includes interactions between things, people, applications, and systems. See lecture 1 Introduction to IoT — Part-I @ 19:30"
     },
     {
       "q": "[Week 1] State whether the following statement is True or False. Statement: In the Web of Things, IoT sensors are replaced completely by cloud databases.",
@@ -60,10 +60,10 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The Web of Things does not replace sensors. Sensors remain responsible for collecting physical-world data, while web technologies help expose and access IoT resources. See lecture 1 Introduction to IoT \u2014 Part-I @ 22:50"
+      "solution": "The Web of Things does not replace sensors. Sensors remain responsible for collecting physical-world data, while web technologies help expose and access IoT resources. See lecture 1 Introduction to IoT — Part-I @ 22:50"
     },
     {
-      "q": "[Week 1] In an IoT network configuration, local addresses may be valid only within a gateway\u2019s domain. The same local address may even appear under another gateway. The main advantage of this strategy is:",
+      "q": "[Week 1] In an IoT network configuration, local addresses may be valid only within a gateway’s domain. The same local address may even appear under another gateway. The main advantage of this strategy is:",
       "options": [
         "It increases unnecessary address consumption",
         "It helps conserve address space",
@@ -72,7 +72,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Using locally valid addresses within a gateway\u2019s domain allows address reuse across different gateway domains. This helps avoid unnecessary wastage of global addresses. See lecture 2 Introduction to IoT \u2014 Part-II @ 05:30"
+      "solution": "Using locally valid addresses within a gateway’s domain allows address reuse across different gateway domains. This helps avoid unnecessary wastage of global addresses. See lecture 2 Introduction to IoT — Part-II @ 05:30"
     },
     {
       "q": "[Week 1] Which of the following functions are associated with IoT gateways in the addressing strategy discussed in the lecture?",
@@ -89,7 +89,7 @@
         3
       ],
       "isMSQ": true,
-      "solution": "IoT gateways can provide Internet connectivity and IoT LAN intra-connectivity. They may obtain upstream prefixes through DHCPv6 and delegate them to nodes using SLAAC. See lecture 2 Introduction to IoT \u2014 Part-II @ 09:40"
+      "solution": "IoT gateways can provide Internet connectivity and IoT LAN intra-connectivity. They may obtain upstream prefixes through DHCPv6 and delegate them to nodes using SLAAC. See lecture 2 Introduction to IoT — Part-II @ 09:40"
     },
     {
       "q": "[Week 1] Which of the following is true about IPv6 compared to IPv4?",
@@ -101,7 +101,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "IPv4 uses 32-bit addresses and dotted decimal notation, whereas IPv6 uses 128- bit addresses and hexadecimal notation. This makes IPv6 more suitable for large-scale IoT addressing. See lecture 2 Introduction to IoT \u2014 Part-II @ 16:50"
+      "solution": "IPv4 uses 32-bit addresses and dotted decimal notation, whereas IPv6 uses 128- bit addresses and hexadecimal notation. This makes IPv6 more suitable for large-scale IoT addressing. See lecture 2 Introduction to IoT — Part-II @ 16:50"
     },
     {
       "q": "[Week 1] Which statement correctly represents the design expectation from a good sensor?",
@@ -187,7 +187,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "In the example IoT implementation, the sensor first collects the data. The data then passes through the gateway and proxy server before reaching the cloud server for further processing and analytics. See Lecture 5: Basics of IoT Networking \u2014 Part-I @ 07:30"
+      "solution": "In the example IoT implementation, the sensor first collects the data. The data then passes through the gateway and proxy server before reaching the cloud server for further processing and analytics. See Lecture 5: Basics of IoT Networking — Part-I @ 07:30"
     }
   ],
   "2": [
@@ -396,170 +396,203 @@
   ],
   "3": [
     {
-      "q": "[Week 3] State whether the following statement is true or false. Statement: There is no network layer in Wired HART",
+      "q": "[Week 3] Which WirelessHART data-link mechanism provides reliable, collision-free, and deterministic communication?",
       "options": [
-        "True",
-        "False"
+        "Superframes divided into 10-millisecond TDMA time slots",
+        "Pure ALOHA without time-slot allocation",
+        "CSMA/CD over a wired Ethernet bus",
+        "Token-ring emulation among field devices"
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "There is no network layer in Wired HART. See lecture 11 @ 05:22"
+      "solution": "WirelessHART uses superframes divided into 10-millisecond TDMA time slots along with channel hopping at the data-link layer to provide reliable, collision-free, and deterministic communication."
     },
     {
-      "q": "[Week 3] Zwave operates at ________ MHz in the US and ________ MHz in Europe.",
+      "q": "[Week 3] In WirelessHART, which entity requests network nodes and guides them regarding when and what packets should be transmitted?",
       "options": [
-        "1008,989",
-        "908.42, 868.42",
-        "767.56,855.28",
-        "None of these"
-      ],
-      "correctIndex": 1,
-      "isMSQ": false,
-      "solution": "Zwave operates at 908.42 MHz in the US and 868.42 MHz in Europe. See lecture 13 @ 3:40"
-    },
-    {
-      "q": "[Week 3] Dumb behavior of sensor nodes is _______________ in nature (as it is dependent on the effects of the environmental conditions).",
-      "options": [
-        "Temporal",
-        "Spatial",
-        "Both (a) and (b)",
-        "None of these"
+        "Network manager",
+        "NFC reader",
+        "Z-Wave end device",
+        "Bluetooth inquiry agent"
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Dumb behavior of sensor nodes is Temporal in nature (as it is dependent on the effects of the environmental conditions). See lecture 15 @ 05:40"
+      "solution": "In WirelessHART, the Network Manager is responsible for configuring the network, scheduling communications, and guiding nodes on when and what packets should be transmitted."
     },
     {
-      "q": "[Week 3] The process of identifying channels consistently affected by interference and removing them from use is known as _________________.",
+      "q": "[Week 3] Which of the following are operating modes of NFC?",
       "options": [
-        "Channel Trimming",
-        "Channel Flushing",
-        "Both (a) and (b)",
-        "None of these"
+        "Peer-to-peer mode",
+        "Read/write mode",
+        "Card emulation mode",
+        "Frequency-hopping mode"
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "The standard operating modes of NFC are Peer-to-peer mode, Read/write mode, and Card emulation mode."
+    },
+    {
+      "q": "[Week 3] Which of the following are phases of Bluetooth connection establishment?",
+      "options": [
+        "Inquiry",
+        "Root-node discovery",
+        "Extraction phase",
+        "Connection-matching phase"
+      ],
+      "correctIndex": 0,
+      "isMSQ": false,
+      "solution": "The standard phases of Bluetooth connection establishment are Inquiry, Paging, and Connection. Among the given options, Inquiry is a valid phase."
+    },
+    {
+      "q": "[Week 3] In which Bluetooth operating mode does a slave remain inactive until the master instructs it to wake up?",
+      "options": [
+        "Active mode",
+        "Sniff mode",
+        "Hold mode",
+        "Park mode"
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Channel Blacklisting identifies channels consistently affected by interference and removes them from use. See lecture 11 @ 07:30"
+      "solution": "In Park mode, a slave device gives up its active member address but remains synchronized to the piconet master. It enters a low-power state and remains completely inactive until the master explicitly broadcasts a command to wake it up and invite it back into active communication."
     },
     {
-      "q": "[Week 3] The full form of NFC is",
+      "q": "[Week 3] Which of the following functions are provided by the Bluetooth L2CAP layer?",
       "options": [
-        "Near Field Contact",
-        "Near Field Communication",
-        "Both (a) and (b)",
-        "Neither (a) nor (b)"
+        "Connection-oriented and connectionless data services",
+        "Protocol multiplexing",
+        "Segmentation and reassembly",
+        "Generation of the magnetic field used by NFC tags"
       ],
-      "correctIndex": 1,
-      "isMSQ": false,
-      "solution": "The full form of NFC is Near Field Communication. See lecture 11 @ 17:44"
-    },
-    {
-      "q": "[Week 3] State true or false. NFC works on the principle of magnetic induction.",
-      "options": [
-        "True",
-        "False"
+      "correctIndex": [
+        0,
+        1,
+        2
       ],
-      "correctIndex": 0,
-      "isMSQ": false,
-      "solution": "NFC works on the principle of magnetic induction. See lecture 11 @ 21:00"
+      "isMSQ": true,
+      "solution": "The Logical Link Control and Adaptation Protocol (L2CAP) provides protocol multiplexing, segmentation and reassembly of large packets, and handles both connection-oriented and connectionless data services. Option d is incorrect because NFC is an entirely different technology."
     },
     {
-      "q": "[Week 3] State whether the following statement is true or false. Statement: NFC tags found in supermarket products are examples of active NFC.",
+      "q": "[Week 3] A single Piconet network can contain up to approximately how many nodes?",
       "options": [
-        "True",
-        "False"
-      ],
-      "correctIndex": 1,
-      "isMSQ": false,
-      "solution": "Passive NFC tags found in supermarket products are examples of passive NFC. See lecture 11 @ 18:47"
-    },
-    {
-      "q": "[Week 3] Bluetooth is based on ___________.",
-      "options": [
-        "Nanonets",
-        "Binarynets",
-        "Both (a) and (b)",
-        "None of these"
+        "8",
+        "16",
+        "128",
+        "256"
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Bluetooth is based on Piconets. See lecture 12 @ 01:55"
+      "solution": "A standard active piconet consists of 1 master and up to 7 active slaves (totaling 8 active nodes). However, when including parked slaves (up to 255 parked devices plus the master and active slaves), a single piconet can support up to approximately 256 nodes."
     },
     {
-      "q": "[Week 3] A __________ in NFC emits a small electric current which creates a magnetic field that in turn bridges the physical space between the devices.",
+      "q": "[Week 3] Which of the following statements about Z-Wave addressing are correct?",
       "options": [
-        "reader",
-        "writer",
-        "destroyer",
-        "None of these"
+        "Each logical Z-Wave network has one Home ID.",
+        "A Z-Wave Node ID has a length of one byte.",
+        "A Z-Wave Home ID has a length of four bytes.",
+        "Nodes having different Home IDs can communicate directly with one another."
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "Z-Wave uses a 4-byte (32-bit) Home ID to identify the specific logical network, and each node within that network is assigned a 1-byte (8-bit) Node ID. Nodes with different Home IDs belong to separate networks and cannot communicate directly with each other."
+    },
+    {
+      "q": "[Week 3] Which of the following statements about ISA100.11a are correct?",
+      "options": [
+        "Its network and transport layers are based on TCP, UDP, or IPv6.",
+        "Its data-link layer supports mesh networking with frequency hopping.",
+        "Its radio is based on IEEE 802.15.4.",
+        "It supports only a star topology."
+      ],
+      "correctIndex": [
+        0,
+        1,
+        2
+      ],
+      "isMSQ": true,
+      "solution": "ISA100.11a utilizes the standard IEEE 802.15.4 physical layer (radio), incorporates frequency hopping at the data link layer to increase reliability over mesh networks, and integrates IP-based protocols (IPv6, UDP) at the higher layers. It natively supports mesh, star, and hybrid topologies—not just star."
+    },
+    {
+      "q": "[Week 3] Why is multi-hop communication commonly used in a wireless sensor network?",
+      "options": [
+        "Sensor nodes have short transmission ranges, so intermediate nodes relay data toward the sink.",
+        "Every sensor node must communicate directly with the Internet.",
+        "Multi-hop communication eliminates the need for a sink node.",
+        "Only mobile sensor nodes are permitted to transmit data."
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "A reader in NFC emits a small electric current which creates a magnetic field that in turn bridges the physical space between the devices See lecture 11 @ 20:31"
+      "solution": "Sensor nodes are usually low-power devices with short radio transmission ranges. Multi-hop routing allows them to send data across long distances to a central base station (sink) by passing the messages through intermediate neighbor nodes."
     },
     {
-      "q": "[Week 3] State true of false. Bluetooth technology is based on Ad-hoc network technology.",
+      "q": "[Week 3] Which of the following is described as an optional unit of a sensor node?",
       "options": [
-        "False",
-        "True"
+        "Sensing unit",
+        "Processing unit",
+        "Power unit",
+        "Location-finding system such as GPS"
       ],
-      "correctIndex": 1,
+      "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Bluetooth technology is based on Ad-hoc network technology. See lecture 12 @ 02:30"
+      "solution": "Every standard sensor node fundamentally requires a sensing unit to gather data, a processing unit to compute it, and a power unit (like a battery) to run. A location-finding system (GPS) is an optional module added only if the specific application requires precise geospatial tracking."
     },
     {
-      "q": "[Week 3] State true or false. Zwave utilizes GFSK modulation and Hongkong channel encoding.",
+      "q": "[Week 3] If n denotes the number of nodes in a sensor network, the lecture states that the throughput decreases approximately at what rate as the network scales?",
       "options": [
-        "True",
-        "False"
+        "1/n",
+        "n",
+        "sqrt(n)",
+        "1/sqrt(n)"
       ],
-      "correctIndex": 1,
+      "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Zwave utilizes GFSK modulation and Manchester channel encoding. See lecture 13 @ 07:36"
+      "solution": "As the sensor network scales with n nodes, the lecture states that the throughput decreases approximately at the rate of 1/sqrt(n)."
     },
     {
-      "q": "[Week 3] The process of bypassing radio dead-spots is done using a message called ________ in Zwave.",
+      "q": "[Week 3] Which types of sensor-node misbehavior are classified as intentional?",
       "options": [
-        "Ping",
-        "Healing",
-        "Frame",
-        "None of these"
+        "Malicious behavior",
+        "Selfish behavior",
+        "Failed-node behavior",
+        "Badly failed-node behavior"
       ],
-      "correctIndex": 1,
-      "isMSQ": false,
-      "solution": "The process of bypassing radio dead-spots is done using a message called Healing in Zwave. See lecture 13 @ 11:34"
-    },
-    {
-      "q": "[Week 3] State whether the following statement is true or false. Statement: Sensor nodes have unlimited battery life.",
-      "options": [
-        "True",
-        "False"
+      "correctIndex": [
+        0,
+        1
       ],
-      "correctIndex": 1,
-      "isMSQ": false,
-      "solution": "Sensors nodes have limited battery life. See lecture 14 @ 13:15"
+      "isMSQ": true,
+      "solution": "Malicious behavior and Selfish behavior are classified as intentional misbehaviors, whereas Failed-node behavior and Badly failed-node behavior are unintentional."
     },
     {
-      "q": "[Week 3] State whether the following statement is true or false. Statement: The Link Manager Protocol in Bluetooth manages the establishment, authentication, link configuration.",
+      "q": "[Week 3] What distinguishes a badly failed sensor node from an ordinarily failed sensor node?",
       "options": [
-        "True",
-        "False"
-      ],
-      "correctIndex": 0,
-      "isMSQ": false,
-      "solution": "The Link Manager Protocol in Bluetooth manages the establishment, authentication, link configuration. See Page number \u2013 157, Chapter - 7, Book - Introduction to IoT, Authors \u2013 Sudip Misra, Anandarup Mukherjee, and Arijit Roy, Publisher \u2013 Cambridge University Press, Edition \u2013 1 (2021)"
-    },
-    {
-      "q": "[Week 3] Zigbee commonly uses __________ data rate.",
-      "options": [
-        "250 kbps",
-        "250 Mbps",
-        "260 kbps",
-        "260 Mbps"
+        "It additionally sends false routing messages.",
+        "It always increases the network throughput.",
+        "It changes from a mobile node into a stationary node.",
+        "It communicates normally but consumes no power."
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Zigbee commonly uses 250 kbps data rate. See Page number \u2013 131, Chapter - 7, Book - Introduction to IoT, Authors \u2013 Sudip Misra, Anandarup Mukherjee, and Arijit Roy, Publisher \u2013 Cambridge University Press, Edition \u2013 1 (2021)"
+      "solution": "A badly failed sensor node not only ceases proper functioning but additionally sends false routing messages, disrupting network operation."
+    },
+    {
+      "q": "[Week 3] Which consequence may arise when a selfish sensor node refuses to cooperate because forwarding involves a personal cost?",
+      "options": [
+        "It forwards every received packet twice.",
+        "It drops a received packet instead of forwarding it.",
+        "It automatically becomes the sink node.",
+        "It increases the communication range of neighboring nodes."
+      ],
+      "correctIndex": 1,
+      "isMSQ": false,
+      "solution": "When a selfish sensor node refuses to cooperate due to personal cost (such as power/bandwidth), it drops received packets instead of forwarding them."
     }
   ],
   "4": [
@@ -573,7 +606,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "In the Agricultural Intrusion Detection system, the ultrasonic sensor measures the distance at which the detected object is located. See Lecture 16: Sensor Networks \u2013 Part III @ 13:22"
+      "solution": "In the Agricultural Intrusion Detection system, the ultrasonic sensor measures the distance at which the detected object is located. See Lecture 16: Sensor Networks – Part III @ 13:22"
     },
     {
       "q": "[Week 4] Which component processes the data received from the sensors in the AID system?",
@@ -636,7 +669,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Forest-fire monitoring uses event-driven reporting because sensor nodes report data when a fire-related event is detected. The lecture contrasts this with on-demand reporting, such as an inventory- control system. See Lecture 17: Sensor Networks \u2013 Part IV @ 01:44."
+      "solution": "Forest-fire monitoring uses event-driven reporting because sensor nodes report data when a fire-related event is detected. The lecture contrasts this with on-demand reporting, such as an inventory- control system. See Lecture 17: Sensor Networks – Part IV @ 01:44."
     },
     {
       "q": "[Week 4] What does a data mule do?",
@@ -684,7 +717,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "In a stationary wireless sensor network, sensor nodes remain fixed. Therefore, deployment and topology maintenance are comparatively easier. See Lecture 18: Sensor Networks \u2013 Part V @ 00:43"
+      "solution": "In a stationary wireless sensor network, sensor nodes remain fixed. Therefore, deployment and topology maintenance are comparatively easier. See Lecture 18: Sensor Networks – Part V @ 00:43"
     },
     {
       "q": "[Week 4] State whether the following statement is True or False. Statement: In a UAV network, the network topology may change frequently because the UAVs are mobile.",
@@ -728,7 +761,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "In a stationary wireless sensor network, sensor nodes remain fixed. Therefore, they cannot move automatically to repair connectivity after a node failure. See Lecture 18: Sensor Networks \u2013 Part V @ 00:43"
+      "solution": "In a stationary wireless sensor network, sensor nodes remain fixed. Therefore, they cannot move automatically to repair connectivity after a node failure. See Lecture 18: Sensor Networks – Part V @ 00:43"
     },
     {
       "q": "[Week 4] Which statement best describes M2M communication?",
@@ -790,7 +823,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The Arduino UNO operates at 5 volts. See Lecture 22: Introduction to Arduino Programming \u2013 Part I @ 06:57."
+      "solution": "The Arduino UNO operates at 5 volts. See Lecture 22: Introduction to Arduino Programming – Part I @ 06:57."
     },
     {
       "q": "[Week 5] What is a program written in the Arduino IDE called?",
@@ -814,7 +847,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The Arduino UNO uses a USB interface to connect to a computer. The USB connection can be used to upload programs to the board and also provide power during development. See Lecture 22: Introduction to Arduino Programming \u2013 Part I @ 07:26"
+      "solution": "The Arduino UNO uses a USB interface to connect to a computer. The USB connection can be used to upload programs to the board and also provide power during development. See Lecture 22: Introduction to Arduino Programming – Part I @ 07:26"
     },
     {
       "q": "[Week 5] What is the conventional starting index of an array in Arduino programming?",
@@ -862,7 +895,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "A DHT sensor measures the temperature and humidity of its surroundings. See Lecture 24: Integration of Sensors and Actuators with Arduino \u2013 Part I @ 04:37."
+      "solution": "A DHT sensor measures the temperature and humidity of its surroundings. See Lecture 24: Integration of Sensors and Actuators with Arduino – Part I @ 04:37."
     },
     {
       "q": "[Week 5] What does a sensor convert a physical quantity into?",
@@ -874,7 +907,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "A sensor is an electronic element that converts a physical quantity or measurement into an electrical signal. See Lecture 24: Integration of Sensors and Actuators with Arduino \u2013 Part I, Sensors section."
+      "solution": "A sensor is an electronic element that converts a physical quantity or measurement into an electrical signal. See Lecture 24: Integration of Sensors and Actuators with Arduino – Part I, Sensors section."
     },
     {
       "q": "[Week 5] In the DHT sensor sketch, delay(2000) causes successive readings to be printed after approximately how much time?",
@@ -896,7 +929,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "A servo motor is a high-precision motor that provides controlled rotary motion. See Lecture 25: Integration of Sensors and Actuators with Arduino \u2013 Part II @ 04:30."
+      "solution": "A servo motor is a high-precision motor that provides controlled rotary motion. See Lecture 25: Integration of Sensors and Actuators with Arduino – Part II @ 04:30."
     },
     {
       "q": "[Week 5] Which device provides controlled rotary motion?",
@@ -908,7 +941,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "A servo motor is an actuator that provides precise and controlled rotary motion. See Lecture 25: Integration of Sensors and Actuators with Arduino \u2013 Part II @ 04:30."
+      "solution": "A servo motor is an actuator that provides precise and controlled rotary motion. See Lecture 25: Integration of Sensors and Actuators with Arduino – Part II @ 04:30."
     },
     {
       "q": "[Week 5] State whether the following statement is True or False. Statement: A stepper motor is a type of actuator.",
@@ -918,7 +951,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "A stepper motor is one of the motor actuators discussed in the lecture. Other examples include servo motors, hydraulic motors, solenoids, relays, and AC motors. See Lecture 25: Integration of Sensors and Actuators with Arduino \u2013 Part II @ 03:20."
+      "solution": "A stepper motor is one of the motor actuators discussed in the lecture. Other examples include servo motors, hydraulic motors, solenoids, relays, and AC motors. See Lecture 25: Integration of Sensors and Actuators with Arduino – Part II @ 03:20."
     }
   ],
   "6": [
@@ -932,7 +965,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "The lecture states that Python has five data types: Numbers, String, List, Tuple, and Dictionary. See Lecture 26 (Introduction to Python Programming \u2013 Part I) @ 15:50"
+      "solution": "The lecture states that Python has five data types: Numbers, String, List, Tuple, and Dictionary. See Lecture 26 (Introduction to Python Programming – Part I) @ 15:50"
     },
     {
       "q": "[Week 6] Which keyword is used to define a function in Python?",
@@ -944,7 +977,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "A function in Python is defined using the def keyword, followed by the function name and its arguments. See Lecture 26 (Introduction to Python Programming \u2013 Part I) @ 19:20"
+      "solution": "A function in Python is defined using the def keyword, followed by the function name and its arguments. See Lecture 26 (Introduction to Python Programming – Part I) @ 19:20"
     },
     {
       "q": "[Week 6] In Python's exception handling, which keyword is used to handle an exception raised inside the try block?",
@@ -956,7 +989,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Python uses the try, except and else block structure for exception handling; the except block catches the exception raised in the try block. See Lecture 26 (Introduction to Python Programming \u2013 Part I) @ 28:55"
+      "solution": "Python uses the try, except and else block structure for exception handling; the except block catches the exception raised in the try block. See Lecture 26 (Introduction to Python Programming – Part I) @ 28:55"
     },
     {
       "q": "[Week 6] Which mode of Python's open() function is used to add data to the end of an existing file without erasing its existing content?",
@@ -968,7 +1001,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Python supports four basic file modes: r (read), w (write), a (append), and r+ (read and write). The append mode adds new data to the end of the file without deleting existing content. See Lecture 27 (Introduction to Python Programming \u2013 Part II) @ 02:55"
+      "solution": "Python supports four basic file modes: r (read), w (write), a (append), and r+ (read and write). The append mode adds new data to the end of the file without deleting existing content. See Lecture 27 (Introduction to Python Programming – Part II) @ 02:55"
     },
     {
       "q": "[Week 6] Which Python library, installable via pip, is used for image read/write operations as covered in the lecture?",
@@ -980,7 +1013,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "PIL (Python Image Library) is used to work with image files. It is installed using 'sudo pip install pillow'; PIL supports up to Python 2.7 while Pillow supports Python 3.x. See Lecture 27 (Introduction to Python Programming \u2013 Part II) @ 17:25"
+      "solution": "PIL (Python Image Library) is used to work with image files. It is installed using 'sudo pip install pillow'; PIL supports up to Python 2.7 while Pillow supports Python 3.x. See Lecture 27 (Introduction to Python Programming – Part II) @ 17:25"
     },
     {
       "q": "[Week 6] Which socket_type value is used while creating a TCP/IP socket in Python's socket module?",
@@ -992,7 +1025,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "A socket is created using socket.socket(socket_family, socket_type, protocol). For a TCP/IP (connection-oriented) socket, socket_family is AF_INET and socket_type is SOCK_STREAM. See Lecture 27 (Introduction to Python Programming \u2013 Part II) @ 24:40"
+      "solution": "A socket is created using socket.socket(socket_family, socket_type, protocol). For a TCP/IP (connection-oriented) socket, socket_family is AF_INET and socket_type is SOCK_STREAM. See Lecture 27 (Introduction to Python Programming – Part II) @ 24:40"
     },
     {
       "q": "[Week 6] How many GPIO pins does the Raspberry Pi 3 Model B have, as shown in the specifications table?",
@@ -1004,7 +1037,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "As per the specifications table, the Raspberry Pi 3 Model B, Raspberry Pi 2 Model B, and Raspberry Pi Zero all have 40 GPIO pins. See Lecture 28 (Introduction to Raspberry Pi \u2013 Part I) @ 05:10"
+      "solution": "As per the specifications table, the Raspberry Pi 3 Model B, Raspberry Pi 2 Model B, and Raspberry Pi Zero all have 40 GPIO pins. See Lecture 28 (Introduction to Raspberry Pi – Part I) @ 05:10"
     },
     {
       "q": "[Week 6] Which of the following is an officially supported operating system for Raspberry Pi mentioned in the lecture?",
@@ -1016,7 +1049,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Raspbian and NOOBS are the officially supported operating systems for Raspberry Pi. Ubuntu Mate, Snappy Ubuntu Core, Windows 10 Core, Pinet, and RISC OS are examples of third-party operating systems. See Lecture 28 (Introduction to Raspberry Pi \u2013 Part I) @ 12:05"
+      "solution": "Raspbian and NOOBS are the officially supported operating systems for Raspberry Pi. Ubuntu Mate, Snappy Ubuntu Core, Windows 10 Core, Pinet, and RISC OS are examples of third-party operating systems. See Lecture 28 (Introduction to Raspberry Pi – Part I) @ 12:05"
     },
     {
       "q": "[Week 6] Raspberry Pi is best described as a:",
@@ -1028,7 +1061,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "The lecture introduces Raspberry Pi as a computer that fits in your palm \u2014 a low-cost, single-board computer that is easy to access and use. See Lecture 28 (Introduction to Raspberry Pi \u2013 Part I) @ 04:45"
+      "solution": "The lecture introduces Raspberry Pi as a computer that fits in your palm — a low-cost, single-board computer that is easy to access and use. See Lecture 28 (Introduction to Raspberry Pi – Part I) @ 04:45"
     },
     {
       "q": "[Week 6] Which command is used to install the GPIO library on Raspberry Pi before programming the blinking LED example?",
@@ -1040,7 +1073,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "After installing Python development tools using 'sudo apt-get install python-dev', the GPIO library is installed using 'sudo apt-get install python-rpi.gpio'. See Lecture 29 (Introduction to Raspberry Pi \u2013 Part II) @ 07:43"
+      "solution": "After installing Python development tools using 'sudo apt-get install python-dev', the GPIO library is installed using 'sudo apt-get install python-rpi.gpio'. See Lecture 29 (Introduction to Raspberry Pi – Part II) @ 07:43"
     },
     {
       "q": "[Week 6] Where is the CSI camera connector slot located on the Raspberry Pi board?",
@@ -1052,7 +1085,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The Raspberry Pi Camera connects through a dedicated CSI slot, which is placed between the Ethernet port and the HDMI port on the board. See Lecture 29 (Introduction to Raspberry Pi \u2013 Part II) @ 18:27"
+      "solution": "The Raspberry Pi Camera connects through a dedicated CSI slot, which is placed between the Ethernet port and the HDMI port on the board. See Lecture 29 (Introduction to Raspberry Pi – Part II) @ 18:27"
     },
     {
       "q": "[Week 6] Which terminal command captures a still image using the Raspberry Pi camera?",
@@ -1064,7 +1097,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Running 'raspistill -o image.jpg' in the terminal captures an image using the Raspberry Pi camera and stores it as image.jpg. See Lecture 29 (Introduction to Raspberry Pi \u2013 Part II) @ 19:35"
+      "solution": "Running 'raspistill -o image.jpg' in the terminal captures an image using the Raspberry Pi camera and stores it as image.jpg. See Lecture 29 (Introduction to Raspberry Pi – Part II) @ 19:35"
     },
     {
       "q": "[Week 6] What does DHT stand for in the DHT sensor used with Raspberry Pi in the auto-cooling system?",
@@ -1076,7 +1109,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "DHT stands for Digital Humidity and Temperature Sensor. It has 4 pins: PIN 1 (3.3V\u20135V power supply), PIN 2 (Data), PIN 3 (Null), and PIN 4 (Ground). See Lecture 30 (Implementation of IoT with Raspberry Pi \u2013 Part I) @ 05:20"
+      "solution": "DHT stands for Digital Humidity and Temperature Sensor. It has 4 pins: PIN 1 (3.3V–5V power supply), PIN 2 (Data), PIN 3 (Null), and PIN 4 (Ground). See Lecture 30 (Implementation of IoT with Raspberry Pi – Part I) @ 05:20"
     },
     {
       "q": "[Week 6] How many output terminals does the relay used in the temperature-dependent auto-cooling system have, as shown in the lecture?",
@@ -1088,7 +1121,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The relay is a mechanical/electromechanical switch with 3 output terminals (left to right): NO (normal open), Common, and NC (normal close). See Lecture 30 (Implementation of IoT with Raspberry Pi \u2013 Part I) @ 07:50"
+      "solution": "The relay is a mechanical/electromechanical switch with 3 output terminals (left to right): NO (normal open), Common, and NC (normal close). See Lecture 30 (Implementation of IoT with Raspberry Pi – Part I) @ 07:50"
     },
     {
       "q": "[Week 6] State whether the following statement is True or False. Statement: In the temperature-dependent auto-cooling system, the fan operates when the surrounding temperature rises above the threshold value specified in the code.",
@@ -1098,7 +1131,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "The lecture demonstrates that the fan is switched on whenever the measured temperature exceeds the threshold value set in the program. See Lecture 30 (Implementation of IoT with Raspberry Pi \u2013 Part I) @ 18:14"
+      "solution": "The lecture demonstrates that the fan is switched on whenever the measured temperature exceeds the threshold value set in the program. See Lecture 30 (Implementation of IoT with Raspberry Pi – Part I) @ 18:14"
     }
   ],
   "7": [
@@ -1112,7 +1145,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The client creates a UDP socket using socket.socket(socket.AF_INET, socket.SOCK_DGRAM) to send the sensor readings to the server. See Lecture 31 (Implementation of IoT with Raspberry Pi \u2013 Part 2) @ 07:10"
+      "solution": "The client creates a UDP socket using socket.socket(socket.AF_INET, socket.SOCK_DGRAM) to send the sensor readings to the server. See Lecture 31 (Implementation of IoT with Raspberry Pi – Part 2) @ 07:10"
     },
     {
       "q": "[Week 7] Which Adafruit function is used in the client code to read humidity and temperature values from the DHT sensor?",
@@ -1124,7 +1157,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "The sensordata() function calls Adafruit_DHT.read_retry(sensor,17), which returns the humidity and temperature values from the DHT sensor. See Lecture 31 (Implementation of IoT with Raspberry Pi \u2013 Part 2) @ 04:50"
+      "solution": "The sensordata() function calls Adafruit_DHT.read_retry(sensor,17), which returns the humidity and temperature values from the DHT sensor. See Lecture 31 (Implementation of IoT with Raspberry Pi – Part 2) @ 04:50"
     },
     {
       "q": "[Week 7] Where does the server in the remote data logging example save the data received from the client as mentioned in the lecture?",
@@ -1136,7 +1169,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The server code opens 'Datalog.txt' in append mode and writes the received message from the client into this text file. See Lecture 31 (Implementation of IoT with Raspberry Pi \u2013 Part 2) @ 15:40"
+      "solution": "The server code opens 'Datalog.txt' in append mode and writes the received message from the client into this text file. See Lecture 31 (Implementation of IoT with Raspberry Pi – Part 2) @ 15:40"
     },
     {
       "q": "[Week 7] Which Python string function is used to split the comma-separated sensor data into separate values on the server?",
@@ -1148,7 +1181,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "The split() function splits a string into multiple strings based on a specified separator/delimiter, e.g. Data.split(\",\") splits data wherever a comma is found. See Lecture 32 (Implementation of IoT with Raspberry Pi \u2013 Part 3) @ 08:40"
+      "solution": "The split() function splits a string into multiple strings based on a specified separator/delimiter, e.g. Data.split(\",\") splits data wherever a comma is found. See Lecture 32 (Implementation of IoT with Raspberry Pi – Part 3) @ 08:40"
     },
     {
       "q": "[Week 7] State whether the following statement is True or False. Statement: Matplotlib Python library is used to plot the temperature and humidity data received at the server in the lecture.",
@@ -1158,7 +1191,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "MATPLOTLIB is a Python library used to create 2D plots; functions such as plot(), xlabel(), ylabel(), and title() are used to plot and label the sensor data. See Lecture 32 (Implementation of IoT with Raspberry Pi \u2013 Part 3) @ 12:15"
+      "solution": "MATPLOTLIB is a Python library used to create 2D plots; functions such as plot(), xlabel(), ylabel(), and title() are used to plot and label the sensor data. See Lecture 32 (Implementation of IoT with Raspberry Pi – Part 3) @ 12:15"
     },
     {
       "q": "[Week 7] Which matplotlib function turns on interactive mode so that the plot updates in real time as new data arrives?",
@@ -1170,7 +1203,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "ion() turns on the interactive mode in matplotlib. Other common plotting functions mentioned include figure(), grid(), subplot(), close(), and scatter(). See Lecture 32 (Implementation of IoT with Raspberry Pi \u2013 Part 3) @ 23:25"
+      "solution": "ion() turns on the interactive mode in matplotlib. Other common plotting functions mentioned include figure(), grid(), subplot(), close(), and scatter(). See Lecture 32 (Implementation of IoT with Raspberry Pi – Part 3) @ 23:25"
     },
     {
       "q": "[Week 7] In a traditional (non-SDN) network, where does the routing protocol logic (e.g., OSPF) mainly execute?",
@@ -1182,10 +1215,10 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "In the current network, protocols like OSPF execute at the switches, which forward traffic in a distributed manner with no centralized control. See Lecture 33 (Software-Defined Networking \u2013 Part I) @ 04:10"
+      "solution": "In the current network, protocols like OSPF execute at the switches, which forward traffic in a distributed manner with no centralized control. See Lecture 33 (Software-Defined Networking – Part I) @ 04:10"
     },
     {
-      "q": "[Week 7] In which year was the OpenFlow project \u2014 from which the idea of software-defined networking originated \u2014 presented at ACM SIGCOMM?",
+      "q": "[Week 7] In which year was the OpenFlow project — from which the idea of software-defined networking originated — presented at ACM SIGCOMM?",
       "options": [
         "2006",
         "2008",
@@ -1194,7 +1227,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The idea of software-defined networking originated from the OpenFlow project, presented at ACM SIGCOMM in 2008. Stanford published the OpenFlow V1.0.0 specification the following year. See Lecture 33 (Software-Defined Networking \u2013 Part I) @ 10:50"
+      "solution": "The idea of software-defined networking originated from the OpenFlow project, presented at ACM SIGCOMM in 2008. Stanford published the OpenFlow V1.0.0 specification the following year. See Lecture 33 (Software-Defined Networking – Part I) @ 10:50"
     },
     {
       "q": "[Week 7] What message does a switch send to the SDN controller when it receives a packet for which no matching flow-rule exists?",
@@ -1206,7 +1239,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "When no flow-rule is present for an incoming request, the switch sends a PACKET-IN message to the controller, which then decides a suitable flow-rule and inserts it at the switch. See Lecture 33 (Software-Defined Networking \u2013 Part I) @ 22:33"
+      "solution": "When no flow-rule is present for an incoming request, the switch sends a PACKET-IN message to the controller, which then decides a suitable flow-rule and inserts it at the switch. See Lecture 33 (Software-Defined Networking – Part I) @ 22:33"
     },
     {
       "q": "[Week 7] Which SDN API is used for communication between the control layer and the infrastructure layer?",
@@ -1218,7 +1251,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The Southbound API is used to communicate between the control layer and the infrastructure layer using the OpenFlow protocol. The Northbound API communicates between the control and application layers. See Lecture 34 (Software-Defined Networking \u2013 Part II) @ 02:00"
+      "solution": "The Southbound API is used to communicate between the control layer and the infrastructure layer using the OpenFlow protocol. The Northbound API communicates between the control and application layers. See Lecture 34 (Software-Defined Networking – Part II) @ 02:00"
     },
     {
       "q": "[Week 7] According to the lecture, approximately how many requests per second can a typical SDN controller handle through a single thread?",
@@ -1230,7 +1263,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "The lecture states that a controller can typically handle around 200 requests in a second through a single thread. See Lecture 34 (Software-Defined Networking \u2013 Part II) @ 04:10"
+      "solution": "The lecture states that a controller can typically handle around 200 requests in a second through a single thread. See Lecture 34 (Software-Defined Networking – Part II) @ 04:10"
     },
     {
       "q": "[Week 7] Which control mechanism is described where the entire network's control decisions are taken by a single controller?",
@@ -1242,7 +1275,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "In centralized control, control decisions are taken in a centralized manner by a single controller, unlike distributed control where each subnetwork is controlled by a different controller. See Lecture 34 (Software-Defined Networking \u2013 Part II) @ 08:15"
+      "solution": "In centralized control, control decisions are taken in a centralized manner by a single controller, unlike distributed control where each subnetwork is controlled by a different controller. See Lecture 34 (Software-Defined Networking – Part II) @ 08:15"
     },
     {
       "q": "[Week 7] Which of the following is listed as a benefit of integrating SDN with IoT?",
@@ -1254,7 +1287,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Benefits of integrating SDN in IoT include intelligent routing decisions, simplified information collection/analysis/decision-making, visibility of network resources, and intelligent traffic pattern analysis. See Lecture 35 (Software-Defined IoT Networking \u2013 Part I) @ 02:50"
+      "solution": "Benefits of integrating SDN in IoT include intelligent routing decisions, simplified information collection/analysis/decision-making, visibility of network resources, and intelligent traffic pattern analysis. See Lecture 35 (Software-Defined IoT Networking – Part I) @ 02:50"
     },
     {
       "q": "[Week 7] According to the lecture, what is a key resource-constraint challenge in wireless sensor networks that motivates software-defined WSN?",
@@ -1266,7 +1299,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Wireless sensor network challenges include real-time programming of sensor nodes, vendor-specific architecture, resource-constrained devices, and limited memory, meaning too many control programs cannot be inserted. See Lecture 35 (Software-Defined IoT Networking \u2013 Part I) @ 08:10"
+      "solution": "Wireless sensor network challenges include real-time programming of sensor nodes, vendor-specific architecture, resource-constrained devices, and limited memory, meaning too many control programs cannot be inserted. See Lecture 35 (Software-Defined IoT Networking – Part I) @ 08:10"
     },
     {
       "q": "[Week 7] In the SDN-WISE protocol stack for sensor nodes, what does \"INPP\" stand for?",
@@ -1278,7 +1311,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "In the SDN-WISE protocol stack, the forwarding layer above IEEE 802.15.4 consists of flow-rules, and INPP stands for In Network Packet Processing. See Lecture 35 (Software-Defined IoT Networking \u2013 Part I) @ 15:35"
+      "solution": "In the SDN-WISE protocol stack, the forwarding layer above IEEE 802.15.4 consists of flow-rules, and INPP stands for In Network Packet Processing. See Lecture 35 (Software-Defined IoT Networking – Part I) @ 15:35"
     }
   ],
   "8": [
@@ -1292,7 +1325,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Traditional mobile networks are difficult to scale because static, over-provisioned networks are inflexible to manage high-demand mobile traffic; they are also difficult to manage, inflexible, and cost-expensive. See Lecture 36 (Software-Defined IoT Networking \u2013 Part II, slide 3)"
+      "solution": "Traditional mobile networks are difficult to scale because static, over-provisioned networks are inflexible to manage high-demand mobile traffic; they are also difficult to manage, inflexible, and cost-expensive. See Lecture 36 (Software-Defined IoT Networking – Part II, slide 3)"
     },
     {
       "q": "[Week 8] In the ODIN architecture for software-defined wireless networks, what does the 'Odin agent' do?",
@@ -1304,7 +1337,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "In ODIN, an agent is placed at access points (with the physical devices) to communicate with the controller, while the Odin master resides at the controller end. See Lecture 36 (Software-Defined IoT Networking \u2013 Part II, slide 11)"
+      "solution": "In ODIN, an agent is placed at access points (with the physical devices) to communicate with the controller, while the Odin master resides at the controller end. See Lecture 36 (Software-Defined IoT Networking – Part II, slide 11)"
     },
     {
       "q": "[Week 8] What is the primary goal of Mobi-Flow's proactive rule placement approach in Software-Defined IoT?",
@@ -1316,7 +1349,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Mobi-Flow predicts the location of end-users at time (t+1) while they are at time (t), and places flow-rules at the access points that can be associated with the users based on their predicted locations, using an order-K Markov predictor. See Lecture 36 (Software-Defined IoT Networking \u2013 Part II, slides 15\u201316)"
+      "solution": "Mobi-Flow predicts the location of end-users at time (t+1) while they are at time (t), and places flow-rules at the access points that can be associated with the users based on their predicted locations, using an order-K Markov predictor. See Lecture 36 (Software-Defined IoT Networking – Part II, slides 15–16)"
     },
     {
       "q": "[Week 8] Which simulation tool is mentioned in the lecture for experimenting with wireless software-defined networks, supporting both wired and wireless (IEEE 802.11) protocols?",
@@ -1328,7 +1361,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Mininet-WiFi can be used to deploy a network supporting both wired (Ethernet) and wireless (WiFi, IEEE 802.11) protocols, while ONOS can be used to place the controllers. See Lecture 36 (Software-Defined IoT Networking \u2013 Part II, slide 21)"
+      "solution": "Mininet-WiFi can be used to deploy a network supporting both wired (Ethernet) and wireless (WiFi, IEEE 802.11) protocols, while ONOS can be used to place the controllers. See Lecture 36 (Software-Defined IoT Networking – Part II, slide 21)"
     },
     {
       "q": "[Week 8] According to the NIST definition quoted in the lecture, cloud computing enables on-demand network access to a shared pool of what?",
@@ -1340,7 +1373,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "NIST defines cloud computing as a model for enabling convenient, on-demand network access to a shared pool of configurable computing resources such as networks, servers, storage, and applications. See Lecture 37 (Cloud Computing \u2013 Fundamentals, slide 4)"
+      "solution": "NIST defines cloud computing as a model for enabling convenient, on-demand network access to a shared pool of configurable computing resources such as networks, servers, storage, and applications. See Lecture 37 (Cloud Computing – Fundamentals, slide 4)"
     },
     {
       "q": "[Week 8] Which of the following is one of the essential characteristics of cloud computing as defined by NIST?",
@@ -1352,7 +1385,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "NIST lists rapid elasticity as an essential characteristic, meaning cloud resource allocation and release should be rapid, elastic, and automatic, giving consumers the impression of infinite resources. See Lecture 37 (Cloud Computing \u2013 Fundamentals, slide 9)"
+      "solution": "NIST lists rapid elasticity as an essential characteristic, meaning cloud resource allocation and release should be rapid, elastic, and automatic, giving consumers the impression of infinite resources. See Lecture 37 (Cloud Computing – Fundamentals, slide 9)"
     },
     {
       "q": "[Week 8] Which cloud deployment model is set up for the exclusive use of a single organization, typically managed on-premises or by a third party off-premises?",
@@ -1364,7 +1397,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "A private cloud is a cloud set-up functioned only for a single organization, typically managed by the organization itself (on-premises) or by a third party (off-premises). See Lecture 37 (Cloud Computing \u2013 Fundamentals, slide 20)"
+      "solution": "A private cloud is a cloud set-up functioned only for a single organization, typically managed by the organization itself (on-premises) or by a third party (off-premises). See Lecture 37 (Cloud Computing – Fundamentals, slide 20)"
     },
     {
       "q": "[Week 8] Which of the following is given as an example of a public cloud provider in the lecture?",
@@ -1376,7 +1409,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Public cloud examples given include Amazon Web Services (AWS), Google Compute Engine, and Microsoft Azure \u2014 cloud set-ups available for the use of any person or industry. See Lecture 37 (Cloud Computing \u2013 Fundamentals, slide 19)"
+      "solution": "Public cloud examples given include Amazon Web Services (AWS), Google Compute Engine, and Microsoft Azure — cloud set-ups available for the use of any person or industry. See Lecture 37 (Cloud Computing – Fundamentals, slide 19)"
     },
     {
       "q": "[Week 8] Which cloud service model provides on-demand delivery of computing infrastructure such as servers, storage, network, and operating system?",
@@ -1388,7 +1421,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Infrastructure-as-a-Service (IaaS) contains the basic building blocks for cloud IT, providing access to networking features, computers (virtual or dedicated hardware), storage, and operating systems. See Lecture 38 (Cloud Computing \u2013 Service Models, slide 4)"
+      "solution": "Infrastructure-as-a-Service (IaaS) contains the basic building blocks for cloud IT, providing access to networking features, computers (virtual or dedicated hardware), storage, and operating systems. See Lecture 38 (Cloud Computing – Service Models, slide 4)"
     },
     {
       "q": "[Week 8] In the IaaS working methodology, which component allows multiple virtual machines to share the same physical hardware?",
@@ -1400,7 +1433,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "In IaaS, the hypervisor sits above the physical hardware and manages multiple virtual machines (VMs), each running its own operating system, on a virtualized server. See Lecture 38 (Cloud Computing \u2013 Service Models, slide 5)"
+      "solution": "In IaaS, the hypervisor sits above the physical hardware and manages multiple virtual machines (VMs), each running its own operating system, on a virtualized server. See Lecture 38 (Cloud Computing – Service Models, slide 5)"
     },
     {
       "q": "[Week 8] Which cloud service model is described as 'application middleware offered as a service to developers', removing the need to manage underlying hardware and operating systems?",
@@ -1412,7 +1445,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Platform-as-a-Service (PaaS) removes the need for organizations to manage underlying infrastructure (hardware and OS) and lets developers focus on deploying and managing their applications; it is described as application middleware offered as a service. See Lecture 38 (Cloud Computing \u2013 Service Models, slide 15)"
+      "solution": "Platform-as-a-Service (PaaS) removes the need for organizations to manage underlying infrastructure (hardware and OS) and lets developers focus on deploying and managing their applications; it is described as application middleware offered as a service. See Lecture 38 (Cloud Computing – Service Models, slide 15)"
     },
     {
       "q": "[Week 8] What is the primary purpose of a Service Level Agreement (SLA) in cloud service management?",
@@ -1424,7 +1457,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "An SLA defines the non-functional requirements expected from the service provider and provides a roadmap with clearly defined deliverables, describing the quality, utility, and warranty of services expected by the customer. See Lecture 39 (Cloud Computing \u2013 Service Management and Security, slide 4)"
+      "solution": "An SLA defines the non-functional requirements expected from the service provider and provides a roadmap with clearly defined deliverables, describing the quality, utility, and warranty of services expected by the customer. See Lecture 39 (Cloud Computing – Service Management and Security, slide 4)"
     },
     {
       "q": "[Week 8] In cloud service accounting and billing, what does 'service accounting' primarily aim to obtain?",
@@ -1436,7 +1469,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Service accounting aims to obtain resource usage information, typically in the form of records, depending on infrastructure and service monitoring where usage information is obtained from metric measurements. See Lecture 39 (Cloud Computing \u2013 Service Management and Security, slide 5)"
+      "solution": "Service accounting aims to obtain resource usage information, typically in the form of records, depending on infrastructure and service monitoring where usage information is obtained from metric measurements. See Lecture 39 (Cloud Computing – Service Management and Security, slide 5)"
     },
     {
       "q": "[Week 8] What is the main purpose of using cloud simulators such as CloudSim before actual deployment?",
@@ -1448,7 +1481,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Simulation tools provide a reliable, scalable, and repeatable environment for performance evaluation, facilitating pre-deployment tests of services at no cost and enabling repeatable evaluation. See Lecture 40 (Cloud Computing \u2013 Case Studies, slides 2\u20133)"
+      "solution": "Simulation tools provide a reliable, scalable, and repeatable environment for performance evaluation, facilitating pre-deployment tests of services at no cost and enabling repeatable evaluation. See Lecture 40 (Cloud Computing – Case Studies, slides 2–3)"
     },
     {
       "q": "[Week 8] CloudSim, a widely used cloud simulation framework, was developed at which institution and is based on which programming language?",
@@ -1460,7 +1493,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "CloudSim is a simulation framework that models cloud computing environments (data centers, VMs, applications, users, and network topology), written in a Java-based environment, and developed at the CLOUDS Lab of the University of Melbourne. See Lecture 40 (Cloud Computing \u2013 Case Studies, slide 5)"
+      "solution": "CloudSim is a simulation framework that models cloud computing environments (data centers, VMs, applications, users, and network topology), written in a Java-based environment, and developed at the CLOUDS Lab of the University of Melbourne. See Lecture 40 (Cloud Computing – Case Studies, slide 5)"
     }
   ],
   "9": [
@@ -1474,7 +1507,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "OpenStack, a software used to create cloud infrastructure, was launched as a joint project of Rackspace Hosting and NASA in 2010, and is open source. See Lecture 41 (Cloud Computing \u2013 Practical, slide 3)"
+      "solution": "OpenStack, a software used to create cloud infrastructure, was launched as a joint project of Rackspace Hosting and NASA in 2010, and is open source. See Lecture 41 (Cloud Computing – Practical, slide 3)"
     },
     {
       "q": "[Week 9] Which OpenStack component provides the dashboard (GUI) that gives an overview of the other components?",
@@ -1486,7 +1519,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Horizon is the dashboard component of OpenStack \u2014 it provides the GUI of the software and gives an overview of the other components. See Lecture 41 (Cloud Computing \u2013 Practical, slide 5)"
+      "solution": "Horizon is the dashboard component of OpenStack — it provides the GUI of the software and gives an overview of the other components. See Lecture 41 (Cloud Computing – Practical, slide 5)"
     },
     {
       "q": "[Week 9] Which OpenStack component is the compute service where instances are launched?",
@@ -1498,7 +1531,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Nova is the compute service in OpenStack \u2014 it is where you launch your instances. Glance is the image service, Cinder is block storage, and Neutron provides networking. See Lecture 41 (Cloud Computing \u2013 Practical, slide 5)"
+      "solution": "Nova is the compute service in OpenStack — it is where you launch your instances. Glance is the image service, Cinder is block storage, and Neutron provides networking. See Lecture 41 (Cloud Computing – Practical, slide 5)"
     },
     {
       "q": "[Week 9] Which script/tool is used in the lecture to install OpenStack, requiring the local.conf file to be configured with passwords and host IP before running?",
@@ -1510,7 +1543,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "OpenStack is installed using Devstack: after cloning the devstack repository and configuring local.conf with ADMIN_PASSWORD, DATABASE_PASSWORD, RABBIT_PASSWORD, SERVICE_PASSWORD, and HOST_IP, the stack.sh file is run to install it. See Lecture 41 (Cloud Computing \u2013 Practical, slides 9\u201310)"
+      "solution": "OpenStack is installed using Devstack: after cloning the devstack repository and configuring local.conf with ADMIN_PASSWORD, DATABASE_PASSWORD, RABBIT_PASSWORD, SERVICE_PASSWORD, and HOST_IP, the stack.sh file is run to install it. See Lecture 41 (Cloud Computing – Practical, slides 9–10)"
     },
     {
       "q": "[Week 9] According to the lecture, what does sensor-cloud fundamentally provide, beyond merely integrating sensors with cloud computing?",
@@ -1522,7 +1555,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Sensor-cloud is not mere integration of sensors and cloud computing or 'dumping sensor data into the cloud' \u2014 it introduces the concept of virtualization of the sensor node, offered on a pay-per-use basis, acting as a stratum between sensor nodes and end-users. See Lecture 42 (Sensor-Cloud \u2013 Part I: Sensor-as-a-Service, slide 10)"
+      "solution": "Sensor-cloud is not mere integration of sensors and cloud computing or 'dumping sensor data into the cloud' — it introduces the concept of virtualization of the sensor node, offered on a pay-per-use basis, acting as a stratum between sensor nodes and end-users. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 10)"
     },
     {
       "q": "[Week 9] In a traditional Wireless Sensor Network (WSN), who is typically responsible for redeployment of the sensor nodes?",
@@ -1534,7 +1567,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "In a traditional WSN, the WSN-user is responsible for ownership, deployment, redeployment, maintenance, overhead, and usage. In sensor-cloud, redeployment and maintenance shift to the Sensor-Cloud Service Provider (SCSP), while usage shifts to the end-user. See Lecture 42 (Sensor-Cloud \u2013 Part I: Sensor-as-a-Service, slide 12)"
+      "solution": "In a traditional WSN, the WSN-user is responsible for ownership, deployment, redeployment, maintenance, overhead, and usage. In sensor-cloud, redeployment and maintenance shift to the Sensor-Cloud Service Provider (SCSP), while usage shifts to the end-user. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 12)"
     },
     {
       "q": "[Week 9] In the sensor-cloud model, which actor purchases physical sensor devices and lends them to the sensor-cloud, playing a role from a business perspective?",
@@ -1546,7 +1579,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The Sensor-owner purchases physical sensor devices deployed over different geographical locations and lends these devices to the sensor-cloud, acting as a business actor. See Lecture 42 (Sensor-Cloud \u2013 Part I: Sensor-as-a-Service, slide 13)"
+      "solution": "The Sensor-owner purchases physical sensor devices deployed over different geographical locations and lends these devices to the sensor-cloud, acting as a business actor. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 13)"
     },
     {
       "q": "[Week 9] Which of the following is listed as a major limitation of traditional WSNs that motivates the sensor-cloud model?",
@@ -1558,7 +1591,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Limitations of WSNs include procurement issues (price, right vendor, sensor types), deployment and maintenance overheads, and difficulty adapting to a change of requirement \u2014 e.g., a WSN built for agriculture cannot easily be repurposed for a smart home. See Lecture 42 (Sensor-Cloud \u2013 Part I: Sensor-as-a-Service, slide 9)"
+      "solution": "Limitations of WSNs include procurement issues (price, right vendor, sensor types), deployment and maintenance overheads, and difficulty adapting to a change of requirement — e.g., a WSN built for agriculture cannot easily be repurposed for a smart home. See Lecture 42 (Sensor-Cloud – Part I: Sensor-as-a-Service, slide 9)"
     },
     {
       "q": "[Week 9] In the Optimal Composition of Virtual Sensors, what does CoV-I refer to?",
@@ -1570,7 +1603,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "CoV-I refers to the formation of a Virtual Sensor (VS) using homogeneous sensor nodes within the same geographical boundary, while CoV-II spans multiple regions using heterogeneous nodes to form a Virtual Sensor Group (VSG). See Lecture 43 (Sensor-Cloud \u2013 Part II: Sensor-as-a-Service, slide 6)"
+      "solution": "CoV-I refers to the formation of a Virtual Sensor (VS) using homogeneous sensor nodes within the same geographical boundary, while CoV-II spans multiple regions using heterogeneous nodes to form a Virtual Sensor Group (VSG). See Lecture 43 (Sensor-Cloud – Part II: Sensor-as-a-Service, slide 6)"
     },
     {
       "q": "[Week 9] In the sensor-cloud caching mechanism, which cache handles requests directly from the end-user and decides whether to serve data directly or re-cache from another source?",
@@ -1582,7 +1615,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "The Internal Cache (IC) handles requests from the end-user and takes the decision on whether the data should be provided directly or whether it is required to re-cache the data from the External Cache (EC). See Lecture 43 (Sensor-Cloud \u2013 Part II: Sensor-as-a-Service, slide 13)"
+      "solution": "The Internal Cache (IC) handles requests from the end-user and takes the decision on whether the data should be provided directly or whether it is required to re-cache the data from the External Cache (EC). See Lecture 43 (Sensor-Cloud – Part II: Sensor-as-a-Service, slide 13)"
     },
     {
       "q": "[Week 9] Why is dynamic and adaptive data caching useful in sensor-cloud, according to the lecture?",
@@ -1594,7 +1627,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "In many cases, environmental conditions change quite slowly, so the sensed data of physical sensors remains largely unaltered; unnecessary sensing under such conditions causes needless energy consumption, motivating adaptive caching. See Lecture 43 (Sensor-Cloud \u2013 Part II: Sensor-as-a-Service, slide 12)"
+      "solution": "In many cases, environmental conditions change quite slowly, so the sensed data of physical sensors remains largely unaltered; unnecessary sensing under such conditions causes needless energy consumption, motivating adaptive caching. See Lecture 43 (Sensor-Cloud – Part II: Sensor-as-a-Service, slide 12)"
     },
     {
       "q": "[Week 9] Which company is credited with coining the term 'fog computing'?",
@@ -1606,7 +1639,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Fog computing, or 'fogging,' is a term coined by CISCO. The idea is to extend the cloud nearer to IoT devices by introducing an intermediate layer between the cloud and the devices. See Lecture 44 (Fog Computing \u2013 Part I, slide 2)"
+      "solution": "Fog computing, or 'fogging,' is a term coined by CISCO. The idea is to extend the cloud nearer to IoT devices by introducing an intermediate layer between the cloud and the devices. See Lecture 44 (Fog Computing – Part I, slide 2)"
     },
     {
       "q": "[Week 9] Which of the following is listed as a key issue with the traditional cloud model that motivates fog computing?",
@@ -1618,7 +1651,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The current cloud model faces issues of Volume (too much data to process/store), Latency (round-trip time is too slow for time-sensitive data), and Bandwidth (huge traffic generated by billions of devices consumes most available bandwidth). See Lecture 44 (Fog Computing \u2013 Part I, slide 6)"
+      "solution": "The current cloud model faces issues of Volume (too much data to process/store), Latency (round-trip time is too slow for time-sensitive data), and Bandwidth (huge traffic generated by billions of devices consumes most available bandwidth). See Lecture 44 (Fog Computing – Part I, slide 6)"
     },
     {
       "q": "[Week 9] Where is the fog layer positioned in the fog computing architecture?",
@@ -1630,7 +1663,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Fog is a layer between the cloud and IoT devices; many fog nodes can be present, and sensor data are processed in the fog before being sent to the cloud, reducing latency and saving bandwidth and cloud storage. See Lecture 45 (Fog Computing \u2013 Part II, slide 2)"
+      "solution": "Fog is a layer between the cloud and IoT devices; many fog nodes can be present, and sensor data are processed in the fog before being sent to the cloud, reducing latency and saving bandwidth and cloud storage. See Lecture 45 (Fog Computing – Part II, slide 2)"
     },
     {
       "q": "[Week 9] Which of the following is NOT listed as a required characteristic of a fog node?",
@@ -1642,7 +1675,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Fog nodes need transient storage, computing facility (to process data and take quick decisions), and network connectivity to connect with IoT devices, other fog nodes, and the cloud \u2014 not permanent unlimited archival storage, which is the cloud's role. See Lecture 45 (Fog Computing \u2013 Part II, slide 4)"
+      "solution": "Fog nodes need transient storage, computing facility (to process data and take quick decisions), and network connectivity to connect with IoT devices, other fog nodes, and the cloud — not permanent unlimited archival storage, which is the cloud's role. See Lecture 45 (Fog Computing – Part II, slide 4)"
     }
   ],
   "10": [
@@ -1656,7 +1689,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "In the human\u2013smart city analogy, Sensors and Tags correspond to Sensory Organs, Buildings/Industries/People correspond to the Skeleton, digital telecommunication networks correspond to Nerves, and ubiquitously embedded intelligence corresponds to the Brain. See Lecture 46 (Smart Cities and Smart Homes \u2013 Part I, slide 3)"
+      "solution": "In the human–smart city analogy, Sensors and Tags correspond to Sensory Organs, Buildings/Industries/People correspond to the Skeleton, digital telecommunication networks correspond to Nerves, and ubiquitously embedded intelligence corresponds to the Brain. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 3)"
     },
     {
       "q": "[Week 10] Which of the following is listed as one of the six 'Application Focus Areas' of a smart city?",
@@ -1668,7 +1701,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "The six application focus areas listed are Smart Economy, Smart Governance, Smart People, Smart Mobility, Smart Environment, and Smart Living. See Lecture 46 (Smart Cities and Smart Homes \u2013 Part I, slide 4)"
+      "solution": "The six application focus areas listed are Smart Economy, Smart Governance, Smart People, Smart Mobility, Smart Environment, and Smart Living. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 4)"
     },
     {
       "q": "[Week 10] Under 'Current Focus Areas' of smart cities, which application area specifically deals with the auto routing of vehicles to empty slots and detecting vacant slots?",
@@ -1680,7 +1713,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Smart Parking Lots focus on auto routing of vehicles to empty slots, auto charging for services provided, and detection of vacant slots in the parking lot. See Lecture 46 (Smart Cities and Smart Homes \u2013 Part I, slide 11)"
+      "solution": "Smart Parking Lots focus on auto routing of vehicles to empty slots, auto charging for services provided, and detection of vacant slots in the parking lot. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 11)"
     },
     {
       "q": "[Week 10] Which IoT challenge in smart cities relates to the risk of data leakage arising from multiple tenants sharing the same infrastructure?",
@@ -1692,7 +1725,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Under Security and Privacy challenges, the lecture notes exposure to attacks and vulnerabilities, and that multi-tenancy induces the risk of data leakage. See Lecture 46 (Smart Cities and Smart Homes \u2013 Part I, slide 16)"
+      "solution": "Under Security and Privacy challenges, the lecture notes exposure to attacks and vulnerabilities, and that multi-tenancy induces the risk of data leakage. See Lecture 46 (Smart Cities and Smart Homes – Part I, slide 16)"
     },
     {
       "q": "[Week 10] What is the primary purpose of data fusion in IoT-enabled smart city environments, as described in the lecture?",
@@ -1704,7 +1737,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Data fusion addresses the challenge of making large, incoming data volumes precise and accurate, since the quality of data precision and accuracy directly affects the quality of decision-making in IoT-enabled smart cities. See Lecture 47 (Smart Cities and Smart Homes \u2013 Part II, slide 2)"
+      "solution": "Data fusion addresses the challenge of making large, incoming data volumes precise and accurate, since the quality of data precision and accuracy directly affects the quality of decision-making in IoT-enabled smart cities. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 2)"
     },
     {
       "q": "[Week 10] Which data fusion challenge refers to the situation where the same type of sensor reports different data for the same location?",
@@ -1716,7 +1749,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Conflicts arise when the same sensor type reports different data for the same location. Imperfection refers to inaccurate/uncertain sensor data, Ambiguity refers to outliers/missing data, and Alignment relates to converting sensor data frames to a singular frame. See Lecture 47 (Smart Cities and Smart Homes \u2013 Part II, slide 4)"
+      "solution": "Conflicts arise when the same sensor type reports different data for the same location. Imperfection refers to inaccurate/uncertain sensor data, Ambiguity refers to outliers/missing data, and Alignment relates to converting sensor data frames to a singular frame. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 4)"
     },
     {
       "q": "[Week 10] In the stages of data fusion, at which level does the fusion of information happen at the sensor node or within the local network itself?",
@@ -1728,7 +1761,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Signal level fusion occurs at the sensor node or within the local network itself, while pixel level occurs at the imaging device, feature level occurs prior to decision making, and decision level is an ensemble of decisions. See Lecture 47 (Smart Cities and Smart Homes \u2013 Part II, slide 6)"
+      "solution": "Signal level fusion occurs at the sensor node or within the local network itself, while pixel level occurs at the imaging device, feature level occurs prior to decision making, and decision level is an ensemble of decisions. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 6)"
     },
     {
       "q": "[Week 10] Which of the following is listed as one of the three functional layers of a smart parking system?",
@@ -1740,7 +1773,7 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "Smart parking has three functional layers: Information Collection, System Deployment, and Service Dissemination. See Lecture 47 (Smart Cities and Smart Homes \u2013 Part II, slide 11)"
+      "solution": "Smart parking has three functional layers: Information Collection, System Deployment, and Service Dissemination. See Lecture 47 (Smart Cities and Smart Homes – Part II, slide 11)"
     },
     {
       "q": "[Week 10] In the classification of energy harvesting solutions for smart cities, which type involves energy sources intentionally deployed near IoT devices?",
@@ -1752,7 +1785,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "Dedicated energy harvesting involves energy sources intentionally deployed near IoT sources, with the amount of energy harvested depending on the sensitivity of the harvesting circuit, the distance between device and source, and the environment. See Lecture 48 (Smart Cities and Smart Homes \u2013 Part III, slide 18)"
+      "solution": "Dedicated energy harvesting involves energy sources intentionally deployed near IoT sources, with the amount of energy harvested depending on the sensitivity of the harvesting circuit, the distance between device and source, and the environment. See Lecture 48 (Smart Cities and Smart Homes – Part III, slide 18)"
     },
     {
       "q": "[Week 10] Which Home Area Network (HAN) standard is defined by IEEE 802.15.4 at the physical and MAC layers, and aims at low-cost, low-energy devices?",
@@ -1764,7 +1797,7 @@
       ],
       "correctIndex": 2,
       "isMSQ": false,
-      "solution": "Zigbee consists of four layers (Physical, MAC, Network, Application); the Physical and MAC layers are defined by IEEE 802.15.4, while Network and Application layers are defined by Zigbee itself, and it targets low-cost, low-energy devices. See Lecture 48 (Smart Cities and Smart Homes \u2013 Part III, slide 14)"
+      "solution": "Zigbee consists of four layers (Physical, MAC, Network, Application); the Physical and MAC layers are defined by IEEE 802.15.4, while Network and Application layers are defined by Zigbee itself, and it targets low-cost, low-energy devices. See Lecture 48 (Smart Cities and Smart Homes – Part III, slide 14)"
     },
     {
       "q": "[Week 10] Which HAN standard enables remote control of compliant devices over existing power lines and electrical wiring in a house, and is mainly used for lighting and appliance control?",
@@ -1776,7 +1809,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "X-10 enables remote control of compliant transmitters and receivers over power lines and electrical wiring, is adopted by GE and Philips, has low speed and low data rate, and is mainly used for control of lighting, appliance networks, and security sensors. See Lecture 48 (Smart Cities and Smart Homes \u2013 Part III, slide 15)"
+      "solution": "X-10 enables remote control of compliant transmitters and receivers over power lines and electrical wiring, is adopted by GE and Philips, has low speed and low data rate, and is mainly used for control of lighting, appliance networks, and security sensors. See Lecture 48 (Smart Cities and Smart Homes – Part III, slide 15)"
     },
     {
       "q": "[Week 10] According to the lecture, why does traditional TCP/IP fail to work well for Vehicle-to-Everything (V2X) communication?",
@@ -1788,19 +1821,19 @@
       ],
       "correctIndex": 0,
       "isMSQ": false,
-      "solution": "TCP/IP is designed mainly for handling information exchange between a single pair of entities, is dependent on the location of data, and can only identify endpoint addresses \u2014 which alone is not useful for content distribution in highly mobile V2X environments. See Lecture 49 (Connected Vehicles \u2013 Part I, slide 7)"
+      "solution": "TCP/IP is designed mainly for handling information exchange between a single pair of entities, is dependent on the location of data, and can only identify endpoint addresses — which alone is not useful for content distribution in highly mobile V2X environments. See Lecture 49 (Connected Vehicles – Part I, slide 7)"
     },
     {
       "q": "[Week 10] Which frequency spectrum did the US Department of Transport and FCC allocate for Intelligent Connected Vehicles (ICVs)?",
       "options": [
         "2.4 GHz ISM band",
-        "75 MHz (5850\u20135925 MHz)",
+        "75 MHz (5850–5925 MHz)",
         "900 MHz band",
         "60 GHz mmWave band"
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "The US Department of Transport and Federal Communications Commission allocated 75 MHz (5850\u20135925 MHz) as the dedicated spectrum for ICVs, based on Dedicated Short Range Communication (DSRC) technology. See Lecture 50 (Connected Vehicles \u2013 Part II, slide 3)"
+      "solution": "The US Department of Transport and Federal Communications Commission allocated 75 MHz (5850–5925 MHz) as the dedicated spectrum for ICVs, based on Dedicated Short Range Communication (DSRC) technology. See Lecture 50 (Connected Vehicles – Part II, slide 3)"
     },
     {
       "q": "[Week 10] In the phases of ICV development described in the lecture, which phase is based on 4G LTE or DSRC and focuses on intelligent transportation services?",
@@ -1812,7 +1845,7 @@
       ],
       "correctIndex": 1,
       "isMSQ": false,
-      "solution": "Phase-1 covers infotainment services based on 2G/3G, Phase-2 covers intelligent transportation services based on 4G LTE or DSRC, and Phase-3 covers vehicles connected to the cloud. See Lecture 50 (Connected Vehicles \u2013 Part II, slide 6)"
+      "solution": "Phase-1 covers infotainment services based on 2G/3G, Phase-2 covers intelligent transportation services based on 4G LTE or DSRC, and Phase-3 covers vehicles connected to the cloud. See Lecture 50 (Connected Vehicles – Part II, slide 6)"
     },
     {
       "q": "[Week 10] In the VANET domain classification, which domain consists of vehicles (mobile) and Road-Side Units (RSUs, static), communicating via V2V or V2I using the DSRC stack?",
@@ -1824,7 +1857,7 @@
       ],
       "correctIndex": 3,
       "isMSQ": false,
-      "solution": "The Ad-hoc Domain is composed of vehicles (OBUs, which are mobile) and Road-Side Units (RSUs, which are static); communication may be V2V or V2I, carried out through the DSRC stack (IEEE 802.11p). See Lecture 50 (Connected Vehicles \u2013 Part II, slide 12)"
+      "solution": "The Ad-hoc Domain is composed of vehicles (OBUs, which are mobile) and Road-Side Units (RSUs, which are static); communication may be V2V or V2I, carried out through the DSRC stack (IEEE 802.11p). See Lecture 50 (Connected Vehicles – Part II, slide 12)"
     }
   ],
   "11": [
