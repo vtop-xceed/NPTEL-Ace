@@ -287,7 +287,7 @@ export default function QuizPage() {
               <span className="ms">close</span>
             </Link>
             <span className="quiz-week-label">
-              {week === 'grand' ? 'Grand Test' : `Week ${week}`}
+              {week === 'grand' ? 'Grand Final Quiz' : `Week ${week}`}
             </span>
             <div className={`quiz-streak-badge ${streak >= 2 ? 'visible' : ''} ${streak >= 5 ? 'hot' : ''}`}>
               <span className="streak-flame ms">local_fire_department</span>

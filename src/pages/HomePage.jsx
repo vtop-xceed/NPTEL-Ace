@@ -185,7 +185,7 @@ export default function HomePage() {
                 style={{ animationDelay: `${activeCourseObj.weeks * 0.05 + 0.05}s` }}
               >
                 <span className="week-number ms">emoji_events</span>
-                <span className="week-label">Grand Test — All Weeks</span>
+                <span className="week-label">Grand Final Quiz — All Weeks</span>
                 {(() => {
                   const grandBest = getBest(selectedCourse, 'grand');
                   return grandBest ? (
